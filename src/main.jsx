@@ -1,15 +1,32 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from '@material-tailwind/react'
 
 import { App } from './App.jsx'
 
 import './index.css'
 
-createRoot(document.getElementById('root')).render(
+
+const router = createBrowserRouter([
+
+  // Landing Page do projeto
+  {
+    path: "/",
+    element: <App />,
+  },
+
+  //  Estrutura para quando formos adicionar outra página
+  // { 
+  //   path: "/Namepage",
+  //   element: <NamePage />,
+  // },
+]);
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
-      <App />
+      <RouterProvider router={router} />
     </ThemeProvider>
-  </StrictMode>,
-)
+  </StrictMode>
+);
