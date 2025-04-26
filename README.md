@@ -1,12 +1,5 @@
-# React + Vite
+# Descubra PE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O sistema tem como objetivo central oferecer uma plataforma digital unificada que concentre e organize todas as informações culturais e turísticas do estado de Pernambuco, facilitando o acesso tanto para turistas quanto para moradores. Por meio de uma navegação intuitiva e recursos de personalização, os usuários poderão descobrir eventos, pontos históricos, gastronomia local e muito mais, de acordo com seus interesses e localização.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Além disso, o sistema busca transformar a forma como a cultura é vivenciada, por meio da gamificação, tornando a experiência mais divertida e engajadora. Missões, desafios, conquistas e recompensas incentivam o envolvimento contínuo, promovendo o aprendizado e a valorização da cultura local.
