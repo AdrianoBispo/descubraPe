@@ -1,0 +1,24 @@
+.SecaoPrincipal {
+    background-image: url(../../assets/landingPage/BackgroundLandingPage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.Aventure-se{
+    background-color: #56faff;
+    color: #2423a3;
+    font-weight: bold;
+    border-radius: 40px;
+    width: 160px;
+    height: 40px;
+    margin-left: 180px;
+}
+
+.Pin {
+   width: 580px;
+   float: right;
+   display: flex;
+   margin-top: -330px;
+   margin-right: 77px;
+}

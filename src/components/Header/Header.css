@@ -1,0 +1,20 @@
+.Logo {
+    background-image: url(../../assets/landingPage/Logo.jpg);
+    background-size: cover;
+}
+
+.TituloLogo {
+    color: #002cdf;
+    font-weight: bold;
+}
+
+.Navbar {
+    color: #002cdf;
+}
+
+.Botões{
+    background-color: #002cdf;
+    color: #fff;
+    border-radius: 40px;
+    width: 160px;
+}
