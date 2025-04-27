@@ -8,6 +8,13 @@ import "./App.css";
 export function App() {
   return (
     <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<CarroselTrilha />} />
+          <Route path="/trilhas/:id" element={<TrilhaDetalhes />} />
+        </Routes>
+      </Router>
+      
       <Header />
       <Carrosel />
       <CarroselTrilha />

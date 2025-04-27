@@ -1,0 +1,112 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.carrossel-container {
+    background-image: url(../../assets/landingPage/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.carrossel-titulo {
+    font-size: 38px;
+    color: #002cdf;
+    margin-left: 150px;
+    margin-right: 650px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.carrossel-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.carrossel-wrapper {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carrossel-card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+    border: 2px solid #000000;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background-color: #cccccc;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+.carrossel-card.ativo {
+    border: 5px solid #FFD700;
+    border-top: 10px solid #FFD700;
+    border-bottom: 10px solid #FFD700;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.carrossel-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrossel-nomeTrilha {
+    margin: 100px;
+    position: absolute;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carrossel-subtitulo {
+    margin-top: 40px;
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+}
+
+.text {
+    color: #1E40AF;
+}
+
+/* Botão setas nas laterais */
+.carrossel-seta.lateral {
+    background: #FFD700;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 15px;
+    z-index: 2;
+    transition: background 0.3s;
+}
+
+.carrossel-seta.lateral:hover {
+    background: #2563EB;
+}

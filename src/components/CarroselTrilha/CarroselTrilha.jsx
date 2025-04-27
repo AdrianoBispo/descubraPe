@@ -1,23 +1,71 @@
-import { Carousel } from "@material-tailwind/react";
+import { useState } from 'react';
+import "./CarroselTrilha.css";
+import gastronomica from '../../assets/landingPage/feijao.webp';
+import capelas from '../../assets/landingPage/capela_dourada_1.jpg';
+import aventuras from '../../assets/landingPage/parque_bonito.webp';
+import cultural from '../../assets/landingPage/cultural.jpg';
+import praia from '../../assets/landingPage/praia.webp';
+
+
+
+const trilhas = [
+  { id: 1, titulo: 'Gastronômica', imagem: gastronomica },
+  { id: 2, titulo: 'Capelas', imagem: capelas },
+  { id: 3, titulo: 'Aventuras', imagem: aventuras },
+  { id: 4, titulo: 'Cultural', imagem: cultural },
+  { id: 5, titulo: 'Praia', imagem: praia },
+];
+
 
 export function CarroselTrilha() {
-  //return (
-    <Carousel className="rounded-xl">
-      <img
-        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-        alt="image 1"
-        className="h-full w-full object-cover"
-      />
-      <img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-        alt="image 2"
-        className="h-full w-full object-cover"
-      />
-      <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-        alt="image 3"
-        className="h-full w-full object-cover"
-      />
-    </Carousel>
-  //);
+  const [indiceAtual, setIndiceAtual] = useState(0);
+  const navigate = useNavigate();
+
+  const anterior = () => {
+    setIndiceAtual((prev) => (prev === 0 ? trilhas.length - 1 : prev - 1));
+  };
+
+  const proximo = () => {
+    setIndiceAtual((prev) => (prev === trilhas.length - 1 ? 0 : prev + 1));
+  };
+
+  const handleClick = (item) => {
+    if (indiceAtual === trilhas.findIndex((trilha) => trilha.id === item.id)) {
+      navigate(`/trilhas/${item.id}`);
+
+  return (
+    <div className="carrossel-container">
+      <h1 className="carrossel-titulo">MONTE A SUA TRILHA PERSONALIZADA!</h1>
+
+      <div className="carrossel-area">
+        <button onClick={anterior} className="carrossel-seta lateral">❮</button>
+
+        <div className="carrossel-wrapper">
+          {trilhas.map((item, index) => (
+            <div
+              key={item.id}
+              className={`carrossel-card ${indiceAtual === index ? 'ativo' : ''}`}
+              onClick={() => handleClick(item)}
+              style={{
+                cursor: indiceAtual === index ? 'pointer' : 'not-allowed', 
+                opacity: indiceAtual === index ? 1 : 0.5,
+              }}
+            >
+              <img src={item.imagem} alt={item.titulo} className="carrossel-imagem" />
+              <h3 className="carrossel-nomeTrilha">{item.titulo}</h3>
+            </div>
+          ))}
+        </div>
+
+        <button onClick={proximo} className="carrossel-seta lateral">❯</button>
+      </div>
+
+      <div className="carrossel-subtitulo">
+        <p><strong>E muito mais</strong></p>
+      </div>
+      <p className="text">Monte a sua trilha personalizada de forma prática e rápida!</p>
+    </div>
+  );
+}
+}
 }
