@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import "./CarroselTrilha.css";
 import gastronomica from '../../assets/landingPage/feijao.webp';
 import capelas from '../../assets/landingPage/capela_dourada_1.jpg';
@@ -32,6 +33,8 @@ export function CarroselTrilha() {
   const handleClick = (item) => {
     if (indiceAtual === trilhas.findIndex((trilha) => trilha.id === item.id)) {
       navigate(`/trilhas/${item.id}`);
+    }
+  }; 
 
   return (
     <div className="carrossel-container">
@@ -66,6 +69,4 @@ export function CarroselTrilha() {
       <p className="text">Monte a sua trilha personalizada de forma prática e rápida!</p>
     </div>
   );
-}
-}
 }
