@@ -24,7 +24,7 @@ body {
 .left-column {
     background: white;
     width: 50%;
-    height: 100%;
+    height: 75%;
     margin-top: 15rem;
 }
 
@@ -39,7 +39,7 @@ body {
     position: absolute;
     background-image: url(../../assets/landingPage/capela_dourada_1.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
