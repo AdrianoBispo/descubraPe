@@ -1,0 +1,115 @@
+.perfil-container1 {
+    background-image: url(../../assets/landingPage/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.perfil-esquerda {
+    width: 40vw;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.perfil-esquerda img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgb(0, 153, 255);
+    margin-top: 4rem;
+    margin-left: 12rem;
+}
+
+.perfil-esquerda .Camera {
+    position: absolute;
+    margin-top: -5.5rem;
+    margin-left: 25rem;
+    width: 100px;
+    height: 100px;
+    background-color: #2563eb;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.perfil-esquerda .btn-opcao {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 10px;
+    border-radius: 2rem;
+    margin-top: 3rem;
+    margin-left: 22rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.perfil-esquerda .btn-excluir {
+    color: red;
+    background: none;
+    text-decoration: overline 2px #ddd;
+    margin-top: 20px;
+    margin-left: 8rem;
+    cursor: pointer;
+}
+
+.perfil-direita {
+    flex: 1;
+    margin-top: 4rem;
+}
+
+.perfil-direita h2 {
+    margin-bottom: 10px;
+}
+
+.perfil-direita p {
+    font-style: italic;
+}
+
+.preferencias-btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.preferencias-btns button {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.visitas-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.visitas-lista li {
+    margin-bottom: 5px;
+}
+
+.estrelas {
+    color: #fbbf24;
+    font-size: 20px;
+}
+
+.btn-cinza {
+    background-color: #e5e7eb;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}

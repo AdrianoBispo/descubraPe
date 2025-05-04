@@ -1,0 +1,134 @@
+.ranking-container {
+    background-image: url(../../assets/landingPage/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.pontuacao {
+    padding: 1rem 1.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.pontuacao h3 {
+    margin-bottom: 0.25rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.pontuacao p {
+    margin-left: 3rem;
+}
+
+.saldo {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.btn-recompensa {
+    background-color: #002cdf;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    margin-left: 2.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.ranking {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+}
+
+.ranking h3 {
+    margin-bottom: 0.25rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.descricaoo {
+    margin-left: 5rem;
+    margin-right: 45rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.filtros {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.tab {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tab.ativa {
+    background: #002cdf;
+    color: white;
+}
+
+select {
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.tabela-ranking {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela-ranking th {
+    background-color: rgba(218, 218, 218, 0.5);
+}
+
+.tabela-ranking th,
+.tabela-ranking td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.avatar-mini {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.linha-destaque {
+    background-color: rgba(255, 255, 167, 0.5);
+    /* Vermelho com 50% de opacidade */
+    font-weight: 600;
+}

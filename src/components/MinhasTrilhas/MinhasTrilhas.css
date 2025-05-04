@@ -1,0 +1,171 @@
+.trilha-container {
+  background-image: url(../../assets/landingPage/background2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+.titulo {
+  font-size: 3rem;
+  color: #0033cc;
+  font-weight: bold;
+  margin-left: 38rem;
+  margin-bottom: 0.5rem;
+}
+
+.descricao {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+  margin-left: 38rem;
+  margin-bottom: 1.5rem;
+}
+
+.data {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #002cdf;
+  border-bottom: 2px solid #002cdf;
+  padding-bottom: 0.5rem;
+}
+
+.trilha-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.trilha-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.horario {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.conteudo {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+.imagem {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.detalhes {
+  flex: 1;
+}
+
+.detalhes h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.descricao-ponto {
+  margin: 0.2rem 0;
+  color: #666;
+}
+
+.avaliacao {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.btn-remover {
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.btn-remover:hover {
+  color: #d00;
+}
+
+.botoes {
+  margin-top: 2rem;
+  margin-left: 40rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.btn-editar,
+.btn-salvar,
+.btn-compartilhar {
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-editar {
+  background-color: #ffffff;
+  color: #002cdf;
+  border: 1px solid #002cdf;
+}
+
+.btn-editar:hover {
+  background-color: #ccc;
+}
+
+.btn-salvar {
+  background-color: #0044ff;
+  color: #fff;
+}
+
+.btn-salvar:hover {
+  background-color: #0033cc;
+}
+
+.btn-compartilhar {
+  background-color: #008000;
+  color: #fff;
+}
+
+.btn-compartilhar:hover {
+  background-color: #006600;
+}
+
+@media (max-width: 600px) {
+  .conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .imagem {
+    width: 100%;
+    height: auto;
+  }
+
+  .botoes {
+    flex-direction: column;
+  }
+}
