@@ -43,3 +43,55 @@
   margin-top: -31.25rem;
   margin-right: 9.25rem;
 }
+
+@media (max-width: 1024px) {
+  .SecaoPrincipal h1 {
+    font-size: 3rem;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .SecaoPrincipal p {
+    font-size: 1.2rem;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .Aventure-se {
+    margin: 20px auto;
+    display: block;
+  }
+
+  .Pin {
+    width: 100%;
+    max-width: 400px;
+    float: none;
+    margin: 30px auto 0;
+  }
+
+  .Pin img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .SecaoPrincipal h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .SecaoPrincipal p {
+    font-size: 1rem;
+  }
+
+  .Aventure-se {
+    width: 140px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .Pin {
+    max-width: 300px;
+  }
+}
