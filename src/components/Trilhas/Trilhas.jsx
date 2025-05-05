@@ -1,5 +1,6 @@
 import React from "react";
 import "./Trilhas.css";
+import { FaCalendarDays } from "react-icons/fa6";
 import Capela1 from "../../assets/landingPage/sao_benedito.png";
 import Capela2 from "../../assets/landingPage/capela_dourada.jpg";
 import Capela3 from "../../assets/landingPage/madre_deus.jpg";
@@ -14,7 +15,7 @@ export default function Trilhas() {
                 <div className="top-column">
                     <div className="titulo-trilha">
                         <h2>Capelas em Pernambuco</h2>
-                        <p className="date">11-04</p>
+                        <p className="date"> <FaCalendarDays class/> 11-04</p>
                     </div>
                 </div>
                 {/* Coluna esquerda */}
@@ -35,18 +36,21 @@ export default function Trilhas() {
                             <div className="card">
                                 <img src={Capela1} alt="Capela 1" />
                                 <h4>Capela de São Benedito</h4>
+                                <div className="estrelas">  5.0 ⭐⭐⭐⭐⭐</div>
                                 <p>Capela histórica verde e branca construída no século XVII, com vista para o mar.</p>
                                 <button className="trilha-btn">Adicionar à Trilha</button>
                             </div>
                             <div className="card">
                                 <img src={Capela2} alt="Capela 2" />
                                 <h4>Capela Dourada</h4>
+                                <div className="estrelas">  5.0 ⭐⭐⭐⭐⭐</div>
                                 <p>Consagrada como um dos monumentos barrocos mais importantes.</p>
                                 <button className="trilha-btn">Adicionar à Trilha</button>
                             </div>
                             <div className="card">
                                 <img src={Capela3} alt="Capela 3" />
                                 <h4>Igreja da Madre Deus</h4>
+                                <div className="estrelas">  5.0 ⭐⭐⭐⭐⭐</div>
                                 <p>Um templo católico da cidade do Recife, capital do estado de Pernambuco.</p>
                                 <button className="trilha-btn">Adicionar à Trilha</button>
                             </div>

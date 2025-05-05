@@ -1,7 +1,10 @@
 import React from "react";
-import { FaCamera, FaUser, FaLock } from "react-icons/fa";
-import { MdPerson } from "react-icons/md";
+import { FaCamera, FaRegIdBadge, FaUser } from "react-icons/fa";
+import { MdOutlineMuseum } from "react-icons/md";
+import { FaUmbrellaBeach } from "react-icons/fa6";
+import { GrSchedules } from "react-icons/gr";
 import userPhoto from "../../assets/landingPage/usuario.png";
+import { IoIosUnlock } from "react-icons/io";
 import "./Profile.css";
 
 const Profile = () => {
@@ -10,34 +13,34 @@ const Profile = () => {
             <div className="perfil-esquerda">
                 <img src={userPhoto} alt="Usuário" />
                 <button className="Camera">
-                    <FaCamera />
+                    <FaCamera className="CameraIcon" />
                 </button>
 
                 <button className="btn-opcao">
-                    <MdPerson />
+                    <FaUser className="Icones"/>
                     Em Geral
                 </button>
                 <button className="btn-opcao">
-                    <FaUser />
+                    <FaRegIdBadge className="Icones" />
                     Dados Pessoais
                 </button>
                 <button className="btn-opcao">
-                    <FaLock />
+                    <IoIosUnlock className="Icones" />
                     Alterar Senha
                 </button>
                 <button className="btn-excluir">Excluir Conta</button>
             </div>
 
             <div className="perfil-direita">
-                <h2>Bruna Santos <span style={{ fontWeight: 400 }}>/ Nível 5 • 3 Badges • 1250 XP</span></h2>
-                <p>"Apaixonada por cultura, tecnologia e turismo em Pernambuco."</p>
+                <h2>Bruna Santos <span>/</span> Nível 5 • 3 Badges • 1250 XP</h2>
+                <p className="descricaoUser">"Apaixonada por cultura, tecnologia e turismo em Pernambuco."</p>
 
                 <div>
-                    <h3>Preferências Culturais</h3>
+                    <h2 className="preferencias">Preferências Culturais</h2>
                     <div className="preferencias-btns">
-                        <button>Museus</button>
-                        <button>Praias</button>
-                        <button>Eventos</button>
+                        <button> <MdOutlineMuseum className="Icones" /> Museus</button>
+                        <button> <FaUmbrellaBeach className="Icones" /> Praias</button>
+                        <button> <GrSchedules className="Icones" /> Eventos</button>
                     </div>
                 </div>
 
@@ -45,23 +48,23 @@ const Profile = () => {
                     <h3>Histórico de Visitas</h3>
                     <ul>
                         <li>
-                            <strong>Instituto Ricardo Brennand</strong> | Visitado em: 03/04/2025
-                            <p>"Um lugar incrível com uma coleção surpreendente!"</p>
-                            <div className="estrelas">★★★★★</div>
+                            <strong>• Instituto Ricardo Brennand</strong> | Visitado em: 03/04/2025
+                            <p className="descrLocal">"Um lugar incrível com uma coleção surpreendente!"</p>
+                            <div className="estrelas">⭐⭐⭐⭐⭐</div>
                         </li>
                     </ul>
                 </div>
 
-                <div>
+                <div className="MinhasListas">
                     <h3>Minhas Listas de Locais</h3>
                     <button className="btn-cinza">+ Nova Lista</button>
                 </div>
 
-                <div>
+                <div className="MinhasReco">
                     <h3>Minhas Recomendações</h3>
                     <ul>
-                        <li>Paço do Frevo</li>
-                        <li>Marco Zero</li>
+                        <li>• Paço do Frevo</li>
+                        <li>• Marco Zero</li>
                     </ul>
                     <button className="btn-cinza">+ Compartilhar</button>
                 </div>
