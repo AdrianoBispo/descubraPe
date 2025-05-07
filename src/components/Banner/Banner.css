@@ -43,55 +43,90 @@
   margin-top: -31.25rem;
   margin-right: 9.25rem;
 }
+@media (max-width: 1524px) { 
+  .Pin {
+    width: 550px;
+  }
+}
 
-@media (max-width: 1024px) {
-  .SecaoPrincipal h1 {
-    font-size: 3rem;
-    margin-right: 0;
+/* Responsividade para Notebooks e Tablets */
+@media (min-width: 768px) and (max-width: 1124px) {
+  .SecaoPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
     text-align: center;
+    justify-content: center;
+  }
+
+  .SecaoPrincipal h1 {
+    font-size: 2.5rem;
+    margin-right: 0;
+    margin-top: 2rem;
   }
 
   .SecaoPrincipal p {
     font-size: 1.2rem;
     margin-right: 0;
-    text-align: center;
   }
 
   .Aventure-se {
-    margin: 20px auto;
-    display: block;
+    margin-left: 0;
+    margin-top: 2rem;
   }
 
+  /* Ajuste do Pin para que ele não saia da tela */
   .Pin {
     width: 100%;
-    max-width: 400px;
-    float: none;
-    margin: 30px auto 0;
+    max-width: 450px; /* Limita a largura da imagem */
+    margin: 2rem auto; /* Centraliza e adiciona margem para espaçamento */
+    display: flex;
+    justify-content: center;
   }
 
   .Pin img {
     width: 100%;
+    max-width: 450px; /* Limita a largura da imagem para não ultrapassar */
     height: auto;
   }
 }
 
 @media (max-width: 768px) {
+  .SecaoPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
   .SecaoPrincipal h1 {
     font-size: 2rem;
+    margin-right: 0;
     margin-top: 2rem;
   }
 
   .SecaoPrincipal p {
     font-size: 1rem;
+    margin-right: 0;
   }
 
   .Aventure-se {
-    width: 140px;
-    height: 45px;
-    font-size: 0.9rem;
+    margin-left: 0;
+    margin-top: 1.5rem;
   }
 
   .Pin {
+    float: none;
+    width: 100%;
+    margin: 2rem auto 0;
+    justify-content: center;
+  }
+
+  .Pin img {
+    width: 80%;
     max-width: 300px;
+    height: auto;
   }
 }

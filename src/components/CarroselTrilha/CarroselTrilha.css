@@ -35,14 +35,11 @@
 .carrossel-wrapper {
   display: flex;
   overflow-x: auto;
-  /* Permite scroll horizontal */
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   width: 100%;
   -ms-overflow-style: none;
-  /* Esconde scrollbar IE/Edge */
   scrollbar-width: none;
-  /* Esconde scrollbar Firefox */
 }
 
 .carrossel-card {
@@ -117,55 +114,10 @@
   background: #2563eb;
 }
 
-@media (max-width: 1024px) {
-  .carrossel-titulo {
-    font-size: 2.5rem;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-  }
-
-  .carrossel-area {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem 0;
-  }
-
-  .carrossel-card {
-    width: 80%;
-    height: 16rem;
-    margin: 0 auto;
-    transform: scale(1);
-  }
-
-  .carrossel-card.ativo {
-    width: 85%;
-    height: 18rem;
-  }
-
-  .carrossel-nomeTrilha {
-    margin: 4rem auto;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .carrossel-subtitulo {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  .carrossel-seta.lateral {
-    position: absolute;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    margin-left: 43rem;
-  }
-}
-
+/* Responsividade para Smartphones */
 @media (max-width: 600px) {
   .carrossel-titulo {
+    margin-left: 38rem;
     font-size: 2rem;
     padding: 0 1rem;
   }
@@ -191,11 +143,128 @@
   }
 
   .carrossel-seta.lateral {
-    position: absolute;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    margin-left: 27rem;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin: 0 20px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .carrossel-container {
+    padding: 30px 20px;
+  }
+
+  .carrossel-titulo {
+    font-size: 2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px; 
+  }
+
+  .carrossel-area {
+    height: 40vh;
+  }
+
+  .carrossel-wrapper {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .carrossel-card {
+    width: 40rem;
+    height: 20rem;
+    margin: 0 15px;
+    border: 2px solid #000;
+    background-color: #cccccc;
+    transition: all 0.3s ease;
+  }
+
+  .carrossel-card.ativo {
+    transform: scale(1.05);
+    width: 45rem;
+    height: 22rem;
+  }
+
+  .carrossel-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carrossel-nomeTrilha {
+    font-size: 0.6rem;
+    margin: 3rem auto;
+    margin-top: 8rem;
+  }
+
+  .carrossel-seta.lateral {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin: 0 20px;
+  }
+}
+
+/* Responsividade para Tablets e Notebooks */
+@media (min-width: 1001px) and (max-width: 1145px) {
+  .carrossel-container {
+    padding: 30px 20px;
+  }
+
+  .carrossel-titulo {
+    font-size: 0.9rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px; 
+  }
+
+  .carrossel-area {
+    height: 40vh;
+  }
+
+  .carrossel-wrapper {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .carrossel-card {
+    width: 40rem;
+    height: 20rem;
+    margin: 0 15px;
+    border: 2px solid #000;
+    background-color: #cccccc;
+    transition: all 0.3s ease;
+  }
+
+  .carrossel-card.ativo {
+    transform: scale(1.05);
+    width: 45rem;
+    height: 22rem;
+  }
+
+  .carrossel-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carrossel-nomeTrilha {
+    font-size: 1.5rem;
+    margin: 3rem auto;
+    margin-top: 8rem;
+  }
+
+  .carrossel-seta.lateral {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin: 0 20px;
   }
 }
