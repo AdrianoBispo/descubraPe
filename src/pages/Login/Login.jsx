@@ -1,9 +1,10 @@
 import React from 'react';
-import './Login.css';
-import Cadastramento from "../../assets/landingPage/cadastro.png";
-import logo from "../../assets/landingPage/Logo.jpg";
 
-export default function Cadastro() {
+import './Login.css';
+
+import Cadastramento from "../../assets/landingPage/cadastro.png";
+
+export function Login() {
     return (
         <div className="cadastr-container">
             <div className="cadastr-left">

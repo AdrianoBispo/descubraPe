@@ -1,13 +1,13 @@
-import { BrowserRouter as Router } from "react-router-dom";
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from '@material-tailwind/react'
 
 import { App } from './App.jsx'
+import { Cadastro}  from './pages/Cadastro/Cadastro.jsx';
+import { Login }  from './pages/Login/Login.jsx'
 
 import './index.css'
-
 
 const router = createBrowserRouter([
 
@@ -17,11 +17,17 @@ const router = createBrowserRouter([
     element: <App />,
   },
 
-  //  Estrutura para quando formos adicionar outra página
-  // { 
-  //   path: "/Namepage",
-  //   element: <NamePage />,
-  // },
+// Tela de Login
+{
+  path: "/Cadastro",
+  element: <Cadastro />,
+},
+
+// Tela de Perfil de Usuario
+{
+  path: "/Login",
+  element: <Login />,
+},
 ]);
 
 createRoot(document.getElementById("root")).render(
@@ -30,12 +36,4 @@ createRoot(document.getElementById("root")).render(
       <RouterProvider router={router} />
     </ThemeProvider>
   </StrictMode>
-);
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
-  </React.StrictMode>
 );

@@ -1,9 +1,8 @@
 import React from 'react';
 import './Cadastro.css';
 import Cadastramento from "../../assets/landingPage/cadastro.png";
-import logo from "../../assets/landingPage/Logo.jpg";
 
-export default function Cadastro() {
+export function Cadastro() {
     return (
         <div className="cadastr-container">
                 <div className="cadastr-left">

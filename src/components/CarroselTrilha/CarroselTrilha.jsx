@@ -35,45 +35,46 @@ export function CarroselTrilha() {
   };
 
   return (
-    <div className="carrossel-container">
-      <h1 className="carrossel-titulo">
-        Conheça lugares de acordo com seus interesses.
+    <>
+      <h1 className="mt-32 titulo">
+        Conheça Pernambuco de acordo com seus interesses.
       </h1>
 
-      <div className="carrossel-area">
-        <button onClick={anterior} className="carrossel-seta lateral">
-          ❮
-        </button>
+      <div className="carrossel-container">
+        <div className="carrossel-area">
+          <button onClick={anterior} className="carrossel-seta lateral">
+            ❮
+          </button>
 
-        <div className="carrossel-wrapper">
-          {trilhas.map((item, index) => (
-            <div
-              key={item.id}
-              className={`carrossel-card ${
-                indiceAtual === index ? "ativo" : ""
-              }`}
-              onClick={() => handleClick(item)}
-              style={{
-                cursor: indiceAtual === index ? "pointer" : "not-allowed",
-                opacity: indiceAtual === index ? 1 : 0.5,
-              }}
-            >
-              <img
-                src={item.imagem}
-                alt={item.titulo}
-                className="carrossel-imagem"
-              />
-              <h3 className="carrossel-nomeTrilha">{item.titulo}</h3>
-            </div>
-          ))}
+          <div className="carrossel-wrapper">
+            {trilhas.map((item, index) => (
+              <div
+                key={item.id}
+                className={`carrossel-card ${
+                  indiceAtual === index ? "ativo" : ""
+                }`}
+                onClick={() => handleClick(item)}
+                style={{
+                  cursor: indiceAtual === index ? "pointer" : "not-allowed",
+                  opacity: indiceAtual === index ? 1 : 0.5,
+                }}
+              >
+                <img
+                  src={item.imagem}
+                  alt={item.titulo}
+                  className="carrossel-imagem"
+                />
+                <h3 className="carrossel-nomeTrilha">{item.titulo}</h3>
+              </div>
+            ))}
+          </div>
+
+          <button onClick={proximo} className="carrossel-seta lateral">
+            ❯
+          </button>
         </div>
 
-        <button onClick={proximo} className="carrossel-seta lateral">
-          ❯
-        </button>
-      </div>
-
-      {/* 
+        {/* 
         Acho melhor removermos essa parte pois não faz mais sentido existir.
 
         <div className="carrossel-subtitulo">
@@ -86,6 +87,7 @@ export function CarroselTrilha() {
         </p>
       
       */}
-    </div>
+      </div>
+    </>
   );
 }
