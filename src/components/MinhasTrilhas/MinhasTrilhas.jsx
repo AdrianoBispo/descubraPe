@@ -35,7 +35,7 @@ const favoritos = [
 export default function MinhasTrilhas() {
   return (
     <div className="trilha-container">
-      <h1 className="titulo">Minha Trilha Personalizada</h1>
+      <h1 className="titulo">Crie sua Trilha Personalizada</h1>
       <p className="descricao">Explore Pernambuco no seu ritmo com os lugares que você mais deseja conhecer.</p>
       <h2 className="data">Dia 1: Sábado, 30 de Setembro</h2>
 

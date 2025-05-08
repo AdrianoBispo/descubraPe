@@ -36,7 +36,9 @@ export function CarroselTrilha() {
 
   return (
     <div className="carrossel-container">
-      <h1 className="carrossel-titulo">MONTE A SUA TRILHA PERSONALIZADA!</h1>
+      <h1 className="carrossel-titulo">
+        Conheça lugares de acordo com seus interesses.
+      </h1>
 
       <div className="carrossel-area">
         <button onClick={anterior} className="carrossel-seta lateral">
@@ -71,14 +73,19 @@ export function CarroselTrilha() {
         </button>
       </div>
 
-      <div className="carrossel-subtitulo">
-        <p>
-          <strong>E muito mais</strong>
+      {/* 
+        Acho melhor removermos essa parte pois não faz mais sentido existir.
+
+        <div className="carrossel-subtitulo">
+          <p>
+            <strong>E muito mais</strong>
+          </p>
+        </div>
+        <p className="text">
+          Monte a sua trilha personalizada de forma prática e rápida!
         </p>
-      </div>
-      <p className="text">
-        Monte a sua trilha personalizada de forma prática e rápida!
-      </p>
+      
+      */}
     </div>
   );
 }
