@@ -1,6 +1,11 @@
-.cadastr-container {
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cadastr-containerC {
     width: 100vw;
-    height: 71.2vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: #f5f5f5;
@@ -8,68 +13,96 @@
     margin: 0;
 }
 
-.cadastr-left {
-    position: absolute;
-    background-image: url(../../assets/landingPage/cadastro.png) no-repeat center center;
-    width: 100vh;   
+.cadastr-leftC {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.cadastr-right {
-    background-color: white;    
+.cadastr-leftC .LoginCadastro {
+    position: absolute;
+    width: 90vw;
+    height: 100vh;
+    margin-right: 60rem;
+}
+
+.cadastr-rightC {
+    background-color: white;
     margin-left: 60rem;
     position: absolute;
     width: 100vh;
-    height: 72vh;
+    height: 100vh;
 }
 
-.cadastr-right h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #496582;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-    margin-left: 22rem;
+.cadastr-rightC .Logo {
+    display: inline-block;
+    width: 4.5rem;
+    margin-right: 2rem;
 }
 
-.cadastr-right h2 {
+.cadastr-rightC h1 {
     font-size: 2rem;
     font-weight: bold;
     color: #496582;
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+    margin-left: 17.5rem;
+}
+
+.cadastr-rightC h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #496582;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     margin-left: 18rem;
 }
 
 .princip {
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #555;
-    margin-bottom: 20px;
-    margin-left: 12.5rem;
+    margin-bottom: 1rem;
+    margin-left: 10rem;
 }
 
-.btn-azul {
+.btn-azulC {
     width: 40%;
-    padding: 12px;
+    padding: 1rem;
     background-color: #00aaff;
     color: white;
     border: none;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-left: 17.5rem;
     cursor: pointer;
 }
 
-.input-social {
+.input-socialC {
+
     width: 40%;
-    padding: 12px;
-    margin-bottom: 10px;
+    padding: 0.5rem;
     margin-left: 17.5rem;
-    border: 1px solid #ccc;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(151, 151, 151, 0.5);
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.btn-facebook {
+.input-socialC .GoogleIcon {
+    display: inline-block;
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+.btn-facebookC {
     width: 40%;
-    padding: 12px;
+    padding: 0.5rem;
+    margin-top: 1rem;
     margin-left: 17.5rem;
     background-color: #0f30b6;
     color: white;
@@ -78,14 +111,16 @@
     cursor: pointer;
 }
 
-.termos {
-    margin-left: 12.5rem;
-    margin-right: 11.5rem;
-    padding: 2rem;
+.btn-facebookC .FacebookIconC {
+    display: inline-block;
+    width: 2.5rem;
+    font-size: 1.5rem;
 }
 
-.conecte {
-    margin-left: 21rem;
+.termos {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding: 2rem;
 }
 
 .termos,
