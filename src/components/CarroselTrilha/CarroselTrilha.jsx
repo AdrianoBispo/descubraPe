@@ -42,17 +42,15 @@ export function CarroselTrilha() {
 
       <div className="carrossel-container">
         <div className="carrossel-area">
-          <button onClick={anterior} className="carrossel-seta lateral">
-            ❮
-          </button>
-
           <div className="carrossel-wrapper">
+            <button onClick={anterior} className="carrossel-setalateralEsquerda">
+              ❮
+            </button>
             {trilhas.map((item, index) => (
               <div
                 key={item.id}
-                className={`carrossel-card ${
-                  indiceAtual === index ? "ativo" : ""
-                }`}
+                className={`carrossel-card ${indiceAtual === index ? "ativo" : ""
+                  }`}
                 onClick={() => handleClick(item)}
                 style={{
                   cursor: indiceAtual === index ? "pointer" : "not-allowed",
@@ -67,11 +65,10 @@ export function CarroselTrilha() {
                 <h3 className="carrossel-nomeTrilha">{item.titulo}</h3>
               </div>
             ))}
+            <button onClick={proximo} className="carrossel-setalateralDireita">
+              ❯
+            </button>
           </div>
-
-          <button onClick={proximo} className="carrossel-seta lateral">
-            ❯
-          </button>
         </div>
 
         {/* 

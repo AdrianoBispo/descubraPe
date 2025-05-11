@@ -44,25 +44,29 @@
 
 .carrossel-card {
   position: relative;
+  margin-top: 3.5rem;
   width: 150rem;
-  height: 20rem;
+  height: 35vh;
   overflow: hidden;
   border: 2px solid #000000;
   border-top: 2px solid #000000;
   border-bottom: 2px solid #000000;
-  background-color: #cccccc;
+  background-color: #fdec8a;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: scale(0.9);
+  transform: scale(1.0);
 }
 
 .carrossel-card.ativo {
+  position: relative;
+  margin-top: 0.5rem;
   border: none;
   width: 150rem;
-  height: 22rem;
-  transform: scale(1.05);
+  height: 45vh;
+  transform: scale(1.02);
+  border: 0.5rem solid #cfb301;
 }
 
 .carrossel-imagem {
@@ -73,14 +77,14 @@
 }
 
 .carrossel-nomeTrilha {
-  margin: 8rem;
+  margin-top: 10rem;
   position: absolute;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-style: normal;
   font-size: 28px;
   color: #ffffff;
-  text-shadow: 40px 40px 40px rgba(0, 0, 0, 0.7);
+  text-shadow: 0.2em 0.2em 0.5em black
 }
 
 .carrossel-subtitulo {
@@ -96,22 +100,36 @@
 }
 
 /* Botão setas nas laterais */
-.carrossel-seta.lateral {
-  background: #ffd700;
-  color: white;
+.carrossel-setalateralEsquerda {
+  position: absolute;
+  background: #d9b529;
+  color: #7a6618;
   border: none;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 22px;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
   cursor: pointer;
-  margin: 0 15px;
+  margin-left: -1rem;
+  margin-top: 13rem;
   z-index: 2;
   transition: background 0.3s;
 }
 
-.carrossel-seta.lateral:hover {
-  background: #2563eb;
+.carrossel-setalateralDireita{
+  position: absolute;
+  background: #d9b529;
+  color: #7a6618;
+  border: none;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: 13rem;
+  margin-left: 113.5rem;
+  z-index: 2;
+  transition: background 0.3s;
 }
 
 /* Responsividade para Smartphones */
