@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner.css";
-import Pin from "../../assets/landingPage/Pin.png";
+import Pin from "../../assets/landingPage/Banner.png";
 
 export function Banner() {
   return (
@@ -14,9 +14,8 @@ export function Banner() {
           Conecte-se com o que Pernambuco tem de mais autêntico.
         </p>
       </section>
-      <button className="Aventure-se">Aventure-se</button>
+      <button className="Aventure-se">Aventure-se <span>❯</span></button>
       <div className="Pin">
-        <img src={Pin} />
       </div>
     </div>
   );

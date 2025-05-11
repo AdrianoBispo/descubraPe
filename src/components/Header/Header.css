@@ -10,12 +10,17 @@
 .Logo {
   background-image: url(../../assets/landingPage/Logo.jpg);
   background-size: cover;
+  margin-left: 5rem;
+  width: 3rem;
+  height: 3rem;
+  border: 50%;
 }
 
 .TituloLogo {
   color: #002cdf;
   font-weight: bold;
-  font-size: 18.9px;
+  font-size: 1.5rem;
+  margin-left: 1rem;
 }
 
 .Navbar {
@@ -31,12 +36,24 @@
     margin-top: 10px;
 }
 
-.Botões {
+.BotaoLogin {
+  position: relative;
+  background-color: #ffffff;
+  color: #002cdf;
+  border: 1px solid #b4b4b4;
+  border-radius: 2rem;
+  width: 7rem;
+  height: 2.5rem;
+}
+
+.BotaoCadastro {
+  margin-right: 2.5rem;
   position: relative;
   background-color: #002cdf;
   color: #fff;
   border-radius: 40px;
-  width: 160px;
+  width: 10rem;
+  height: 2,5rem;
 }
 
 /* Oculta o menu hamburguer em desktop */

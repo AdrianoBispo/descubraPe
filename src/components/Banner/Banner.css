@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  margin-top: 50px;
+  margin-top: 2.5rem;
 }
 
 .SecaoPrincipal h1 {
@@ -11,8 +11,8 @@
   font-weight: bold;
   font-style: normal;
   font-size: 4rem;
-  margin-top: 4rem;
-  margin-right: 670px;
+  margin-top: 7.5rem;
+  margin-left: 8.5rem;
 }
 
 .SecaoPrincipal p {
@@ -20,30 +20,50 @@
   font-weight: 200;
   font-style: normal;
   font-size: 1.5rem;
-  margin-top: 20px;
-  margin-right: 700px;
+  margin-top: 1rem;
+  margin-left: 8.5rem;
 }
 
 .Aventure-se {
   background-color: #56faff;
   color: #2423a3;
   font-weight: bold;
-  border-radius: 40px;
-  width: 160px;
-  height: 50px;
-  margin-left: 150px;
-  margin-top: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  width: 13rem;
+  height: 3rem;
+  margin-left: 18rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.Aventure-se span {
+  display: inline-block;
+  background: #2423a3;
+  color: #56faff;
+  border: none;
+  border-radius: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .Pin {
-  width: 780px;
-  float: right;
-  display: flex;
-  margin-top: -31.25rem;
-  margin-right: 9.25rem;
+  position: relative;
+  background-image: url(../../assets/landingPage/Banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 37rem;
+  height: 37rem;
+  border-radius: 50%;
+  box-shadow: 0 0 4rem rgb(0, 30, 255);
+  margin-top: -35rem;
+  margin-left: 70rem;
 }
-@media (max-width: 1524px) { 
+
+@media (max-width: 1524px) {
   .Pin {
     width: 550px;
   }
@@ -79,15 +99,18 @@
   /* Ajuste do Pin para que ele não saia da tela */
   .Pin {
     width: 100%;
-    max-width: 450px; /* Limita a largura da imagem */
-    margin: 2rem auto; /* Centraliza e adiciona margem para espaçamento */
+    max-width: 450px;
+    /* Limita a largura da imagem */
+    margin: 2rem auto;
+    /* Centraliza e adiciona margem para espaçamento */
     display: flex;
     justify-content: center;
   }
 
   .Pin img {
     width: 100%;
-    max-width: 450px; /* Limita a largura da imagem para não ultrapassar */
+    max-width: 450px;
+    /* Limita a largura da imagem para não ultrapassar */
     height: auto;
   }
 }

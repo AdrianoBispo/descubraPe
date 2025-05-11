@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Button } from "@material-tailwind/react";
 
 export function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -12,7 +11,7 @@ export function Header() {
   return (
     <header className="flex fixed w-full top-0 left-0 justify-between items-center z-10 p-3 bg-white shadow-md">
       <div className="flex items-center ml-5">
-        <div className="w-8 h-8 bg-blue-800 rounded-full Logo" />
+        <div className="Logo" />
         <span className="TituloLogo">Descubra PE</span>
       </div>
 
@@ -31,13 +30,8 @@ export function Header() {
         <a href="#sobre" className="Navbar">Sobre</a>
       </nav>
         <div className="menu-buttons">
-          <Button
-            variant="outlined"
-            className="bg-white border-gray-400 text-blue-800 rounded-full"
-          >
-            Login
-          </Button>
-          <button className="Botões">Cadastre-se</button>
+          <button className="BotaoLogin">Login</button>
+          <button className="BotaoCadastro">Cadastre-se</button>
         </div>
     </header>
   );
