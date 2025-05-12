@@ -4,36 +4,50 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
 
 import { App } from "./App.jsx";
-import { Cadastro } from "./pages/Cadastro/Cadastro.jsx";
 import { Login } from "./pages/Login/Login.jsx";
+import { Cadastro } from "./pages/Cadastro/Cadastro.jsx";
+import { Home } from "./pages/Home/Home.jsx";
+import { Profilee } from "./pages/Profile/Profile.jsx";
 
 import "./index.css";
-import { BookingCard } from "./components/Cards/BookingCard.jsx";
 
 const router = createBrowserRouter([
-  // Landing Page do projeto
+  // Landing Page
   {
     path: "/",
     element: <App />,
   },
 
-  // Teste
-  // {
-  //   path: "/",
-  //   element: <BookingCard />,
-  // },
-
   // Tela de Cadastro
   {
-    path: "/Cadastro",
+    path: "/cadastro",
     element: <Cadastro />,
   },
 
   // Tela de Login
   {
-    path: "/Login",
+    path: "/login",
     element: <Login />,
   },
+
+  // Home Page
+  {
+    path: "/home",
+    element: <Home />,
+  },
+
+  // Profile Page
+  {
+    path: "/profile",
+    element: <Profilee />,
+  },
+
+  /* Teste
+    {
+      path: "/",
+      element: <BookingCard />,
+    },
+  */
 ]);
 
 createRoot(document.getElementById("root")).render(

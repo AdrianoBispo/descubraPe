@@ -1,9 +1,8 @@
-import React from "react";
 import { FaCamera, FaRegIdBadge, FaUser } from "react-icons/fa";
 import { MdOutlineMuseum } from "react-icons/md";
 import { FaUmbrellaBeach } from "react-icons/fa6";
 import { GrSchedules } from "react-icons/gr";
-import userPhoto from "../../assets/landingPage/usuario.png";
+import userPhoto from "../../../../assets/landingPage/usuario.png";
 import { IoIosUnlock } from "react-icons/io";
 
 import "./Profile.css";

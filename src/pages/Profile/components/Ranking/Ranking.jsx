@@ -1,12 +1,11 @@
-import React from "react";
 import "./Ranking.css";
 
-import avatar1 from "../../assets/landingPage/avatarFem.png";
-import avatar2 from "../../assets/landingPage/avatarMasc.png";
-import avatar3 from "../../assets/landingPage/avatarMasc.png";
-import avatar4 from "../../assets/landingPage/usuario.png";
-import avatar5 from "../../assets/landingPage/avatarMasc.png";
-import avatar6 from "../../assets/landingPage/avatarMasc.png";
+import avatar1 from "../../../../assets/landingPage/avatarFem.png";
+import avatar2 from "../../../../assets/landingPage/avatarMasc.png";
+import avatar3 from "../../../../assets/landingPage/avatarMasc.png";
+import avatar4 from "../../../../assets/landingPage/usuario.png";
+import avatar5 from "../../../../assets/landingPage/avatarMasc.png";
+import avatar6 from "../../../../assets/landingPage/avatarMasc.png";
 
 export function Ranking() {
   const usuarios = [

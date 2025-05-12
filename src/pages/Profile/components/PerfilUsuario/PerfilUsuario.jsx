@@ -1,7 +1,6 @@
-import React from "react";
 import "./PerfilUsuario.css";
 
-import avatar from "../../assets/landingPage/usuario.png";
+import avatar from "../../../../assets/landingPage/usuario.png";
 
 export function PerfilUsuario() {
   return (
