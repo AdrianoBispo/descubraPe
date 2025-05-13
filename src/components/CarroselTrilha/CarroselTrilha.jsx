@@ -14,6 +14,7 @@ const trilhas = [
   { id: 3, titulo: "Aventuras", imagem: aventuras },
   { id: 4, titulo: "Cultural", imagem: cultural },
   { id: 5, titulo: "Praia", imagem: praia },
+  // { id: 6, titulo: "Eventos", imagem: cultural }, Card para eventos
 ];
 
 export function CarroselTrilha() {
@@ -36,21 +37,25 @@ export function CarroselTrilha() {
 
   return (
     <>
-      <h1 className="mt-32 titulo">
+      <h1 className="mt-24 titulo text-center">
         Conheça Pernambuco de acordo com seus interesses.
       </h1>
 
       <div className="carrossel-container">
         <div className="carrossel-area">
           <div className="carrossel-wrapper">
-            <button onClick={anterior} className="carrossel-setalateralEsquerda">
+            <button
+              onClick={anterior}
+              className="carrossel-setalateralEsquerda"
+            >
               ❮
             </button>
             {trilhas.map((item, index) => (
               <div
                 key={item.id}
-                className={`carrossel-card ${indiceAtual === index ? "ativo" : ""
-                  }`}
+                className={`carrossel-card ${
+                  indiceAtual === index ? "ativo" : ""
+                }`}
                 onClick={() => handleClick(item)}
                 style={{
                   cursor: indiceAtual === index ? "pointer" : "not-allowed",
@@ -71,9 +76,6 @@ export function CarroselTrilha() {
           </div>
         </div>
 
-        {/* 
-        Acho melhor removermos essa parte pois não faz mais sentido existir.
-
         <div className="carrossel-subtitulo">
           <p>
             <strong>E muito mais</strong>
@@ -82,8 +84,6 @@ export function CarroselTrilha() {
         <p className="text">
           Monte a sua trilha personalizada de forma prática e rápida!
         </p>
-      
-      */}
       </div>
     </>
   );

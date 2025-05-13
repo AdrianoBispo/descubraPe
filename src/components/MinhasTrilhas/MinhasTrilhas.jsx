@@ -38,9 +38,9 @@ const favoritos = [
 export function MinhasTrilhas() {
   return (
     <>
-      <h1 className="mt-32 titulo">Crie sua Trilha Personalizada</h1>
 
       <div className="trilha-container">
+      <h1 className="titulo text-center">Monte sua Trilha Personalizada</h1>
         <p className="descricao">
           Explore Pernambuco no seu ritmo com os lugares que você mais deseja
           conhecer.

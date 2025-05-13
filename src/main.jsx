@@ -8,6 +8,7 @@ import { Login } from "./pages/Login/Login.jsx";
 import { Cadastro } from "./pages/Cadastro/Cadastro.jsx";
 import { Home } from "./pages/Home/Home.jsx";
 import { Profilee } from "./pages/Profile/Profile.jsx";
+// import { Convite } from "./components/Convite/Convite.jsx";
 
 import "./index.css";
 
@@ -44,8 +45,8 @@ const router = createBrowserRouter([
 
   /* Teste
     {
-      path: "/",
-      element: <BookingCard />,
+      path: "/convite",
+      element: <Convite />,
     },
   */
 ]);

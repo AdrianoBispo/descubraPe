@@ -2,9 +2,10 @@ import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { Banner } from "./components/Banner/Banner";
 import { CarroselTrilha } from "./components/CarroselTrilha/CarroselTrilha";
-import { Trilhas } from "./components/Trilhas/Trilhas";
 import { MinhasTrilhas } from "./components/MinhasTrilhas/MinhasTrilhas";
 import { BookingCard } from "./components/Cards/BookingCard";
+import { Convite } from "./components/Convite/Convite";
+// import { Trilhas } from "./components/Trilhas/Trilhas";
 
 export function App() {
   return (
@@ -13,8 +14,9 @@ export function App() {
       <Banner />
       <CarroselTrilha />
       <BookingCard />
-      <Trilhas />
+      {/* <Trilhas /> */}
       <MinhasTrilhas />
+      <Convite />
       <Footer />
     </>
   );
