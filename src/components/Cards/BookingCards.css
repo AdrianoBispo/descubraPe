@@ -1,0 +1,15 @@
+.container-bookingCards {
+  background-image: url(../../assets/landingPage/background2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.color-heart {
+  background-color: blue;
+}
+
+.color-heart:hover {
+  color: blue;
+  background-color: white;
+}

@@ -3,7 +3,7 @@ import { Footer } from "./components/Footer/Footer";
 import { Banner } from "./components/Banner/Banner";
 import { CarroselTrilha } from "./components/CarroselTrilha/CarroselTrilha";
 import { MinhasTrilhas } from "./components/MinhasTrilhas/MinhasTrilhas";
-import { BookingCard } from "./components/Cards/BookingCard";
+import { BookingCards } from "./components/Cards/BookingCards";
 import { Convite } from "./components/Convite/Convite";
 // import { Trilhas } from "./components/Trilhas/Trilhas";
 
@@ -13,7 +13,7 @@ export function App() {
       <Header />
       <Banner />
       <CarroselTrilha />
-      <BookingCard />
+      <BookingCards />
       {/* <Trilhas /> */}
       <MinhasTrilhas />
       <Convite />

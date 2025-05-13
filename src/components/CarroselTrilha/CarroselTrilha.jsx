@@ -36,10 +36,11 @@ export function CarroselTrilha() {
   };
 
   return (
-    <>
-      <h1 className="mt-24 titulo text-center">
-        Conheça Pernambuco de acordo com seus interesses.
-      </h1>
+    <div className="mt-12">
+      <h1 className="titulo text-center">Recomendado para você</h1>
+      <p className="text-center text-lg">
+        Excursões e atividades de acordo com seus interesses.
+      </p>
 
       <div className="carrossel-container">
         <div className="carrossel-area">
@@ -85,6 +86,6 @@ export function CarroselTrilha() {
           Monte a sua trilha personalizada de forma prática e rápida!
         </p>
       </div>
-    </>
+    </div>
   );
 }

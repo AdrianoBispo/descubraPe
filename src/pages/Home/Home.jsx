@@ -1,7 +1,7 @@
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { Banner } from "../../components/Banner/Banner";
-import { BookingCard } from "../../components/Cards/BookingCard";
+import { BookingCards } from "../../components/Cards/BookingCards";
 import { CarroselTrilha } from "../../components/CarroselTrilha/CarroselTrilha";
 import { MinhasTrilhas } from "../../components/MinhasTrilhas/MinhasTrilhas";
 import { Trilhas } from "../../components/Trilhas/Trilhas";
@@ -14,7 +14,7 @@ export function Home() {
         <Header />
         <Banner />
         <CarroselTrilha />
-        <BookingCard />
+        <BookingCards />
         <MinhasTrilhas />
         <Trilhas />
         <Footer />
