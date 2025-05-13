@@ -31,9 +31,16 @@
 
 .menu-buttons {
   display: flex;
-    flex-direction: row;
-    gap: 12px;
-    margin-top: 10px;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.menu-buttonsHamb {
+  display: none;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 10px;
 }
 
 .BotaoLogin {
@@ -53,7 +60,27 @@
   color: #fff;
   border-radius: 40px;
   width: 10rem;
-  height: 2,5rem;
+  height: 2, 5rem;
+}
+
+.BotaoLoginHamb {
+  position: relative;
+  background-color: #ffffff;
+  color: #002cdf;
+  border: 1px solid #b4b4b4;
+  border-radius: 2rem;
+  width: 7rem;
+  height: 2.5rem;
+}
+
+.BotaoCadastroHamb {
+  margin-right: 2.5rem;
+  position: relative;
+  background-color: #002cdf;
+  color: #fff;
+  border-radius: 40px;
+  width: 10rem;
+  height: 2, 5rem;
 }
 
 /* Oculta o menu hamburguer em desktop */
@@ -72,7 +99,7 @@
   transition: 0.4s;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1124px) {
   nav {
     display: none;
     flex-direction: column;
@@ -100,6 +127,13 @@
   }
 
   .menu-buttons {
+    display: none;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .menu-buttonsHamb {
     display: flex;
     flex-direction: row;
     gap: 12px;

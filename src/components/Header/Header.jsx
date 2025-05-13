@@ -28,6 +28,10 @@ export function Header() {
         <a href="#mapa" className="Navbar">Mapa</a>
         <a href="#parcerias" className="Navbar">Parcerias</a>
         <a href="#sobre" className="Navbar">Sobre</a>
+        <div className="menu-buttonsHamb">
+          <button className="BotaoLoginHamb">Login</button>
+          <button className="BotaoCadastroHamb">Cadastre-se</button>
+        </div>
       </nav>
         <div className="menu-buttons">
           <button className="BotaoLogin">Login</button>
