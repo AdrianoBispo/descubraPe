@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.titulo {
+  font-size: 3rem;
+  color: #0033cc;
+  font-weight: bold;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}

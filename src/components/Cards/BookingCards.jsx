@@ -2,6 +2,8 @@ import {
   Card,
   CardHeader,
   CardBody,
+  CardFooter,
+  Button,
   Typography,
   IconButton,
   Rating,
@@ -16,7 +18,7 @@ import "./BookingCards.css";
 export function BookingCards() {
   return (
     <div className="container-bookingCards">
-      <h1 className="font-bold titulo">Pernambuco: Cidades Badaladas</h1>
+      <h1 className="titulo">Pernambuco: Cidades Badaladas</h1>
       <p className="ml-8 text-xl">
         Explore as cidades mais visitadas do estado
       </p>
@@ -144,6 +146,14 @@ export function BookingCards() {
                 {dataBookingCard.description}
               </Typography>
             </CardBody>
+
+            <CardFooter className="pt-0">
+        <a href="#" className="inline-block">
+          <Button size="sm" variant="text" className="flex items-center gap-2" color="blue">
+            Adicionar a Trilha
+          </Button>
+        </a>
+      </CardFooter>
           </Card>
         </div>
       ))}
