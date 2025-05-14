@@ -134,37 +134,44 @@
 
 /* Responsividade para Smartphones */
 @media (max-width: 600px) {
-  .carrossel-titulo {
-    margin-left: 38rem;
-    font-size: 2rem;
+  .titulo {
+    font-size: 1.5rem;
     padding: 0 1rem;
   }
 
   .carrossel-card {
-    width: 90%;
+    width: 15%;
     height: 14rem;
   }
 
   .carrossel-card.ativo {
-    width: 95%;
-    height: 16rem;
+    width: 550%;
+    height: 20rem;
   }
 
   .carrossel-nomeTrilha {
-    font-size: 0.7rem;
+    font-size: 2rem;
     margin: 3rem auto;
-    margin-top: 6rem;
+    margin-top: 8rem;
   }
 
   .carrossel-subtitulo {
     font-size: 0.95rem;
   }
 
-  .carrossel-seta.lateral {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    margin: 0 20px;
+  .carrossel-setalateralEsquerda {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin-top: 10rem;
+  }
+
+  .carrossel-setalateralDireita {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin-top: 10rem;
+    margin-left: 26.5rem;
   }
 }
 

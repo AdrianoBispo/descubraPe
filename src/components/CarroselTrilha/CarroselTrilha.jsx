@@ -34,7 +34,7 @@ export function CarroselTrilha() {
 
   return (
     <div className="mt-12">
-      <h1 className="titulo">Monte sua Trilha Personalizada</h1>
+      <h1 className="titulo">MONTE A SUA TRILHA PERSONALIZADA!</h1>
 
       <div className="carrossel-container">
         <div className="carrossel-area">
