@@ -1,11 +1,10 @@
-import React from 'react';
-
-import './Login.css';
 
 import Cadastramento from "../../assets/landingPage/LoginCadastro.png";
 import Logo from "../../assets/landingPage/Logo.jpg"
 import Google from "../../assets/landingPage/Google_Icons.webp"
 import { FaFacebook } from "react-icons/fa";
+
+import './Login.css';
 
 export function Login() {
     return (
