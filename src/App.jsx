@@ -5,7 +5,6 @@ import { CarroselTrilha } from "./components/CarroselTrilha/CarroselTrilha";
 import { MinhasTrilhas } from "./components/MinhasTrilhas/MinhasTrilhas";
 import { BookingCards } from "./components/Cards/BookingCards";
 import { Convite } from "./components/Convite/Convite";
-// import { Trilhas } from "./components/Trilhas/Trilhas";
 
 export function App() {
   return (
@@ -14,7 +13,6 @@ export function App() {
       <Banner />
       <CarroselTrilha />
       <BookingCards />
-      {/* <Trilhas /> */}
       <MinhasTrilhas />
       <Convite />
       <Footer />

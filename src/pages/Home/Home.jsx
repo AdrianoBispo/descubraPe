@@ -4,7 +4,6 @@ import { Banner } from "../../components/Banner/Banner";
 import { BookingCards } from "../../components/Cards/BookingCards";
 import { CarroselTrilha } from "../../components/CarroselTrilha/CarroselTrilha";
 import { MinhasTrilhas } from "../../components/MinhasTrilhas/MinhasTrilhas";
-import { Trilhas } from "../../components/Trilhas/Trilhas";
 
 import "./Home.css"
 
@@ -16,7 +15,6 @@ export function Home() {
         <CarroselTrilha />
         <BookingCards />
         <MinhasTrilhas />
-        <Trilhas />
         <Footer />
       </>
     );

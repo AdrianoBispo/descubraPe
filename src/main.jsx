@@ -8,6 +8,9 @@ import { Login } from "./pages/Login/Login.jsx";
 import { Cadastro } from "./pages/Cadastro/Cadastro.jsx";
 import { Home } from "./pages/Home/Home.jsx";
 import { Profilee } from "./pages/Profile/Profile.jsx";
+import { Trilhas } from "./pages/Trilhas/Trilhas.jsx";
+import { LugarEscolhido } from "./pages/LugarEscolhido/LugarEscolhido.jsx";
+import { Missoes } from "./pages/Missoes/Missoes.jsx";
 // import { Convite } from "./components/Convite/Convite.jsx";
 
 import "./index.css";
@@ -41,6 +44,24 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profilee />,
+  },
+
+  // Missões Page
+  {
+    path: "/missoes",
+    element: <Missoes />,
+  },
+
+  // Trilhas Page
+  {
+    path: "/trilhas",
+    element: <Trilhas />,
+  },
+
+  // LugarEscolhido Page
+  {
+    path: "/lugar-escolhido",
+    element: <LugarEscolhido />,
   },
 
   /* Teste
