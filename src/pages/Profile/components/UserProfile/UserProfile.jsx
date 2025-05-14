@@ -6,9 +6,9 @@ import { IoIosUnlock } from "react-icons/io";
 
 import { usuario } from "../../../../assets/index";
 
-import "./Profile.css";
+import "./UserProfile.css";
 
-export function Profile() {
+export function UserProfile() {
   return (
     <>
       <h1 className="titulo">Crie seu Perfil e Personalize do seu Jeito</h1>

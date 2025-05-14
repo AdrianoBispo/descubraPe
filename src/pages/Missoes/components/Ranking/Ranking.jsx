@@ -68,8 +68,6 @@ export function Ranking() {
 
   return (
     <>
-      <h1 className="titulo">Concorra com seus Amigos e Outros Usuários</h1>
-      <div className="ranking-container">
         <div className="ranking">
           <h3>🏆 Ranking dos Exploradores de Pernambuco</h3>
           <p className="descricaoo">
@@ -122,7 +120,7 @@ export function Ranking() {
             </tbody>
           </table>
         </div>
-      </div>
+
     </>
   );
 }

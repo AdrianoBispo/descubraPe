@@ -9,7 +9,7 @@ import {
 
 import { FaHeart } from "react-icons/fa";
 
-import { cidadesBadaladas, dataBookingCards } from "./data";
+import { cidadesBadaladas, dataBookingCards } from "../../db/lugares";
 
 import "./BookingCards.css";
 

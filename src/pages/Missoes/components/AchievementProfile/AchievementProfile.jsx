@@ -1,8 +1,10 @@
 import { usuario } from "../../../../assets/index";
 
-import "./PerfilUsuario.css";
+import { Ranking } from "../Ranking/Ranking";
 
-export function PerfilUsuario() {
+import "./AchievementProfile.css";
+
+export function AchievementProfile() {
   return (
     <div className="perfil-container">
       <div className="cabecalho-perfil">
@@ -67,6 +69,8 @@ export function PerfilUsuario() {
           </div>
         </div>
       </div>
+      <Ranking />
+
     </div>
   );
 }
