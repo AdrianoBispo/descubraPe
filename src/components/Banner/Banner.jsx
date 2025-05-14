@@ -1,6 +1,4 @@
-import React from "react";
 import "./Banner.css";
-import Pin from "../../assets/landingPage/Banner.png";
 
 export function Banner() {
   return (

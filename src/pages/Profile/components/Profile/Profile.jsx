@@ -2,21 +2,20 @@ import { FaCamera, FaRegIdBadge, FaUser } from "react-icons/fa";
 import { MdOutlineMuseum } from "react-icons/md";
 import { FaUmbrellaBeach } from "react-icons/fa6";
 import { GrSchedules } from "react-icons/gr";
-import userPhoto from "../../../../assets/landingPage/usuario.png";
 import { IoIosUnlock } from "react-icons/io";
+
+import { usuario } from "../../../../assets/index";
 
 import "./Profile.css";
 
 export function Profile() {
   return (
     <>
-      <h1 className="titulo">
-        Crie seu Perfil e Personalize do seu Jeito
-      </h1>
+      <h1 className="titulo">Crie seu Perfil e Personalize do seu Jeito</h1>
 
       <div className="perfil-container1">
         <div className="perfil-esquerda">
-          <img src={userPhoto} alt="Usuário" />
+          <img src={usuario} alt="Usuário" />
           <button className="Camera">
             <FaCamera className="CameraIcon" />
           </button>
@@ -93,4 +92,4 @@ export function Profile() {
       </div>
     </>
   );
-};
+}

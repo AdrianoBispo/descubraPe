@@ -1,5 +1,5 @@
 .SecaoPrincipal {
-  background-image: url(../../assets/landingPage/BackgroundLandingPage.png);
+  background-image: url(../../assets/banner/background-banner.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -51,7 +51,7 @@
 
 .Pin {
   position: relative;
-  background-image: url(../../assets/landingPage/Banner.png);
+  background-image: url(../../assets/banner/mulher-banner.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

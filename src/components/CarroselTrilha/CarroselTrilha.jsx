@@ -1,17 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { feijao, capelaDourada1, mulherEscalando, cultural, praia} from "../../assets/index";
+
 import "./CarroselTrilha.css";
 
-import gastronomica from "../../assets/landingPage/feijao.webp";
-import capelas from "../../assets/landingPage/capela_dourada_1.jpg";
-import aventuras from "../../assets/landingPage/parque_bonito.webp";
-import cultural from "../../assets/landingPage/cultural.jpg";
-import praia from "../../assets/landingPage/praia.webp";
-
 const trilhas = [
-  { id: 1, titulo: "Gastronômica", imagem: gastronomica },
-  { id: 2, titulo: "Capelas", imagem: capelas },
-  { id: 3, titulo: "Aventuras", imagem: aventuras },
+  { id: 1, titulo: "Gastronômica", imagem: feijao },
+  { id: 2, titulo: "Capelas", imagem: capelaDourada1 },
+  { id: 3, titulo: "Aventuras", imagem: mulherEscalando },
   { id: 4, titulo: "Cultural", imagem: cultural },
   { id: 5, titulo: "Praia", imagem: praia },
   // { id: 6, titulo: "Eventos", imagem: cultural }, Card para eventos

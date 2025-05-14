@@ -1,8 +1,6 @@
-import "./MinhasTrilhas.css";
+import {brennand, altoDaSe, capelaDourada} from "../../assets/index";
 
-import brennand from "../../assets/landingPage/brennand.jpg";
-import altose from "../../assets/landingPage/altodaase.jpg";
-import capeladourada from "../../assets/landingPage/capela_dourada.jpg";
+import "./MinhasTrilhas.css";
 
 const favoritos = [
   {
@@ -21,7 +19,7 @@ const favoritos = [
       "Local histórico em Olinda, com vista panorâmica e feirinha de artesanato.",
     avaliacao: 4.7,
     votos: 876,
-    imagem: altose,
+    imagem: altoDaSe,
   },
   {
     horario: "17:00 - 19:00",
@@ -30,7 +28,7 @@ const favoritos = [
       "Consagrada como um dos monumentos barrocos mais importantes do Brasil.",
     avaliacao: 4.9,
     votos: 3520,
-    imagem: capeladourada,
+    imagem: capelaDourada,
   },
 ];
 

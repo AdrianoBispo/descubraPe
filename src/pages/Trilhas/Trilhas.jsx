@@ -1,7 +1,6 @@
 import { FaCalendarDays } from "react-icons/fa6";
-import Capela1 from "../../assets/landingPage/sao_benedito.png";
-import Capela2 from "../../assets/landingPage/capela_dourada.jpg";
-import Capela3 from "../../assets/landingPage/madre_deus.jpg";
+
+import { saoBenedito, capelaDourada, madreDeus } from "../../assets/index";
 
 import "./Trilhas.css";
 
@@ -33,7 +32,7 @@ export function Trilhas() {
             <div className="cards">
               <button className="seta">❮</button>
               <div className="card">
-                <img src={Capela1} alt="Capela 1" />
+                <img src={saoBenedito} alt="Capela 1" />
                 <h4>Capela de São Benedito</h4>
                 <div className="estrelas"> 5.0 ⭐⭐⭐⭐⭐</div>
                 <p>
@@ -43,7 +42,7 @@ export function Trilhas() {
                 <button className="trilha-btn">Adicionar à Trilha</button>
               </div>
               <div className="card">
-                <img src={Capela2} alt="Capela 2" />
+                <img src={capelaDourada} alt="Capela 2" />
                 <h4>Capela Dourada</h4>
                 <div className="estrelas"> 5.0 ⭐⭐⭐⭐⭐</div>
                 <p>
@@ -52,7 +51,7 @@ export function Trilhas() {
                 <button className="trilha-btn">Adicionar à Trilha</button>
               </div>
               <div className="card">
-                <img src={Capela3} alt="Capela 3" />
+                <img src={madreDeus} alt="Capela 3" />
                 <h4>Igreja da Madre Deus</h4>
                 <div className="estrelas"> 5.0 ⭐⭐⭐⭐⭐</div>
                 <p>
