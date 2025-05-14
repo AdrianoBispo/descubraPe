@@ -37,10 +37,7 @@ export function CarroselTrilha() {
 
   return (
     <div className="mt-12">
-      <h1 className="titulo text-center">Recomendado para você</h1>
-      <p className="text-center text-lg">
-        Excursões e atividades de acordo com seus interesses.
-      </p>
+      <h1 className="titulo">Monte sua Trilha Personalizada</h1>
 
       <div className="carrossel-container">
         <div className="carrossel-area">
