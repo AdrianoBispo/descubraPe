@@ -21,10 +21,6 @@ export function UserProfile() {
           </button>
 
           <button className="btn-opcao">
-            <FaUser className="Icones" />
-            Em Geral
-          </button>
-          <button className="btn-opcao">
             <FaRegIdBadge className="Icones" />
             Dados Pessoais
           </button>

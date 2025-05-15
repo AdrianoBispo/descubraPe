@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .carrossel-container {
-  background-image: url(../../assets/landingPage/background2.png);
+  background-image: url(../../assets/background/background-claro.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -67,6 +67,7 @@
   height: 45vh;
   transform: scale(1.02);
   border: 0.5rem solid #cfb301;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.372);
 }
 
 .carrossel-imagem {
@@ -116,7 +117,7 @@
   transition: background 0.3s;
 }
 
-.carrossel-setalateralDireita{
+.carrossel-setalateralDireita {
   position: absolute;
   background: #d9b529;
   color: #7a6618;
@@ -134,13 +135,16 @@
 
 /* Responsividade para Smartphones */
 @media (max-width: 600px) {
-  .titulo {
-    font-size: 1.5rem;
-    padding: 0 1rem;
+
+  .carrossel-titulo {
+    font-size: 2rem;
+    margin-bottom: -3.5rem;
+    margin-left: 3rem;
+    margin-right: -5rem;
   }
 
   .carrossel-card {
-    width: 15%;
+    width: 25%;
     height: 14rem;
   }
 
@@ -155,8 +159,18 @@
     margin-top: 8rem;
   }
 
-  .carrossel-subtitulo {
-    font-size: 0.95rem;
+  .carrossel-subtitulo strong {
+    position: absolute;
+    margin-top: -3rem;
+    margin-left: -5rem;
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-right: -2rem;
+    margin-left: -2rem;
   }
 
   .carrossel-setalateralEsquerda {
@@ -171,26 +185,28 @@
     height: 2rem;
     font-size: 1.2rem;
     margin-top: 10rem;
-    margin-left: 26.5rem;
+    margin-left: 26.7rem;
   }
 }
 
-@media (min-width: 601px) and (max-width: 1000px) {
+@media (min-width: 601px) and (max-width: 1145px) {
   .carrossel-container {
     padding: 30px 20px;
   }
 
   .carrossel-titulo {
     font-size: 2rem;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px; 
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .carrossel-area {
-    height: 40vh;
+    width: 100%;
+    height: 20rem;
+    margin-top: 2rem;
   }
 
   .carrossel-wrapper {
@@ -200,17 +216,15 @@
   }
 
   .carrossel-card {
-    width: 40rem;
+    width: 50%;
     height: 20rem;
     margin: 0 15px;
     border: 2px solid #000;
     background-color: #cccccc;
-    transition: all 0.3s ease;
   }
 
   .carrossel-card.ativo {
-    transform: scale(1.05);
-    width: 45rem;
+    width: 250%;
     height: 22rem;
   }
 
@@ -226,70 +240,19 @@
     margin-top: 8rem;
   }
 
-  .carrossel-seta.lateral {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    margin: 0 20px;
-  }
-}
-
-/* Responsividade para Tablets e Notebooks */
-@media (min-width: 1001px) and (max-width: 1145px) {
-  .carrossel-container {
-    padding: 30px 20px;
+  .carrossel-setalateralEsquerda {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    margin-top: 10rem;
+    margin-left: 0.3rem;
   }
 
-  .carrossel-titulo {
-    font-size: 0.9rem;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px; 
-  }
-
-  .carrossel-area {
-    height: 40vh;
-  }
-
-  .carrossel-wrapper {
-    display: flex;
-    overflow-x: auto;
-    width: 100%;
-  }
-
-  .carrossel-card {
-    width: 40rem;
-    height: 20rem;
-    margin: 0 15px;
-    border: 2px solid #000;
-    background-color: #cccccc;
-    transition: all 0.3s ease;
-  }
-
-  .carrossel-card.ativo {
-    transform: scale(1.05);
-    width: 45rem;
-    height: 22rem;
-  }
-
-  .carrossel-imagem {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .carrossel-nomeTrilha {
-    font-size: 1.5rem;
-    margin: 3rem auto;
-    margin-top: 8rem;
-  }
-
-  .carrossel-seta.lateral {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    margin: 0 20px;
+  .carrossel-setalateralDireita {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    margin-top: 10rem;
+    margin-left: 64.2rem;
   }
 }
