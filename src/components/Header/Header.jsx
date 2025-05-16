@@ -1,9 +1,13 @@
 import { useState } from "react";
-import {logo} from "../../assets/index"
+import { useNavigate } from "react-router-dom";
+
+import { logo } from "../../assets/index";
 
 import "./Header.css";
 
 export function Header() {
+  const navigate = useNavigate();
+
   const [menuAberto, setMenuAberto] = useState(false);
 
   const toggleMenu = () => {
@@ -26,19 +30,24 @@ export function Header() {
 
       {/* Menu suspenso no mobile */}
       <nav className={`${menuAberto ? "active" : ""}`}>
-        <a href="#trilha" className="Navbar">Trilha</a>
-        <a href="#mapa" className="Navbar">Mapa</a>
-        <a href="#parcerias" className="Navbar">Parcerias</a>
-        <a href="#sobre" className="Navbar">Sobre</a>
+        <a href="/#banner" className="Navbar">
+          Início
+        </a>
+        <a href="/#trilhas-carrossel" className="Navbar">
+          Trilhas
+        </a>
+        <a href="/#lugares" className="Navbar">
+          Lugares
+        </a>
         <div className="menu-buttonsHamb">
-          <button className="BotaoLoginHamb">Login</button>
-          <button className="BotaoCadastroHamb">Cadastre-se</button>
+          <button className="BotaoLoginHamb" onClick={() => navigate("/login")}>Login</button>
+          <button className="BotaoCadastroHamb" onClick={() => navigate("/cadastro")}>Cadastre-se</button>
         </div>
       </nav>
-        <div className="menu-buttons">
-          <button className="BotaoLogin">Login</button>
-          <button className="BotaoCadastro">Cadastre-se</button>
-        </div>
+      <div className="menu-buttons">
+        <button className="BotaoLogin" onClick={() => navigate("/login")}>Login</button>
+        <button className="BotaoCadastro" onClick={() => navigate("/cadastro")}>Cadastre-se</button>
+      </div>
     </header>
   );
 }
