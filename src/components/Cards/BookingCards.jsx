@@ -17,7 +17,7 @@ import "./BookingCards.css";
 
 export function BookingCards() {
   return (
-    <div className="container-bookingCards">
+    <div className="container-bookingCards" id="lugares">
       <h1 className="titulo">Pernambuco: Cidades Badaladas</h1>
       <p className="ml-8 text-xl text">
         Explore as cidades mais visitadas do estado

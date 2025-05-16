@@ -28,12 +28,12 @@ export function CarroselTrilha() {
 
   const handleClick = (item) => {
     if (indiceAtual === trilhas.findIndex((trilha) => trilha.id === item.id)) {
-      navigate(`/trilhas/${item.id}`);
+      navigate(`/trilhas`);
     }
   };
 
   return (
-    <div className="mt-0">
+    <div id="trilhas-carrossel">
       <div className="carrossel-container">
       <h1 className="carrossel-titulo">MONTE A SUA TRILHA PERSONALIZADA!</h1>
         <div className="carrossel-area">

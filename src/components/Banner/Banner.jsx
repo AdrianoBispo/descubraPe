@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 import "./Banner.css";
 
 export function Banner() {
+  const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen SecaoPrincipal">
+    <div id="banner" className="min-h-screen SecaoPrincipal">
       <section className="flex flex-1 flex-col items-left justify-center text-left p-8">
         <h1 className="ml-4 mr-4 mt-14 text-white text-4xl md:text-5xl font-bold max-w-2xl leading-tight mb-6">
           Do frevo ao mar cristalino: Pernambuco é paixão à primeira vista!
@@ -12,7 +16,7 @@ export function Banner() {
           Conecte-se com o que Pernambuco tem de mais autêntico.
         </p>
       </section>
-      <button className="Aventure-se">Aventure-se <span>❯</span></button>
+      <button className="Aventure-se" onClick={() => navigate("/login")}>Aventure-se <span>❯</span></button>
       <div className="Pin">
       </div>
     </div>
