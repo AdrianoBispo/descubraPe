@@ -28,7 +28,7 @@ export function CarroselTrilha() {
 
   const handleClick = (item) => {
     if (indiceAtual === trilhas.findIndex((trilha) => trilha.id === item.id)) {
-      navigate(`/trilhas/${item.id}`);
+      navigate(`/trilhas`);
     }
   };
 
