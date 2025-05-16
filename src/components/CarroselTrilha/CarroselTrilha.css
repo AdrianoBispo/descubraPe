@@ -92,8 +92,11 @@
   margin-top: 40px;
   text-align: center;
   color: #555;
-  font-size: 18px;
   font-weight: bold;
+}
+
+.carrossel-subtitulo strong {
+  font-size: 1.5rem;
 }
 
 .text {

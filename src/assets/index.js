@@ -23,6 +23,9 @@ import praia from "./carrossel/praia.webp";
 
 // Icones
 import googleIcon from "./icones/google-icon.webp";
+import alvoIcon from "./convite/alvo.png";
+import medalhaIcon from "./convite/medalha.png";
+import presenteIcon from "./convite/presente.png";
 
 // Lugares
 import altoDaSe from "./lugares/alto-da-se.jpg";
@@ -57,4 +60,7 @@ export {
   madreDeus,
   saoBenedito,
   mapaCapelas,
+  alvoIcon,
+  medalhaIcon,
+  presenteIcon,
 };

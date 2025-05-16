@@ -19,7 +19,7 @@ export function BookingCards() {
   return (
     <div className="container-bookingCards">
       <h1 className="titulo">Pernambuco: Cidades Badaladas</h1>
-      <p className="ml-8 text-xl">
+      <p className="ml-8 text-xl text">
         Explore as cidades mais visitadas do estado
       </p>
 
@@ -92,7 +92,7 @@ export function BookingCards() {
 
       <div className="mt-32 mb-2">
         <h1 className="font-bold titulo">Pernambuco: Melhores Atrações</h1>
-        <p className="ml-8 text-xl">
+        <p className="ml-8 text-xl text">
           Conheça os locais mais visitados do estado
         </p>
       </div>

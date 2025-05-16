@@ -1,14 +1,16 @@
 .convite-container {
-  background-image: url(../../assets/landingPage/background2.png);
+  background-image: url(../../assets/background/background-claro.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .comoFunciona {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
+  font-weight: 600;
   color: #002cdf;
-  font-weight: bold;
 }
 
 .cardbody-color {
@@ -16,11 +18,50 @@
 }
 
 .cards-convite {
+  border-radius: 1rem;
   box-shadow: 0px 15px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cards-convite .Icons {
+  margin-top: -1rem;
+  margin-right: -1rem;
+  width: 60px;
+  height: 60px;
+}
+
+.cards-convite h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #002cdf;
 }
 
 .cards-convite:hover {
   width: 25rem;
   height: 10rem;
-  transform: scale(1.02);
+  transform: scale(1.2);
+}
+
+.Explorar {
+  color: #002cdf;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.BotaoConvite {
+  background-color: #002cdf;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 40px;
+  width: 10.5rem;
+  height: 3rem;
+}
+
+.BotaoEntrar {
+  color: #002cdf;
+  font-weight: 600;
+  border: 1px solid #002cdf;
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem solid #242424;
+  width: 10.5rem;
+  height: 3rem;
 }
