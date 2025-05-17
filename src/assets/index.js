@@ -1,5 +1,5 @@
 // Logo
-import logo from "./logo.jpg";
+import logo from "./logo.png";
 
 // Avatar
 import avatarFem from "./avatar/avatarFem.png";

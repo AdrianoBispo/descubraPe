@@ -63,22 +63,9 @@ export function Convite() {
         Monte trilhas, complete missões e ganhe recompensas enquanto descobre o
         que há de mais autêntico no nosso estado.
       </p>
-      <div className="flex flex-row flew-wrap gap-12 justify-center">
+      <div className="flex flex-row flew-wrap gap-12 justify-center mb-12">
         <button className="BotaoConvite">Começar agora</button>
         <button className="BotaoConvite">Ver Recompensas</button>
-      </div>
-
-      <div className="mt-20">
-        <h2 className="text-center mb-6 Explorar">
-          Pronto para explorar e se divertir?
-        </h2>
-        <p className="text-center mb-6 text">
-          Crie sua conta gratuita e comece a sua jornada cultural agora mesmo!
-        </p>
-        <div className="flex flex-row flew-wrap gap-12 justify-center mb-6 Botoes">
-          <button className="BotaoConvite">Criar conta</button>
-          <button className="BotaoEntrar">Entrar</button>
-        </div>
       </div>
     </div>
   );
