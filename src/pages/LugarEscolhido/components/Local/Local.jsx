@@ -1,8 +1,11 @@
+import { MdArrowBackIos } from "react-icons/md";
+import { IoShareOutline } from "react-icons/io5";
+import { BsPencil } from "react-icons/bs";
+
 import {
   Card,
   CardHeader,
   CardBody,
-  Typography,
   Avatar,
   Rating,
 } from "@material-tailwind/react";
@@ -12,37 +15,79 @@ import "./Local.css";
 export function Local() {
   return (
     <div className="local-container">
-      <div>
-        <span> Ver todos os lugares </span>
-      </div>
-      
-      <div className="flex flex-row items-center justify-center gap-1 mr-12 my-6">
-        <img className=" w-2/3" src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png" alt="" />
-        <div className="flex flex-col gap-1 w-1/3">
-          <img src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png" alt="" />
-          <img src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png" alt="" />
-        </div>
+      {/* Botao de voltar */}
+      <div className="flex flex-row items-center mb-7">
+        <MdArrowBackIos size={18} />{" "}
+        <span className="text-[#0033cc]">Ver todos os lugares </span>
       </div>
 
-      <div>
-        <h2>Informações</h2>
-        <div>
-          <p>
-            Endereço:
-            <span>
-              {" "}
-              Altura da rua Siqueira Campos, R. do Imperador Pedro II, S/N -
-              Santo Antônio, Recife - PE, 50010-240
+      {/* Titulo, subtitulo e avaliação */}
+      <div className="w-full flex flex-row items-center">
+        <div className="w-1/2 justify-center flex-col">
+          <h1 className="text-4xl font-bold text-[#0033cc] mb-4 ml-2">
+            Capela Dourada - Recife
+          </h1>
+          <div className="flex items-center">
+            <span className="text-gray-500 text-sm pt-1 mr-2 ml-3">4.8</span>
+            <Rating value={5} readonly className="mr-2" />
+            <span className="pt-1 font-medium text-[#0033cc] ml-4">
+              50 Avaliações
             </span>
-          </p>
+          </div>
+        </div>
+        <div className="flex flex-row gap-32">
+          <button className="text-[#0033cc] underline flex flex-row items-center">
+            <IoShareOutline size={26} className="pb-0.5 mr-1" /> Compartilhar
+          </button>
+          <button className="text-[#0033cc] underline flex flex-row items-center">
+            <BsPencil size={22} className="mr-1" /> Avaliação
+          </button>
+          <button className="outline rounded-full py-2 px-4 text-white bg-[#0033cc]">
+            Adicionar a trilha
+          </button>
+        </div>
+      </div>
 
-          <p>
+      {/* Imagens */}
+      <div className="flex flex-row items-center justify-center gap-1 mr-12 my-6">
+        <img
+          className="w-2/3"
+          src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png"
+          alt=""
+        />
+        <div className="flex flex-col gap-1 w-1/3">
+          <img
+            src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png"
+            alt=""
+          />
+          <img
+            src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      {/* Seção de Informações */}
+      <h2 className="text-[#0033cc] text-3xl font-bold mb-5">Informações</h2>
+      <div className="flex flex-row items-center">
+        <div className="flex flex-col w-1/3 gap-2">
+          <h3 className="text-[#0033cc] font-bold">Endereço:</h3>
+          <p className="text-[#0033cc] w-3/5">
+            Altura da rua Siqueira Campos, R. do Imperador Pedro II, S/N - Santo
+            Antônio, Recife - PE, 50010-240
+          </p>
+        </div>
+        <div className="flex flex-col pb-12 gap-2">
+          <h3 className="text-[#0033cc] font-bold">
             Horário de Funcionamento*:
-            <span>(Segunda a Sexta-feira)</span>
+          </h3>
+          <p className="text-[#0033cc]">
+            Funciona das 8h às 16h (Segunda a Sexta-feira)
           </p>
         </div>
       </div>
 
+      {/* Seção de Avaliação */}
       <div className="mt-32 flex flex-col">
         <Card
           color="transparent"
@@ -60,19 +105,20 @@ export function Local() {
                 <Rating value={5} readonly />
               </div>
             </div>
-            <Typography className="mr-3 text-nowrap" color="blue-gray">
+            <p className="mr-3 text-nowrap" color="blue-gray">
               Abr 2025
-            </Typography>
+            </p>
           </CardHeader>
+
           <CardBody className="mb-6 p-0">
-            <Typography variant="h6" className="ml-3 text-blue-800">
+            <h5 className="ml-3 text-blue-800 font-bold">
               Vale a pena lugar singular
-            </Typography>
-            <Typography className="text-blue-600 ml-3 mt-2">
+            </h5>
+            <p className="text-blue-600 ml-3 mt-2">
               Lugar imperdível em Recife. Lindamente adornada em ouro, é
               possível fazer fotos incríveis. O ingresso dá direito a guia e
               custa R$ 15,00. Aceitam pix
-            </Typography>
+            </p>
 
             <div className="mt-4 flex flex-row items-center">
               <Avatar
@@ -83,9 +129,9 @@ export function Local() {
                 className="ml-3"
               />
 
-              <Typography className="text-blue-600 ml-3">
+              <p className="text-blue-600 ml-3">
                 Por<span> Marcus</span>
-              </Typography>
+              </p>
             </div>
           </CardBody>
         </Card>
