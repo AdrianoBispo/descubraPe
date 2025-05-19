@@ -1,0 +1,24 @@
+.Principal {
+    background-image: url(../../assets/background/background-claro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.Icon {
+    width: 25px;
+    height: 25px;
+}
+
+.Titulo1 {
+    font-size: 2.3rem;
+    color: #002CDF;
+}
+
+.Texto {
+    color: #002CDF;
+}
+
+.Botao {
+    background-color: #002CDF;
+}

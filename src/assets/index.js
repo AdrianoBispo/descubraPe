@@ -26,6 +26,9 @@ import googleIcon from "./icones/google-icon.webp";
 import alvoIcon from "./convite/alvo.png";
 import medalhaIcon from "./convite/medalha.png";
 import presenteIcon from "./convite/presente.png";
+import presenteIcon2 from "./icones/presente-icon.png";
+import estrelaIcon from "./icones/estrela-icon.png";
+import clipeIcon from "./icones/clipe-icon.png";
 
 // Lugares
 import altoDaSe from "./lugares/alto-da-se.jpg";
@@ -63,4 +66,7 @@ export {
   alvoIcon,
   medalhaIcon,
   presenteIcon,
+  presenteIcon2,
+  estrelaIcon,
+  clipeIcon,
 };

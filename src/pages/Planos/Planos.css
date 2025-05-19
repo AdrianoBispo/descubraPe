@@ -1,0 +1,35 @@
+.Principal {
+    background-image: url(../../assets/background/background-claro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.Titulo {
+    font-size: 3rem;
+    color: #002CDF;
+    margin-top: 10rem;
+}
+
+.Texto {
+    font-size: 1.5rem;
+    color: #002CDF;
+}
+
+.Botao1 {
+    margin-top: 4rem;
+}
+
+.Botao {
+    background-color: #002CDF;
+}
+
+.Month {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .Titulo {
+        font-size: 2rem;
+    }
+}

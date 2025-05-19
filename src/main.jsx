@@ -7,6 +7,8 @@ import { App } from "./App.jsx";
 import { Login } from "./pages/Login/Login.jsx";
 import { Cadastro } from "./pages/Cadastro/Cadastro.jsx";
 import { Home } from "./pages/Home/Home.jsx";
+import  Parcerias  from "./pages/Parcerias/Parcerias";
+import PlanosDeAssinatura from "./pages/Planos/Planos.jsx";
 import { Profilee } from "./pages/Profile/Profile.jsx";
 import { Trilhas } from "./pages/Trilhas/Trilhas.jsx";
 import { LugarEscolhido } from "./pages/LugarEscolhido/LugarEscolhido.jsx";
@@ -38,6 +40,18 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+
+  // Parcerias
+  {
+    path: "/parcerias",
+    element: <Parcerias />,
+  },
+
+  //Planos de Assinatura
+  {
+    path: "/planos",
+    element: <PlanosDeAssinatura />,
   },
 
   // Profile Page
