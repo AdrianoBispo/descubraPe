@@ -11,7 +11,7 @@
   font-weight: bold;
   font-style: normal;
   font-size: 4rem;
-  margin-top: 7.5rem;
+  margin-top: 6rem;
   margin-left: 8.5rem;
 }
 
@@ -28,7 +28,7 @@
   background-color: #56faff;
   color: #2423a3;
   font-weight: bold;
-  border-radius: 2rem;
+  border-radius: 1rem;
   width: 13rem;
   height: 3rem;
   margin-left: 18rem;
@@ -38,6 +38,7 @@
 
 .Aventure-se span {
   display: inline-block;
+  margin-left: 1rem;
   background: #2423a3;
   color: #56faff;
   border: none;
@@ -51,27 +52,29 @@
 
 .Pin {
   position: relative;
+  margin-top: 10rem;
+  margin-right: 14rem;
   background-image: url(../../assets/banner/mulher-banner.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 37rem;
-  height: 37rem;
+  width: 35rem;
+  height: 35rem;
   border-radius: 50%;
   box-shadow: 0 0 4rem rgb(0, 30, 255);
-  margin-top: -35rem;
-  margin-left: 70rem;
 }
 
-@media (max-width: 1524px) {
+@media (min-width: 1161px) and (max-width: 1524px) {
   .Pin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     width: 25rem;
     height: 25rem;
-    margin-left: 50rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1160px) {
+  .Pin {
+    width: 15rem;
+    height: 15rem;
   }
 }
 
@@ -87,31 +90,27 @@
   .SecaoPrincipal h1 {
     font-size: 2rem;
     margin-left: 1rem;
-    margin-right: 5rem;
-    margin-top: 3rem;
+    margin-right: 2rem;
+    margin-top: -12rem;
   }
 
   .SecaoPrincipal p {
     font-size: 1rem;
     margin-left: -1rem;
-    margin-right: 13rem;
+    margin-right: 15rem;
   }
 
   .Aventure-se {
-    margin-left: 0;
-    margin-top: 1.5rem;
-    margin-bottom: 18rem;
+    margin-left: 6rem;
+    margin-top: 2rem;
   }
 
   .Pin {
-    position: absolute;
-    justify-content: center;
-    float: none;
-    width: 14rem;
-    height: 14rem;
+    width: 15rem;
+    height: 15rem;
     margin: 2rem auto 0;
-    margin-top: 18rem;
-    margin-left: 15rem;
+    margin-top: -2rem;
+    margin-left: 11rem;
   }
 
   .Pin img {

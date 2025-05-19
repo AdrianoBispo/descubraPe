@@ -35,16 +35,15 @@
   color: #002cdf;
 }
 
-.cards-convite:hover {
-  width: 25rem;
-  height: 10rem;
-  transform: scale(1.2);
-}
-
 .Explorar {
   color: #002cdf;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.textF {
+  color: #002cdf;
+  font-size: 1rem;
 }
 
 .BotaoConvite {

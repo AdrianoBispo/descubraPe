@@ -15,10 +15,10 @@ export function Banner() {
           Descubra roteiros incríveis e participe de experiências únicas.
           Conecte-se com o que Pernambuco tem de mais autêntico.
         </p>
-      </section>
-      <button className="Aventure-se" onClick={() => navigate("/login")}>Aventure-se <span>❯</span></button>
-      <div className="Pin">
+      <button className="Aventure-se" onClick={() => navigate("/login")}>AVENTURE-SE <span>❯</span></button>
+      <div className="Pin absolute right-6 top-34 transform -translate-y-8">
       </div>
+      </section>
     </div>
   );
 }

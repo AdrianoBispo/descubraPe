@@ -64,7 +64,7 @@ export function CarroselTrilha() {
                 <h3 className="carrossel-nomeTrilha">{item.titulo}</h3>
               </div>
             ))}
-            <button onClick={proximo} className="carrossel-setalateralDireita">
+            <button onClick={proximo} className="carrossel-setalateralDireita absolute right-1 top-6 transform -translate-y-1">
               ❯
             </button>
           </div>

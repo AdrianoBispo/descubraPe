@@ -18,8 +18,7 @@
   color: #002cdf;
   margin-left: 50px;
   margin-right: 45rem;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: -1rem;
   font-weight: bold;
 }
 
@@ -114,7 +113,7 @@
   height: 4rem;
   font-size: 2rem;
   cursor: pointer;
-  margin-left: -1rem;
+  margin-left: 0.2rem;
   margin-top: 13rem;
   z-index: 2;
   transition: background 0.3s;
@@ -131,19 +130,17 @@
   font-size: 2rem;
   cursor: pointer;
   margin-top: 13rem;
-  margin-left: 113.5rem;
+  margin-left: 89rem;
   z-index: 2;
   transition: background 0.3s;
 }
 
 /* Responsividade para Smartphones */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
   .carrossel-titulo {
-    font-size: 2rem;
-    margin-bottom: -3.5rem;
-    margin-left: 3rem;
-    margin-right: -5rem;
+    font-size: 2.5rem;
+    margin-left: 40rem;
   }
 
   .carrossel-card {
@@ -181,18 +178,18 @@
     height: 2rem;
     font-size: 1.2rem;
     margin-top: 10rem;
+    margin-left: 0.2rem;
   }
 
   .carrossel-setalateralDireita {
     width: 2rem;
     height: 2rem;
     font-size: 1.2rem;
-    margin-top: 10rem;
-    margin-left: 26.7rem;
+    margin-top: 13rem;
   }
 }
 
-@media (min-width: 601px) and (max-width: 1145px) {
+@media (min-width: 769px) and (max-width: 850px) {
   .carrossel-container {
     padding: 30px 20px;
   }
@@ -255,7 +252,13 @@
     width: 3rem;
     height: 3rem;
     font-size: 1.2rem;
-    margin-top: 10rem;
-    margin-left: 64.2rem;
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 851) and (max-width: 1700px) {
+  
+  .carrossel-setalateralDireita {
+    margin-right: 1500rem;
   }
 }
