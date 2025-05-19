@@ -1,6 +1,58 @@
+/* === Importações do Tailwind CSS  === */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* === Design System === */
+:root {
+
+  /* === Tipografia === */
+  --font-xs: 0.75rem; /* 12px */
+  --font-sm: 0.875rem; /* 14px */
+  --font-base: 1rem; /* 16px */
+  --font-lg: 1.125rem; /* 18px */
+  --font-xl: 1.25rem; /* 20px */
+  --font-2xl: 1.5rem; /* 24px */
+  --font-3xl: 1.875rem; /* 30px */
+  --font-4xl: 2.25rem; /* 36px */
+  --font-5xl: 3rem; /* 48px */
+  --font-6xl: 3.75rem; /* 60px */
+  --font-7xl: 4.5rem; /* 72px */
+  --font-8xl: 6rem; /* 96px */
+  --font-9xl: 8rem; /* 128px */
+
+  /* === Espaçamento (Padding, Margin, Width e Height) === */
+  --space-0: 0rem;
+  --space-05: 0.125rem; /* 2px */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem; /* 48px */
+  --space-16: 4rem; /* 64px */
+
+  /* === Paletas de Cores ==== */
+  --azul-principal: #002cdf;
+  --azul-secundario: #0f30b6;
+  --azul-hover: #2563eb;
+  --azul-piscina-1: #56faff;
+  --azul-piscina-2: #00adee;
+  --verde-escuro: #009245;
+  --cinza-300: #d1d5db;
+  --slate-400: #94a3b8;
+  --amarelo-clarinho: #fef08a;
+
+  /* === Border Radius === */
+  --radius-sm: 0.125rem; /* 2px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem; /* 8px */
+  --radius-xl: 0.75rem; /* 12px */
+  --radius-full: 9999px;
+}
 
 .titulo {
   font-size: 3rem;
