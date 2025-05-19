@@ -1,14 +1,24 @@
+import { useState } from "react";
+
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { UserProfile } from "./components/UserProfile/UserProfile";
+import {ProfileConfig} from "./components/Modais/ProfileConfig/ProfileConfig"
 
 import "./Profile.css";
 
 export function Profilee() {
+  const [open, setOpen] = useState(false);
+ 
+  const handleOpen = () => setOpen(!open);
+
+
   return (
     <>
       <Header />
-      <UserProfile />
+      <UserProfile onClick={handleOpen} />
+      <ProfileConfig open={open} handleOpen={handleOpen}/>
+
       <Footer />
     </>
   );

@@ -1,0 +1,22 @@
+.modal__container {
+  font-size: var(--font-lg);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.modal__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal__titulo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.modal__subtitulo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
