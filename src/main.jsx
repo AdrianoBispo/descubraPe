@@ -54,7 +54,7 @@ const router = createBrowserRouter([
 
   // Trilhas Page
   {
-    path: "/trilhas",
+    path: "/trilhas/:id",
     element: <Trilhas />,
   },
 

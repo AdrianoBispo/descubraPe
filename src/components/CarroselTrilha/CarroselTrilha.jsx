@@ -1,18 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { feijao, capelaDourada1, mulherEscalando, cultural, praia} from "../../assets/index";
+import { trilhas } from "../../db/trilhas";
 
 import "./CarroselTrilha.css";
-
-const trilhas = [
-  { id: 1, titulo: "Gastronômica", imagem: feijao },
-  { id: 2, titulo: "Capelas", imagem: capelaDourada1 },
-  { id: 3, titulo: "Aventuras", imagem: mulherEscalando },
-  { id: 4, titulo: "Cultural", imagem: cultural },
-  { id: 5, titulo: "Praia", imagem: praia },
-  // { id: 6, titulo: "Eventos", imagem: cultural }, Card para eventos
-];
 
 export function CarroselTrilha() {
   const [indiceAtual, setIndiceAtual] = useState(0);
@@ -28,7 +19,7 @@ export function CarroselTrilha() {
 
   const handleClick = (item) => {
     if (indiceAtual === trilhas.findIndex((trilha) => trilha.id === item.id)) {
-      navigate(`/trilhas`);
+      navigate(`/trilhas/${item.id}`);
     }
   };
 
@@ -57,11 +48,11 @@ export function CarroselTrilha() {
                 }}
               >
                 <img
-                  src={item.imagem}
-                  alt={item.titulo}
+                  src={item.capaItemCarrossel}
+                  alt={item.tituloCategoria}
                   className="carrossel-imagem"
                 />
-                <h3 className="carrossel-nomeTrilha">{item.titulo}</h3>
+                <h3 className="carrossel-nomeTrilha">{item.tituloCategoria}</h3>
               </div>
             ))}
             <button onClick={proximo} className="carrossel-setalateralDireita absolute right-1 top-6 transform -translate-y-1">

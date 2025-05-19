@@ -1,24 +1,40 @@
-import { FaCalendarDays } from "react-icons/fa6";
+import { useParams } from "react-router-dom";
 
 import {
-  saoBenedito,
-  capelaDourada,
-  madreDeus,
-} from "../../../../assets/index";
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Button,
+  Typography,
+  IconButton,
+  Rating,
+} from "@material-tailwind/react";
+
+import { FaCalendarDays } from "react-icons/fa6";
+import { FaHeart } from "react-icons/fa";
+
+import { trilhas } from "../../../../db/trilhas";
 
 import "./Categorias.css";
 
 export function Categorias() {
+  const { id } = useParams();
+  const trilha = trilhas.find((t) => t.id === id);
+
+  if (!trilha)
+    return <h1 className="titulo mt-32 text-center">Trilha não encontrada</h1>;
+
   return (
-    <div className="container mt-24">
+    <div className="container">
       {/* Conteúdo principal */}
       <main className="main">
         {/* Coluna do topo */}
         <div className="top-column">
           <div className="titulo-trilha">
-            <h2>Capelas em Pernambuco</h2>
+            <h2>{trilha.tituloCategoria}</h2>
             <div className="flex flex-row gap-1 items-center">
-              <FaCalendarDays size={20}/>
+              <FaCalendarDays size={20} />
               <p className="date text-lg font-medium">11-04</p>
             </div>
           </div>
@@ -35,35 +51,18 @@ export function Categorias() {
             {/* Cards */}
             <div className="cards">
               <button className="seta">❮</button>
-              <div className="card">
-                <img src={saoBenedito} alt="Capela 1" />
-                <h4>Capela de São Benedito</h4>
-                <div className="estrelas"> 5.0 ⭐⭐⭐⭐⭐</div>
-                <p>
-                  Capela histórica verde e branca construída no século XVII, com
-                  vista para o mar.
-                </p>
-                <button className="trilha-btn">Adicionar à Trilha</button>
-              </div>
-              <div className="card">
-                <img src={capelaDourada} alt="Capela 2" />
-                <h4>Capela Dourada</h4>
-                <div className="estrelas"> 5.0 ⭐⭐⭐⭐⭐</div>
-                <p>
-                  Consagrada como um dos monumentos barrocos mais importantes.
-                </p>
-                <button className="trilha-btn">Adicionar à Trilha</button>
-              </div>
-              <div className="card">
-                <img src={madreDeus} alt="Capela 3" />
-                <h4>Igreja da Madre Deus</h4>
-                <div className="estrelas"> 5.0 ⭐⭐⭐⭐⭐</div>
-                <p>
-                  Um templo católico da cidade do Recife, capital do estado de
-                  Pernambuco.
-                </p>
-                <button className="trilha-btn">Adicionar à Trilha</button>
-              </div>
+              {trilha.lugares.map((lugar) => (
+                <div className="card">
+                  <img src={lugar.capaLocal} alt={lugar.tituloLocal} />
+                  <h4>{lugar.tituloLocal}</h4>
+                  <div className="flex flex-row items-center">
+                    <Rating className="pb-1.5" value={parseInt(lugar.avaliacao)} readonly />
+                    <p className="text-green-600">({lugar.qtdeAvaliacao})</p>
+                  </div>
+                  <p>{lugar.descricao}</p>
+                  <button className="trilha-btn">Adicionar à Trilha</button>
+                </div>
+              ))}
               <button className="seta">❯</button>
             </div>
           </div>
@@ -73,7 +72,7 @@ export function Categorias() {
         <div className="right-column">
           <div className="map-wrapper">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.3833925172785!2d-34.8800266888442!3d-8.062318580527359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18bb910ecf63%3A0xfe0a857a7c19ce2b!2sCapela%20Dourada!5e0!3m2!1spt-BR!2sbr!4v1746074421198!5m2!1spt-BR!2sbr"
+              src={trilha.mapa}
               width="600"
               height="450"
               style={{ border: 0, width: "100%", height: "100%" }}
