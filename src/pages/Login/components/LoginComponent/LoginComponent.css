@@ -3,8 +3,7 @@
     margin: 0;
 }
 
-
-.cadastr-containerL {
+.cadastr-containerC {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,7 +13,7 @@
     margin: 0;
 }
 
-.cadastr-leftL {
+.cadastr-leftC {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -23,14 +22,14 @@
     overflow: hidden;
 }
 
-.cadastr-leftL .LoginCadastro {
+.cadastr-leftC .LoginCadastro {
     position: absolute;
     width: 90vw;
     height: 100vh;
     margin-right: 60rem;
 }
 
-.cadastr-rightL {
+.cadastr-rightC {
     background-color: white;
     margin-left: 60rem;
     position: absolute;
@@ -38,13 +37,13 @@
     height: 100vh;
 }
 
-.cadastr-rightL .Logo {
+.cadastr-rightC .Logo {
     display: inline-block;
     width: 3.5rem;
     margin-right: 2rem;
 }
 
-.cadastr-rightL h1 {
+.cadastr-rightC h1 {
     font-size: 2rem;
     font-weight: bold;
     color: #496582;
@@ -53,7 +52,7 @@
     margin-left: 12.5rem;
 }
 
-.cadastr-rightL h2 {
+.cadastr-rightC h2 {
     font-size: 2rem;
     font-weight: bold;
     color: #496582;
@@ -62,34 +61,28 @@
     margin-left: 18rem;
 }
 
-.principLogin {
+.princip {
     font-size: 0.9rem;
     color: #555;
     margin-bottom: 1rem;
-    margin-left: 8.5rem;
+    margin-left: 10rem;
 }
 
-.input-socialEmail {
+.btn-azulC {
     width: 40%;
-    padding: 0.5rem;
+    padding: 1rem;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 5px;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-left: 17.5rem;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border-bottom: 0.5px solid rgba(151, 151, 151, 0.5);
+    cursor: pointer;
 }
 
-.input-socialSenha {
-    width: 40%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    margin-left: 17.5rem;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border-bottom: 0.5px solid rgba(151, 151, 151, 0.5);
-}
+.input-socialC {
 
-.btn-googleL {
     width: 40%;
     padding: 0.5rem;
     margin-left: 17.5rem;
@@ -100,34 +93,16 @@
     cursor: pointer;
 }
 
-.btn-googleL .GoogleIconL {
+.input-socialC .GoogleIcon {
     display: inline-block;
     width: 2.5rem;
     margin-right: 1rem;
 }
 
-.btn-conectar {
-    width: 40%;
-    padding: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    margin-left: 17.5rem;
-    background-color: #00adee;
-    color: white;
-    border-radius: 5px;
-}
-
-.Ou {
-    position: relative;
-    margin-top: 2rem;
-    margin-left: 28.5rem;
-    margin-bottom: 2rem;
-}
-
-.btn-facebookL {
+.btn-facebookC {
     width: 40%;
     padding: 0.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-left: 17.5rem;
     background-color: #0f30b6;
     color: white;
@@ -136,12 +111,26 @@
     cursor: pointer;
 }
 
-.btn-facebookL .FacebookIconL {
+.btn-facebookC .FacebookIconC {
     display: inline-block;
     width: 2.5rem;
     font-size: 1.5rem;
 }
 
+.termos {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding: 2rem;
+}
+
+.termos,
 .conecte {
-    margin-left: 32rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+.termos a,
+.conecte a {
+    color: #007bff;
+    text-decoration: none;
 }

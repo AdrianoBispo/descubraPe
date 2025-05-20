@@ -3,9 +3,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { Banner } from "../../components/Banner/Banner";
 import { BookingCards } from "../../components/Cards/BookingCards";
 import { CarroselTrilha } from "../../components/CarroselTrilha/CarroselTrilha";
-import { MinhasTrilhas } from "../../components/MinhasTrilhas/MinhasTrilhas";
-
-import "./Home.css"
+import { MinhasTrilhas } from "./components/MinhasTrilhas/MinhasTrilhas";
 
 export function Home() {
   return (

@@ -1,8 +1,8 @@
 import { Card, CardBody, Typography, Button } from "@material-tailwind/react";
-import {alvoIcon, medalhaIcon, presenteIcon} from "../../assets/index";
+import {alvoIcon, medalhaIcon, presenteIcon} from "../../../../assets/index";
 
 import "./Convite.css";
-import "../Header/Header.css";
+import "../../../../components/Header/Header.css";
 
 export function Convite() {
   return (

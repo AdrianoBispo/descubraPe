@@ -1,95 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
 
 import { App } from "./App.jsx";
-import { Login } from "./pages/Login/Login.jsx";
-import { Cadastro } from "./pages/Cadastro/Cadastro.jsx";
-import { Home } from "./pages/Home/Home.jsx";
-import  Parcerias  from "./pages/Parcerias/Parcerias";
-import PlanosDeAssinatura from "./pages/Planos/Planos.jsx";
-import { Profilee } from "./pages/Profile/Profile.jsx";
-import { Trilhas } from "./pages/Trilhas/Trilhas.jsx";
-import { LugarEscolhido } from "./pages/LugarEscolhido/LugarEscolhido.jsx";
-import { Missoes } from "./pages/Missoes/Missoes.jsx";
-// import { Convite } from "./components/Convite/Convite.jsx";
+import { AuthProvider } from "./backend/components/AuthProvider.jsx";
 
 import "./index.css";
 
-const router = createBrowserRouter([
-  // Landing Page
-  {
-    path: "/",
-    element: <App />,
-  },
-
-  // Tela de Cadastro
-  {
-    path: "/cadastro",
-    element: <Cadastro />,
-  },
-
-  // Tela de Login
-  {
-    path: "/login",
-    element: <Login />,
-  },
-
-  // Home Page
-  {
-    path: "/home",
-    element: <Home />,
-  },
-
-  // Parcerias
-  {
-    path: "/parcerias",
-    element: <Parcerias />,
-  },
-
-  //Planos de Assinatura
-  {
-    path: "/planos",
-    element: <PlanosDeAssinatura />,
-  },
-
-  // Profile Page
-  {
-    path: "/profile",
-    element: <Profilee />,
-  },
-
-  // Missões Page
-  {
-    path: "/missoes",
-    element: <Missoes />,
-  },
-
-  // Trilhas Page
-  {
-    path: "/trilhas/:id",
-    element: <Trilhas />,
-  },
-
-  // LugarEscolhido Page
-  {
-    path: "/lugar-escolhido",
-    element: <LugarEscolhido />,
-  },
-
-  /* Teste
-    {
-      path: "/convite",
-      element: <Convite />,
-    },
-  */
-]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </ThemeProvider>
   </StrictMode>
 );

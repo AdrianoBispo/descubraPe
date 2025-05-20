@@ -1,13 +1,13 @@
 import { Header } from "../../components/Header/Header";
+import { Planos } from "./components/Planos";
 import { Footer } from "../../components/Footer/Footer";
-import { AchievementProfile } from "./components/AchievementProfile/AchievementProfile";
 
-export function Missoes() {
+export function Assinaturas() {
   return (
-    <>
+     <>
       <Header />
-      <AchievementProfile />
+      <Planos />
       <Footer />
-    </>
+     </>
   );
 }
