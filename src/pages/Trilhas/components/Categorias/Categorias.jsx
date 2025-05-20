@@ -14,7 +14,7 @@ import {
 import { FaCalendarDays } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 
-import { trilhas } from "../../../../db/trilhas";
+import { trilhas } from "../../../../mocks/trilhas";
 
 import "./Categorias.css";
 

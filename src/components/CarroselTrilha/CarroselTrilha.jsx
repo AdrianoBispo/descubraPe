@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { trilhas } from "../../db/trilhas";
+import { trilhas } from "../../mocks/trilhas";
 
 import "./CarroselTrilha.css";
 

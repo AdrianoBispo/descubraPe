@@ -11,7 +11,7 @@ import {
 
 import { FaHeart } from "react-icons/fa";
 
-import { cidadesBadaladas, dataBookingCards } from "../../db/lugares";
+import { cidadesBadaladas, dataBookingCards } from "../../mocks/lugares";
 
 import "./BookingCards.css";
 
