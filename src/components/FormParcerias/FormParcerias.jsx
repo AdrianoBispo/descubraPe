@@ -1,4 +1,4 @@
-import { presenteIcon2, estrelaIcon, clipeIcon } from "../../../assets/index";
+import { presenteIcon2, estrelaIcon, clipeIcon } from "../../assets/index";
 
 import "./FormParcerias.css";
 

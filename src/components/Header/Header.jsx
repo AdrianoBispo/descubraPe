@@ -41,12 +41,10 @@ export function Header() {
         </a>
         <div className="menu-buttonsHamb">
           <button className="BotaoLoginHamb" onClick={() => navigate("/login")}>Login</button>
-          <button className="BotaoCadastroHamb" onClick={() => navigate("/cadastro")}>Cadastre-se</button>
         </div>
       </nav>
       <div className="menu-buttons">
         <button className="BotaoLogin" onClick={() => navigate("/login")}>Login</button>
-        <button className="BotaoCadastro" onClick={() => navigate("/cadastro")}>Cadastre-se</button>
       </div>
     </header>
   );

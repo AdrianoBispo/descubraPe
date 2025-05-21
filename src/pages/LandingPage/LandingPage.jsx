@@ -3,8 +3,9 @@ import { Footer } from "../../components/Footer/Footer";
 import { Banner } from "../../components/Banner/Banner";
 import { CarroselTrilha } from "../../components/CarroselTrilha/CarroselTrilha";
 import { BookingCards } from "../../components/Cards/BookingCards";
-import { Convite } from "./components/Convite/Convite";
+import { Convite } from "../../components/Convite/Convite";
 import { Assinaturas } from "../Assinaturas/Assinaturas";
+import { FormParcerias } from "../../components/FormParcerias/FormParcerias";
 
 export function LandingPage() {
   return (
@@ -15,6 +16,7 @@ export function LandingPage() {
       <BookingCards />
       <Convite />
       <Assinaturas />
+      <FormParcerias />
       <Footer />
     </>
   );

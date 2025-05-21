@@ -37,7 +37,6 @@ export function LoginComponent({ onClick }) {
 
       <div className="cadastr-rightC">
         <h1>
-          {" "}
           <img src={logo} className="Logo" /> DESCUBRA PE
         </h1>
         <h2>
@@ -45,7 +44,7 @@ export function LoginComponent({ onClick }) {
           Descubra Pernambuco.
         </h2>
         <p className="princip">
-          Entre com sua conta ou crie sua conta e junte-se a diversas pessoas
+          Entre ou crie sua conta e junte-se a diversas pessoas
           que gostam de usar o Descubra PE
         </p>
 
@@ -53,11 +52,9 @@ export function LoginComponent({ onClick }) {
           Conecte-se com seu e-mail & senha
         </button>
         <button className="input-socialC" onClick={handleGoogleLogin}>
-          {" "}
           <img src={googleIcon} className="GoogleIcon" /> Entrar com o Google
         </button>
         <button className="btn-facebookC" onClick={handleFacebookLogin}>
-          {" "}
           <FaFacebook className="FacebookIconC" /> Entrar com o Facebook
         </button>
 

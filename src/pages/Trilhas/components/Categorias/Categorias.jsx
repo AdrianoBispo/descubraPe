@@ -1,18 +1,10 @@
 import { useParams } from "react-router-dom";
 
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Button,
-  Typography,
-  IconButton,
   Rating,
 } from "@material-tailwind/react";
 
 import { FaCalendarDays } from "react-icons/fa6";
-import { FaHeart } from "react-icons/fa";
 
 import { trilhas } from "../../../../mocks/trilhas";
 
