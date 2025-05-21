@@ -1,6 +1,6 @@
 import { FaFacebook } from "react-icons/fa";
-import { loginWithGoogle } from "../../../../backend/auth/googleLogin";
-import { loginWithFacebook } from "../../../../backend/auth/facebookLogin";
+import { loginWithGoogle } from "../../../../backend/FirebaseServices/auth/googleLogin";
+import { loginWithFacebook } from "../../../../backend/FirebaseServices/auth/facebookLogin";
 import { logo, googleIcon, bannerLogin } from "../../../../assets/index";
 import { useNavigate } from "react-router-dom";
 

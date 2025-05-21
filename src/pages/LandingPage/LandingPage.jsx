@@ -6,6 +6,7 @@ import { BookingCards } from "../../components/Cards/BookingCards";
 import { Convite } from "../../components/Convite/Convite";
 import { FormParcerias } from "../../components/FormParcerias/FormParcerias";
 import { Planos } from "../Assinaturas/components/Planos";
+import { Chatbot } from "../../backend/Chatbot/Chatbot";
 
 export function LandingPage() {
   return (
@@ -18,6 +19,7 @@ export function LandingPage() {
       <Planos />
       <FormParcerias />
       <Footer />
+      <Chatbot />
     </>
   );
 }
