@@ -58,10 +58,6 @@ export function Planos() {
             </button>
           </div>
         </div>
-
-        <footer className="text-sm text-blue-700 mt-10">
-          © 2025. Todos os direitos reservados.
-        </footer>
       </div>
     </div>
   );

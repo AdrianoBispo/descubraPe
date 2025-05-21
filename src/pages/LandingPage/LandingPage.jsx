@@ -4,8 +4,8 @@ import { Banner } from "../../components/Banner/Banner";
 import { CarroselTrilha } from "../../components/CarroselTrilha/CarroselTrilha";
 import { BookingCards } from "../../components/Cards/BookingCards";
 import { Convite } from "../../components/Convite/Convite";
-import { Assinaturas } from "../Assinaturas/Assinaturas";
 import { FormParcerias } from "../../components/FormParcerias/FormParcerias";
+import { Planos } from "../Assinaturas/components/Planos";
 
 export function LandingPage() {
   return (
@@ -15,7 +15,7 @@ export function LandingPage() {
       <CarroselTrilha />
       <BookingCards />
       <Convite />
-      <Assinaturas />
+      <Planos />
       <FormParcerias />
       <Footer />
     </>

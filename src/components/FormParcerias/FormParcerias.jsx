@@ -41,7 +41,7 @@ export function FormParcerias() {
                         <img src={presenteIcon2} className="Icon" /> Ofereça cupons exclusivos
                     </h4>
                     <p className="text-sm text-gray-700">
-                        Você escrever algo aqui ainda, esqueça a frase no pc do trabalho, amanhã eu coloco, calma...
+                        “Incentivo de visitas através de promoções e cupons exclusivos para os exploradores da plataforma através de missões.”
                     </p>
                 </div>
 
