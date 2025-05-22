@@ -55,7 +55,7 @@ export function CarroselTrilha() {
                 <h3 className="carrossel-nomeTrilha">{item.tituloItemCarrossel}</h3>
               </div>
             ))}
-            <button onClick={proximo} className="carrossel-setalateralDireita absolute right-1 top-6 transform -translate-y-1">
+            <button onClick={proximo} className="carrossel-setalateralDireita absolute right-1 transform -translate-y-1">
               ❯
             </button>
           </div>
@@ -65,10 +65,10 @@ export function CarroselTrilha() {
           <p>
             <strong>E muito mais</strong>
           </p>
-        </div>
         <p className="text">
           Monte a sua trilha personalizada de forma prática e rápida!
         </p>
+        </div>
       </div>
     </div>
   );

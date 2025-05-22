@@ -1,14 +1,20 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { navConfig } from "../../mocks/navConfig";
 import { logo } from "../../assets/index";
-
 import "./Header.css";
 
 export function Header() {
-  const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const links = navConfig[currentPath] || [];
 
+  const [isLogged, setisLogged] = useState(false);
   const [menuAberto, setMenuAberto] = useState(false);
+
+  useEffect(() => {
+    setisLogged(currentPath === "/");
+  }, [currentPath]);
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -21,30 +27,40 @@ export function Header() {
         <span className="TituloLogo">Descubra PE</span>
       </div>
 
-      {/* Menu Hamburguer */}
       <div className="menu-toggle" onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      {/* Menu suspenso no mobile */}
       <nav className={`${menuAberto ? "active" : ""}`}>
-        <a href="/#banner" className="Navbar">
-          Início
-        </a>
-        <a href="/#trilhas-carrossel" className="Navbar">
-          Trilhas
-        </a>
-        <a href="/#lugares" className="Navbar">
-          Lugares
-        </a>
+        <ul className={`${menuAberto ? "NavbarMobile" : "Navbar"}`}>
+          {links.map((item) => (
+            <li key={item.path}>
+              <Link to={item.path}>{item.label}</Link>
+            </li>
+          ))}
+        </ul>
         <div className="menu-buttonsHamb">
-          <button className="BotaoLoginHamb" onClick={() => navigate("/login")}>Login</button>
+          <Link to={isLogged ? "/profile" : "/login"} className="BotaoLogin">
+            {isLogged ? "Perfil" : "Login"}
+          </Link>
+          <Link to={isLogged ? "/landing-page" : currentPath} className={isLogged ? "BotaoLogin" : "hidden"}>
+            {isLogged ? "Sair" : ""}
+          </Link>
         </div>
       </nav>
+
       <div className="menu-buttons">
-        <button className="BotaoLogin" onClick={() => navigate("/login")}>Login</button>
+        <Link to={isLogged ? "/profile" : "/login"} className="BotaoLogin">
+          {isLogged ? "Perfil" : "Login"}
+        </Link>
+        <Link
+          to={isLogged ? "/landing-page" : currentPath}
+          className={isLogged ? "BotaoLogin" : "hidden"}
+        >
+          {isLogged ? "Sair" : ""}
+        </Link>
       </div>
     </header>
   );
