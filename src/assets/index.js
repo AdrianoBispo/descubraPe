@@ -14,6 +14,9 @@ import backgroundBanner from "./banner/background-banner.png";
 // Banner
 import bannerLogin from "./banner/banner-login.png";
 import mulherBanner from "./banner/mulher-banner.png";
+import Pins from "./banner/Pins.png";
+import Bandeira from "./banner/BandeiraPernambuco.png";
+import Seta from "./banner/SetaAventure.png";
 
 // Carrossel
 import cultural from "./carrossel/cultural.jpg";
@@ -69,4 +72,7 @@ export {
   presenteIcon2,
   estrelaIcon,
   clipeIcon,
+  Pins,
+  Bandeira,
+  Seta,
 };

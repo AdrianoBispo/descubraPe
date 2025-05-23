@@ -104,8 +104,8 @@
   color: #7a6618;
   border: none;
   border-radius: 50%;
-  width: 3%;
-  height: 15%;
+  width: 4.5rem;
+  height: 4.5rem;
   font-size: 200%;
   cursor: pointer;
   margin-left: 0.2rem;
@@ -120,8 +120,8 @@
   color: #7a6618;
   border: none;
   border-radius: 50%;
-  width: 3%;
-  height: 15%;
+  width: 4.5rem;
+  height: 4.5rem;
   font-size: 200%;
   cursor: pointer;
   margin-top: 10%;
@@ -172,7 +172,7 @@
     width: 2rem;
     height: 2rem;
     font-size: 1.2rem;
-    margin-top: 10rem;
+    margin-top: 40%;
     margin-left: 0.2rem;
   }
 
@@ -180,7 +180,7 @@
     width: 2rem;
     height: 2rem;
     font-size: 1.2rem;
-    margin-top: 13rem;
+    margin-top: 40%;
   }
 }
 
@@ -247,7 +247,7 @@
     width: 3rem;
     height: 3rem;
     font-size: 1.2rem;
-    margin-top: 8rem;
+    margin-top: 10rem;
   }
 }
 
