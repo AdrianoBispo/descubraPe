@@ -1,4 +1,5 @@
 export const navConfig = {
+  // Rotas Privadas
   "/": [
     { label: "Início", path: "/" },
     { label: "Trilhas", path: "/trilhas" },
@@ -20,6 +21,8 @@ export const navConfig = {
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
   ],
+
+  // Rotas Públicas
   "/landing-page": [
     { label: "Início", path: "/" },
     { label: "Trilhas", path: "/trilhas" },
