@@ -13,6 +13,13 @@ export const navConfig = {
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
   ],
+  "/profile": [
+    { label: "Início", path: "/" },
+    { label: "Trilhas", path: "/trilhas" },
+    { label: "Missões", path: "/missoes" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
   "/landing-page": [
     { label: "Início", path: "/" },
     { label: "Trilhas", path: "/trilhas" },

@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import { navConfig } from "../../mocks/navConfig";
 import { logo } from "../../assets/index";
+import { logout } from "../../backend/auth/loginNormal/logout";
+
 import "./Header.css";
 
 export function Header() {
+ const handleLogout = async () => {
+    await logout();
+    <Navigate to="/login"></Navigate> // redireciona após logout
+  };
+
+
   const location = useLocation();
   const currentPath = location.pathname;
   const links = navConfig[currentPath] || [];
@@ -56,7 +64,7 @@ export function Header() {
           {isLogged ? "Perfil" : "Login"}
         </Link>
         <Link
-          to={isLogged ? "/landing-page" : currentPath}
+          onClick={handleLogout}
           className={isLogged ? "BotaoLogin" : "hidden"}
         >
           {isLogged ? "Sair" : ""}
