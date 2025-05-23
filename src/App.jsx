@@ -8,6 +8,7 @@ import { Home } from "./pages/Home/Home";
 import { Profile } from "./pages/Profile/Profile";
 import { Login } from "./pages/Login/Login";
 import { Trilhas } from "./pages/Trilhas/Trilhas";
+import { LugarEscolhido } from './pages/LugarEscolhido/LugarEscolhido';
 
 export function App() {
   return (
@@ -18,6 +19,7 @@ export function App() {
         <Route path="/assinaturas" element={<Assinaturas />} />
         <Route path="/login" element={<Login />} />
         <Route path="/trilhas/:id" element={<Trilhas />} />
+        <Route path="/lugar-escolhido" element={<LugarEscolhido />} />
         <Route
           path="/"
           element={

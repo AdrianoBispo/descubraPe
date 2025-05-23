@@ -26,6 +26,12 @@ export const navConfig = {
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
   ],
+  "/lugar-escolhido": [
+    { label: "Início", path: "/" },
+    { label: "Trilhas", path: "/trilhas" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
   "/parcerias": [
     { label: "Início", path: "/" },
     { label: "Trilhas", path: "/trilhas" },
