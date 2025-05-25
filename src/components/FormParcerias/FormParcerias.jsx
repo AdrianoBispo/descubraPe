@@ -4,7 +4,7 @@ import "./FormParcerias.css";
 
 export function FormParcerias() {
     return (
-        <div className="bg-white min-h-screen flex flex-col items-center px-4 py-10 Principal">
+        <div className="mt-14 bg-white min-h-screen flex flex-col items-center px-4 py-10 Principal">
             <div className="max-w-4xl w-full">
                 <h2 className="font-bold text-center Titulo1">
                     Seja um parceiro do Descubra PE

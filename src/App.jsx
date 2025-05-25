@@ -9,6 +9,7 @@ import { Profile } from "./pages/Profile/Profile";
 import { Login } from "./pages/Login/Login";
 import { Trilhas } from "./pages/Trilhas/Trilhas";
 import { LugarEscolhido } from './pages/LugarEscolhido/LugarEscolhido';
+import { MinhasTrilhas } from "./pages/Home/components/MinhasTrilhas/MinhasTrilhas";
 
 export function App() {
   return (
@@ -41,6 +42,14 @@ export function App() {
           element={
             <PrivateRoute>
               <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/trilhas"
+          element={
+            <PrivateRoute>
+              <MinhasTrilhas />
             </PrivateRoute>
           }
         />

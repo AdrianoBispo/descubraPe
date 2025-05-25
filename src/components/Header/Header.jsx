@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, Navigate, useLocation } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { navConfig } from "../../mocks/navConfig";
 import { logo } from "../../assets/index";
 import { logout } from "../../backend/auth/loginNormal/logout";
@@ -7,7 +7,9 @@ import { logout } from "../../backend/auth/loginNormal/logout";
 import "./Header.css";
 
 export function Header() {
- const handleLogout = async () => {
+  const navigate = useNavigate();
+ 
+  const handleLogout = async () => {
     await logout();
     <Navigate to="/login"></Navigate> // redireciona após logout
   };
@@ -32,7 +34,7 @@ export function Header() {
     <header className="flex fixed w-full top-0 left-0 justify-between items-center z-10 p-3 bg-white shadow-md">
       <div className="flex items-center ml-5">
         <img src={logo} alt="" className="Logo" />
-        <span className="TituloLogo">Descubra PE</span>
+        <span className="TituloLogo" onClick={() => navigate("/")}>Descubra PE</span>
       </div>
 
       <div className="menu-toggle" onClick={toggleMenu}>

@@ -25,7 +25,7 @@ export function BookingCards() {
 
       {cidadesBadaladas.map((cidade) => (
         <div className="inline-block">
-          <Card key={cidade.id} className="w-full max-w-[26rem] shadow-lg m-7">
+          <Card key={cidade.id} className="w-full max-w-[20rem] shadow-lg m-7">
             <CardHeader floated={false} color="blue-gray">
               <img
                 src={cidade.image}
@@ -101,7 +101,7 @@ export function BookingCards() {
         <div className="inline-block">
           <Card
             key={dataBookingCard.id}
-            className="w-full max-w-[26rem] shadow-lg m-7"
+            className="w-full max-w-[20rem] shadow-lg m-7"
           >
             <CardHeader floated={false} color="blue-gray">
               <img src={dataBookingCard.image} alt="ui/ux review check" />

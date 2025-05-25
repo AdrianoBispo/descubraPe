@@ -33,6 +33,12 @@ import presenteIcon from "./convite/presente.png";
 import presenteIcon2 from "./icones/presente-icon.png";
 import estrelaIcon from "./icones/estrela-icon.png";
 import clipeIcon from "./icones/clipe-icon.png";
+import Badge from "./icones/Badge.png";
+import Badge1 from "./icones/Badge1.png";
+import Badge2 from "./icones/Badge2.png";
+import Ranking1 from "./icones/Ranking.png";
+import Pontos from "./icones/SeusPontos.png";
+import Missoes from "./icones/Missoes.png";
 
 // Lugares
 import altoDaSe from "./lugares/alto-da-se.jpg";
@@ -77,4 +83,10 @@ export {
   Pins,
   Bandeira,
   Seta,
+  Badge,
+  Badge1,
+  Badge2,
+  Ranking1,
+  Pontos,
+  Missoes,
 };
