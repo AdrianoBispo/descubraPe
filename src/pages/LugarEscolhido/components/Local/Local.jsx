@@ -24,18 +24,18 @@ export function Local() {
       {/* Titulo, subtitulo e avaliação */}
       <div className="w-full flex flex-row items-center">
         <div className="w-1/2 justify-center flex-col">
-          <h1 className="text-4xl font-bold text-[#0033cc] mb-4 ml-2">
+          <h1 className="font-bold text-[#0033cc] mb-4 ml-2 TituloPrincipal">
             Capela Dourada - Recife
           </h1>
           <div className="flex items-center">
-            <span className="text-gray-500 text-sm pt-1 mr-2 ml-3">4.8</span>
+            <span className="text-gray-500 text-sm pt-1 mr-1 ml-1">4.8</span>
             <Rating value={5} readonly className="mr-2" />
-            <span className="pt-1 font-medium text-[#0033cc] ml-4">
+            <span className="pt-1 font-medium text-[#0033cc] ml-4 Avaliacao">
               50 Avaliações
             </span>
           </div>
         </div>
-        <div className="flex flex-row gap-32">
+        <div className="Opcoes">
           <button className="text-[#0033cc] underline flex flex-row items-center">
             <IoShareOutline size={26} className="pb-0.5 mr-1" /> Compartilhar
           </button>
@@ -49,13 +49,13 @@ export function Local() {
       </div>
 
       {/* Imagens */}
-      <div className="flex flex-row items-center justify-center gap-1 mr-12 my-6">
+      <div className="flex flex-row items-center justify-center gap-1 my-6">
         <img
-          className="w-2/3"
+          className="ImagemPrincipal"
           src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png"
           alt=""
         />
-        <div className="flex flex-col gap-1 w-1/3">
+        <div className="Imagens">
           <img
             src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png"
             alt=""
@@ -72,27 +72,27 @@ export function Local() {
       <div className="flex flex-row items-center">
         <div className="flex flex-col w-1/3 gap-2">
           <h3 className="text-[#0033cc] font-bold">Endereço:</h3>
-          <p className="text-[#0033cc] w-3/5">
+          <p className="text-[#0033cc] Endereco">
             Altura da rua Siqueira Campos, R. do Imperador Pedro II, S/N - Santo
             Antônio, Recife - PE, 50010-240
           </p>
         </div>
-        <div className="flex flex-col pb-12 gap-2">
+        <div className="flex flex-col pb-12 gap-2 Horario">
           <h3 className="text-[#0033cc] font-bold">
             Horário de Funcionamento*:
           </h3>
           <p className="text-[#0033cc]">
-            Funciona das 8h às 16h (Segunda a Sexta-feira)
+            Funciona das 8h às 16h <br />(Segunda a Sexta-feira)
           </p>
         </div>
       </div>
 
       {/* Seção de Avaliação */}
-      <div className="mt-32 flex flex-col">
+      <div className="mt-32 flex flex-col w-82">
         <Card
           color="transparent"
           shadow={false}
-          className="max-w-[60rem] border rounded-xl"
+          className="max-w-[88rem] border rounded-xl"
         >
           <CardHeader
             color="transparent"
