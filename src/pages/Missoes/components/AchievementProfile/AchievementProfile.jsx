@@ -18,7 +18,7 @@ export function AchievementProfile() {
         <img
           src={usuario}
           alt="Foto de perfil"
-          className="w-20 h-20 rounded-full object-cover avatar"
+          className="w-40 h-40 mb-4 mr-4 rounded-full object-cover avatar"
         />
         <div>
           <h2 className="nome">Bruna Santos</h2>
