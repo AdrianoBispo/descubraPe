@@ -25,7 +25,8 @@ import mulherEscalando from "./carrossel/mulher-escalando.webp";
 import praia from "./carrossel/praia.webp";
 
 // Icones
-import googleIcon from "./icones/google-icon.webp";
+import googleIcon from "./icones/google-icon.svg";
+import facebookIcon from "./icones/facebook-icon.svg"
 import alvoIcon from "./convite/alvo.png";
 import medalhaIcon from "./convite/medalha.png";
 import presenteIcon from "./convite/presente.png";
@@ -59,6 +60,7 @@ export {
   mulherEscalando,
   praia,
   googleIcon,
+  facebookIcon,
   altoDaSe,
   brennand,
   capelaDourada,
