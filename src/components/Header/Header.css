@@ -1,5 +1,5 @@
 .Logo {
-  margin-left: 5rem;
+  margin-left: 2rem;
   width: 3rem;
   height: 3rem;
   border: 50%;
@@ -10,46 +10,51 @@
   font-weight: bold;
   font-size: 1.5rem;
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 .Navbar {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
   margin-right: 5rem;
   color: #002cdf;
 }
 
-.menu-buttons {
+.NavbarMobile {
   display: flex;
-  flex-direction: row;
-  gap: 12px;
-  margin-top: 10px;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #002cdf;
+}
+
+.menu-buttons {
+    display: flex;
 }
 
 .menu-buttonsHamb {
   display: none;
-  flex-direction: row;
-  gap: 12px;
-  margin-top: 10px;
 }
 
 .BotaoLogin {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
   color: #002cdf;
   border: 1px solid #b4b4b4;
   border-radius: 2rem;
   width: 7rem;
   height: 2.5rem;
+  margin-right: 2rem;
 }
 
-.BotaoCadastro {
-  margin-right: 2.5rem;
-  position: relative;
+.BotaoLogin:hover {
+  align-items: center;
+  justify-content: center;
   background-color: #002cdf;
   color: #fff;
-  border-radius: 40px;
-  width: 10rem;
-  height: 2, 5rem;
+  border: 2px solid #b4b4b4;
 }
 
 .BotaoLoginHamb {
@@ -88,7 +93,7 @@
   transition: 0.4s;
 }
 
-@media (min-width: 0px) and (max-width: 1124px) {
+@media (min-width: 0px) and (max-width: 1360px) {
   nav {
     display: none;
     flex-direction: column;

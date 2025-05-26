@@ -59,7 +59,7 @@ export function Convite() {
           </CardBody>
         </Card>
       </div>
-      <p className="text-center mb-12 text-xl textF ">
+      <p className="text-center mb-12 text-xl textF">
         Monte trilhas, complete missões e ganhe recompensas enquanto descobre o
         que há de mais autêntico no nosso estado.
       </p>

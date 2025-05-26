@@ -55,31 +55,25 @@ export function ModalLogin ({ open, onClose }) {
       <Card className="mx-auto w-full max-w-[24rem]">
         <CardBody className="flex flex-col gap-4">
           <Typography variant="h4" color="blue-gray">
-            {isSignUp ? "Sign Up" : "Sign In"}
+            {isSignUp ? "Cadastre-se" : "Já tem uma conta?"}
           </Typography>
           <Typography className="mb-3 font-normal" variant="paragraph" color="gray">
             {isSignUp
-              ? "Fill in your details to create an account."
-              : "Enter your email and password to sign in."}
+              ? "Preencha os campos abaixo e crie sua conta."
+              : "Faça seu login digitando seu e-mail e senha."}
           </Typography>
 
           {isSignUp && (
             <>
-              <Typography className="-mb-2" variant="h6">
-                Name
-              </Typography>
               <Input
-                label="Full Name"
+                label="Nome e Sobrenome"
                 size="lg"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
               />
 
-              <Typography className="-mb-2" variant="h6">
-                Phone
-              </Typography>
               <Input
-                label="Phone Number"
+                label="Telefone"
                 size="lg"
                 value={telefone}
                 onChange={(e) => setTelefone(e.target.value)}
@@ -87,21 +81,15 @@ export function ModalLogin ({ open, onClose }) {
             </>
           )}
 
-          <Typography className="-mb-2" variant="h6">
-            Email
-          </Typography>
           <Input
-            label="Email"
+            label="E-mail"
             size="lg"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <Typography className="-mb-2" variant="h6">
-            Password
-          </Typography>
           <Input
-            label="Password"
+            label="Senha"
             size="lg"
             type="password"
             value={senha}
@@ -111,11 +99,11 @@ export function ModalLogin ({ open, onClose }) {
 
         <CardFooter className="pt-0">
           <Button variant="gradient" onClick={handleSubmit} fullWidth>
-            {isSignUp ? "Create Account" : "Sign In"}
+            {isSignUp ? "Criar conta" : "Entrar"}
           </Button>
 
           <Typography variant="small" className="mt-4 flex justify-center">
-            {isSignUp ? "Already have an account?" : "Don't have an account?"}
+            {isSignUp ? "Já tem uma conta?" : "Ainda não tem uma conta?"}
             <Typography
               as="a"
               href="#toggle"
@@ -124,7 +112,7 @@ export function ModalLogin ({ open, onClose }) {
               className="ml-1 font-bold cursor-pointer"
               onClick={() => setIsSignUp(!isSignUp)}
             >
-              {isSignUp ? "Sign In" : "Sign Up"}
+              {isSignUp ? "Entrar" : "Cadastre-se"}
             </Typography>
           </Typography>
         </CardFooter>

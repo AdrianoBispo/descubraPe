@@ -1,11 +1,16 @@
 import { minhasTrilhas } from "../../../../mocks/minhasTrilhas";
+import { Header } from "../../../../components/Header/Header";
+
+import { BsPencil } from "react-icons/bs";
 
 import "./MinhasTrilhas.css";
 
 export function MinhasTrilhas() {
   return (
+    <>
+    <Header />
     <div className="trilha-container">
-      <h1 className="titulo text-center">Minha Trilha Personalizada</h1>
+      <h1 className="titulo mt-16 mr-8 text-center">Minha Trilha Personalizada</h1>
       <p className="descricao">
         Explore Pernambuco no seu ritmo com os lugares que você mais deseja
         conhecer.
@@ -25,6 +30,7 @@ export function MinhasTrilhas() {
                   ⭐ {ponto.avaliacao} ({ponto.votos})
                 </p>
               </div>
+              <button className="mt-1 mr-12 cursor-pointer btn-editar"><BsPencil size={16}/></button>
               <button className="btn-remover">✖</button>
             </div>
           </div>
@@ -32,10 +38,10 @@ export function MinhasTrilhas() {
       </div>
 
       <div className="botoes">
-        <button className="btn-editar">Editar Trilha</button>
         <button className="btn-salvar">Salvar Trilha</button>
         <button className="btn-compartilhar">Compartilhar Trilha</button>
       </div>
     </div>
+    </>
   );
 }

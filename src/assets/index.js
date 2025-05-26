@@ -14,6 +14,9 @@ import backgroundBanner from "./banner/background-banner.png";
 // Banner
 import bannerLogin from "./banner/banner-login.png";
 import mulherBanner from "./banner/mulher-banner.png";
+import Pins from "./banner/Pins.png";
+import Bandeira from "./banner/BandeiraPernambuco.png";
+import Seta from "./banner/SetaAventure.png";
 
 // Carrossel
 import cultural from "./carrossel/cultural.jpg";
@@ -22,13 +25,20 @@ import mulherEscalando from "./carrossel/mulher-escalando.webp";
 import praia from "./carrossel/praia.webp";
 
 // Icones
-import googleIcon from "./icones/google-icon.webp";
+import googleIcon from "./icones/google-icon.svg";
+import facebookIcon from "./icones/facebook-icon.svg"
 import alvoIcon from "./convite/alvo.png";
 import medalhaIcon from "./convite/medalha.png";
 import presenteIcon from "./convite/presente.png";
 import presenteIcon2 from "./icones/presente-icon.png";
 import estrelaIcon from "./icones/estrela-icon.png";
 import clipeIcon from "./icones/clipe-icon.png";
+import Badge from "./icones/Badge.png";
+import Badge1 from "./icones/Badge1.png";
+import Badge2 from "./icones/Badge2.png";
+import Ranking1 from "./icones/Ranking.png";
+import Pontos from "./icones/SeusPontos.png";
+import Missoes from "./icones/Missoes.png";
 
 // Lugares
 import altoDaSe from "./lugares/alto-da-se.jpg";
@@ -56,6 +66,7 @@ export {
   mulherEscalando,
   praia,
   googleIcon,
+  facebookIcon,
   altoDaSe,
   brennand,
   capelaDourada,
@@ -69,4 +80,13 @@ export {
   presenteIcon2,
   estrelaIcon,
   clipeIcon,
+  Pins,
+  Bandeira,
+  Seta,
+  Badge,
+  Badge1,
+  Badge2,
+  Ranking1,
+  Pontos,
+  Missoes,
 };

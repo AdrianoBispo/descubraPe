@@ -12,7 +12,7 @@ import "./Categorias.css";
 
 export function Categorias() {
   const { id } = useParams();
-  const trilha = trilhas.find((t) => t.id === id);
+  const trilha = trilhas.find((t) => t.tituloItemCarrossel === id);
 
   if (!trilha)
     return <h1 className="titulo mt-32 text-center">Trilha não encontrada</h1>;

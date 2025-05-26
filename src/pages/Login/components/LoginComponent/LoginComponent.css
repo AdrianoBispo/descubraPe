@@ -1,136 +1,405 @@
-* {
-    padding: 0;
-    margin: 0;
+.container_login {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-.cadastr-containerC {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #f5f5f5;
-    padding: 0;
-    margin: 0;
+.container_login-img {
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
 }
 
-.cadastr-leftC {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.container_login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+.container_login_form-titulo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-size: 2rem;
+  color: #496584;
+  font-weight: 700;
 }
 
-.cadastr-leftC .LoginCadastro {
-    position: absolute;
-    width: 90vw;
-    height: 100vh;
-    margin-right: 60rem;
+.container_login_form-titulo img {
+  width: 3rem;
+  height: 3rem;
 }
 
-.cadastr-rightC {
-    background-color: white;
-    margin-left: 60rem;
-    position: absolute;
-    width: 100vh;
-    height: 100vh;
+.container_login_form-subtitulo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #496582;
 }
 
-.cadastr-rightC .Logo {
-    display: inline-block;
-    width: 3.5rem;
-    margin-right: 2rem;
+.container_login_form-paragrafo {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 10rem 0 10rem;
 }
 
-.cadastr-rightC h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #496582;
-    margin-top: 10rem;
-    margin-bottom: 1rem;
-    margin-left: 12.5rem;
+.btn-conecte {
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 45%;
+  height: 8%;
+  background-color: #00aaff;
+  color: white;
+  border-radius: 5px;
 }
 
-.cadastr-rightC h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #496582;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    margin-left: 18rem;
+.btn-conecte:hover {
+  background-color: #496582;
 }
 
-.princip {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 1rem;
-    margin-left: 10rem;
+.btn-google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 45%;
+  height: 8%;
+  padding: 0px 4rem 0 1rem;
+
+  border: solid 1px #555;
+  border-radius: 5px;
 }
 
-.btn-azulC {
-    width: 40%;
-    padding: 1rem;
-    background-color: #00aaff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 17.5rem;
-    cursor: pointer;
+.btn-google img {
+  width: 48px;
+  height: 48px;
 }
 
-.input-socialC {
-
-    width: 40%;
-    padding: 0.5rem;
-    margin-left: 17.5rem;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgba(151, 151, 151, 0.5);
-    border-radius: 5px;
-    cursor: pointer;
+.btn-google p {
+  font-size: 1.6rem;
+  color: #4a4a4a;
+  font-weight: 400;
 }
 
-.input-socialC .GoogleIcon {
-    display: inline-block;
-    width: 2.5rem;
-    margin-right: 1rem;
+.btn-google:hover {
+  background-color: #496584;
 }
 
-.btn-facebookC {
-    width: 40%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    margin-left: 17.5rem;
-    background-color: #0f30b6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.btn-google:hover p {
+  color: #fff;
 }
 
-.btn-facebookC .FacebookIconC {
-    display: inline-block;
-    width: 2.5rem;
-    font-size: 1.5rem;
+.btn-facebook {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 45%;
+  height: 8%;
+  padding: 0px 3.1rem 0 1rem;
+
+  border: solid 1px #555;
+  border-radius: 5px;
+
+  color: #fff;
+  background-color: var(--azul-secundario);
+}
+
+.btn-facebook img {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-facebook:hover {
+  background-color: #496584;
+}
+
+.btn-facebook p {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .termos {
-    margin-left: 8rem;
-    margin-right: 8rem;
-    padding: 2rem;
+  font-size: 1rem;
+  text-align: left;
+
+  color: #888;
+  padding: 0 15rem 0 16rem;
 }
 
-.termos,
-.conecte {
-    color: #888;
-    margin-top: 10px;
+.termos a {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
 }
 
-.termos a,
-.conecte a {
-    color: #007bff;
-    text-decoration: none;
+.termos a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1790px) {
+  .container_login_form {
+    margin-top: 2rem;
+  }
+
+  .container_login_form-titulo {
+    gap: 0.5rem;
+
+    font-size: 2rem;
+  }
+
+  .container_login_form-titulo img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .container_login_form-subtitulo {
+    font-size: 2.5rem;
+  }
+
+  .container_login_form-paragrafo {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0 10rem 0 10rem;
+  }
+
+  .btn-conecte {
+    font-size: 1.1rem;
+    width: 45%;
+    height: 8%;
+  }
+
+  .btn-google {
+    padding: 0px 4rem 0 1rem;
+  }
+
+  .btn-google img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-google p {
+    font-size: 1.2rem;
+  }
+
+  .btn-facebook {
+    padding: 0px 3.2rem 0 1rem;
+  }
+
+  .btn-facebook img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-facebook p {
+    font-size: 1.125rem;
+  }
+
+  .termos {
+    font-size: 0.8rem;
+    padding: 0 12rem 0 13rem;
+  }
+
+  .termos a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1789px) {
+  .container_login_form {
+    gap: 2rem;
+  }
+
+  .container_login_form-titulo {
+    gap: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .container_login_form-titulo img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .container_login_form-subtitulo {
+    font-size: 2.5rem;
+  }
+
+  .container_login_form-paragrafo {
+    font-size: 1.5rem;
+    padding: 0 10rem 0 10rem;
+  }
+
+  .btn-conecte {
+    font-size: 1.2rem;
+  }
+
+  .btn-google {
+    padding: 0px 4rem 0 1rem;
+  }
+
+  .btn-google p {
+    font-size: 1.5rem;
+  }
+
+  .btn-facebook {
+    padding: 0px 3.2rem 0 1rem;
+  }
+
+  .btn-facebook p {
+    font-size: 1.4rem;
+  }
+
+  .termos {
+    font-size: 1rem;
+    padding: 0 13rem 0 14.8rem;
+  }
+
+  .termos a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1635px) {
+  .container_login-img {
+    width: 60%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .container_login_form {
+    gap: 1rem;
+  }
+
+  .container_login_form-titulo {
+    gap: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .container_login_form-subtitulo {
+    font-size: 2rem;
+  }
+
+  .container_login_form-paragrafo {
+    font-size: 1.2rem;
+    padding: 0 6rem 0 6rem;
+  }
+
+  .btn-conecte {
+    font-size: 1.1rem;
+    width: 60%;
+  }
+
+  .btn-google {
+    padding: 0px 5.4rem 0 1rem;
+    width: 60%;
+  }
+
+  .btn-google p {
+    font-size: 1.2rem;
+  }
+
+  .btn-facebook {
+    padding: 0px 4rem 0 1rem;
+    width: 60%;
+  }
+
+  .btn-facebook p {
+    font-size: 1.2rem;
+  }
+
+  .termos {
+    font-size: 1rem;
+    padding: 0 5rem 0 7.5rem;
+  }
+
+  .termos a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1450px) {
+  .container_login {
+    flex-direction: column;
+  }
+  .container_login-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .container_login_form {
+    gap: 2rem;
+  }
+
+  .container_login_form-titulo {
+    gap: 1rem;
+    font-size: 3rem;
+  }
+
+  .container_login_form-titulo img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .container_login_form-subtitulo {
+    font-size: 4rem;
+  }
+
+  .container_login_form-paragrafo {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 0 20rem 0 20rem;
+  }
+
+  .btn-conecte {
+    font-size: 2rem;
+    width: 50%;
+    height: 10vh;
+    border-radius: 10px;
+  }
+
+  .btn-google {
+    padding: 0px 10rem 0 3rem;
+    width: 50%;
+    height: 10vh;
+    border-radius: 10px;
+  }
+
+  .btn-google img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .btn-google p {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .btn-facebook {
+    padding: 0px 8rem 0 3rem;
+    width: 50%;
+    height: 10vh;
+    border-radius: 10px;
+  }
+
+  .btn-facebook img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .btn-facebook p {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .termos {
+    font-size: 1.8rem;
+    padding: 0 15rem 0 20rem;
+  }
+
+  .termos a {
+    font-size: 1.8rem;
+  }
 }

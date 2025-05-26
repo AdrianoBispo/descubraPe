@@ -12,7 +12,8 @@ import {
 export const trilhas = [
   {
     id: "01",
-    tituloCategoria: "Gastronômica",
+    tituloItemCarrossel: "Gastronômica",
+    tituloCategoria: "Melhores Restaurantes de Pernambuco",
     capaItemCarrossel: feijao,
     mapa: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63203.34944207094!2d-34.934029651531326!3d-8.080120641679818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smelhores%20restaurantes%20de%20pernambuco!5e0!3m2!1spt-BR!2sbr!4v1747440704941!5m2!1spt-BR!2sbr",
     lugares: [  
@@ -47,7 +48,8 @@ export const trilhas = [
   },
   {
     id: "02",
-    tituloCategoria: "Capelas",
+    tituloItemCarrossel: "Capelas",
+    tituloCategoria: "Conheça as Capelas de Pernambuco",
     capaItemCarrossel: capelaDourada1,
     mapa: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d53147.87485758155!2d-34.937291027824166!3d-8.077045533270361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scapelas!5e0!3m2!1spt-BR!2sbr!4v1747440364773!5m2!1spt-BR!2sbr",
     lugares: [  
@@ -82,7 +84,8 @@ export const trilhas = [
   },
   {
     id: "03",
-    tituloCategoria: "Aventuras",
+    tituloItemCarrossel: "Aventuras",
+    tituloCategoria: "Explore as belezas naturais de Pernambuco",
     capaItemCarrossel: mulherEscalando,
     mapa: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2020434.5536983826!2d-35.11640625196226!3d-8.483698602589886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1strilhas%20e%20cachoreiras%20de%20pernambuco!5e0!3m2!1spt-BR!2sbr!4v1747441050373!5m2!1spt-BR!2sbr",
     lugares: [  
@@ -117,7 +120,8 @@ export const trilhas = [
   },
   {
     id: "04",
-    tituloCategoria: "Cultural",
+    tituloItemCarrossel: "Cultural",
+    tituloCategoria: "Conheça o melhor da cultura de Pernambuco",
     capaItemCarrossel: cultural,
     mapa: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2020382.5726844454!2d-35.11633327649954!3d-8.493575462883674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sas%20melhores%20feiras%20de%20pernambuco!5e0!3m2!1spt-BR!2sbr!4v1747440959031!5m2!1spt-BR!2sbr",
     lugares: [  
@@ -152,7 +156,8 @@ export const trilhas = [
   },
   {
     id: "05",
-    tituloCategoria: "Praia",
+    tituloItemCarrossel: "Praias",
+    tituloCategoria: "Conheça as praias mais visitadas de Pernambuco",
     capaItemCarrossel: praia,
     mapa: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d505370.21054641536!2d-35.277661751755225!3d-8.282408593044456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smelhores%20praias%20de%20pernambuco!5e0!3m2!1spt-BR!2sbr!4v1747441176862!5m2!1spt-BR!2sbr",
     lugares: [  

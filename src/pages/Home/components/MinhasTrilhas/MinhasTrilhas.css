@@ -3,8 +3,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  width: 100vw;
-  height: 100vh;
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Poppins', sans-serif;
@@ -12,11 +10,11 @@
 }
 
 .descricao {
+  display: flex;
+  justify-content: center;
   font-size: 1rem;
   font-weight: 400;
   color: #000000;
-  margin-left: 38rem;
-  margin-bottom: 1.5rem;
 }
 
 .data {
@@ -99,15 +97,18 @@
   color: #d00;
 }
 
+.btn-editar:hover {
+  color: #002cdf;
+}
+
 .botoes {
-  margin-top: 2rem;
-  margin-left: 40rem;
   display: flex;
+  justify-content: center;
+  margin-top: 2rem;
   gap: 3rem;
   flex-wrap: wrap;
 }
 
-.btn-editar,
 .btn-salvar,
 .btn-compartilhar {
   border: none;
@@ -116,16 +117,6 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s;
-}
-
-.btn-editar {
-  background-color: #ffffff;
-  color: #002cdf;
-  border: 1px solid #002cdf;
-}
-
-.btn-editar:hover {
-  background-color: #ccc;
 }
 
 .btn-salvar {
@@ -146,7 +137,12 @@
   background-color: #006600;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  
+  .trilha-lista{
+    width: 26rem;
+  }
+
   .conteudo {
     flex-direction: column;
     align-items: flex-start;
@@ -157,7 +153,16 @@
     height: auto;
   }
 
+  .descricao {
+    display: flex;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
   .botoes {
-    flex-direction: column;
+    margin: 0;
+    margin-top: 1rem;
+    gap: 1rem;
   }
 }

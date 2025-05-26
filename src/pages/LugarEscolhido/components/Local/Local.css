@@ -10,3 +10,71 @@
 .w-full {
   width: 93%;
 }
+
+.TituloPrincipal {
+  font-size: 2.25rem;
+}
+
+.Opcoes {
+  display: flex;
+  flex-direction: row;
+  gap: 12rem;
+}
+
+.ImagemPrincipal {
+  width: 66%;
+}
+
+.Imagens {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-right: 2rem;
+  width: 33%;
+}
+
+.Endereco {
+  width: 12rem;
+}
+
+.Horario {
+  margin-top: -1rem;
+}
+
+@media (max-width: 768px) {
+
+  .TituloPrincipal {
+    font-size: 1.5rem;
+  }
+
+  .Avaliacao {
+    text-wrap: nowrap;
+    font-size: 0.8rem;
+  }
+
+  .Opcoes {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 0.8rem;
+  }
+
+  .ImagemPrincipal {
+    width: 90%;
+    margin-right: 3rem;
+  }
+
+  .Imagens {
+    display: none;
+  }
+
+  .Endereco {
+    width: 8rem;
+  }
+
+  .Horario {
+    margin-top: -6rem;
+    margin-left: 2rem;
+  }
+}

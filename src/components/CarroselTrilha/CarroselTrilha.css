@@ -5,18 +5,15 @@
   background-position: center center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 40px 20px;
   min-height: 100vh;
   width: 100%;
 }
 
 .carrossel-titulo {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #002cdf;
-  margin-left: 50px;
-  margin-right: 45rem;
-  margin-top: -1rem;
+  margin: 0 0 1rem 0;
   font-weight: bold;
 }
 
@@ -61,7 +58,7 @@
   margin-top: 0.5rem;
   border: none;
   width: 150rem;
-  height: 45vh;
+  height: 50vh;
   transform: scale(1.02);
   border: 0.5rem solid #cfb301;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.372);
@@ -107,12 +104,12 @@
   color: #7a6618;
   border: none;
   border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-  font-size: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 200%;
   cursor: pointer;
   margin-left: 0.2rem;
-  margin-top: 13rem;
+  margin-top: 10%;
   z-index: 2;
   transition: background 0.3s;
 }
@@ -123,11 +120,11 @@
   color: #7a6618;
   border: none;
   border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-  font-size: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 200%;
   cursor: pointer;
-  margin-top: 13rem;
+  margin-top: 10%;
   margin-left: 89rem;
   z-index: 2;
   transition: background 0.3s;
@@ -138,7 +135,7 @@
 
   .carrossel-titulo {
     font-size: 2.5rem;
-    margin-left: 40rem;
+    margin-left: 2rem;
   }
 
   .carrossel-card {
@@ -175,7 +172,7 @@
     width: 2rem;
     height: 2rem;
     font-size: 1.2rem;
-    margin-top: 10rem;
+    margin-top: 40%;
     margin-left: 0.2rem;
   }
 
@@ -183,7 +180,7 @@
     width: 2rem;
     height: 2rem;
     font-size: 1.2rem;
-    margin-top: 13rem;
+    margin-top: 40%;
   }
 }
 
@@ -250,7 +247,7 @@
     width: 3rem;
     height: 3rem;
     font-size: 1.2rem;
-    margin-top: 8rem;
+    margin-top: 10rem;
   }
 }
 

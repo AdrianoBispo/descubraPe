@@ -1,8 +1,14 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 import { useAuth } from '../useAuth';
 
-export function PrivateRoute ({ children }) {
+export function PrivateRoute({ children }) {
+  const isAuthenticated = localStorage.getItem("authToken"); // ou use um context de auth
   const { currentUser } = useAuth();
 
-  return currentUser ? children : <Navigate to="/landing-page" />;
-};
+  return (
+    isAuthenticated ? children : <Navigate to="/login" replace />,
+    
+    currentUser ? children : <Navigate to="/landing-page" />
+  
+  );
+}

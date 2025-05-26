@@ -1,16 +1,58 @@
 export const navConfig = {
+  // Rotas Privadas
   "/": [
     { label: "Início", path: "/" },
-    { label: "Trilhas", path: "/" },
-    { label: "Missões", path: "/missoes" },
-    { label: "Parcerias", path: "/parcerias" },
-    { label: "Perfil", path: "/profile" },
-  ],
-  "/landing-page": [
-    { label: "Início", path: "/landing-page" },
-    { label: "Trilhas", path: "/landing-page" },
+    { label: "Trilhas", path: "/trilhas" },
     { label: "Missões", path: "/missoes" },
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
-  ]
+  ],
+  "/missoes": [
+    { label: "Início", path: "/" },
+    { label: "Trilhas", path: "/trilhas" },
+    { label: "Missões", path: "/missoes" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
+  "/profile": [
+    { label: "Início", path: "/" },
+    { label: "Trilhas", path: "/trilhas" },
+    { label: "Missões", path: "/missoes" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
+
+  // Rotas Públicas
+  "/landing-page": [
+    { label: "Início", path: "/" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
+  "/lugar-escolhido": [
+    { label: "Início", path: "/" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
+  "/parcerias": [
+    { label: "Início", path: "/" },
+    { label: "Trilhas", path: "/trilhas" },
+    { label: "Missões", path: "/missoes" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
+  "/trilhas/:tituloItemCarrossel": [
+    { label: "Início", path: "/" },
+    { label: "Trilhas", path: "/trilhas" },
+    { label: "Missões", path: "/missoes" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
+  "/assinaturas": [
+    { label: "Início", path: "/" },
+    { label: "Trilhas", path: "/trilhas" },
+    { label: "Missões", path: "/missoes" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
+
 };
