@@ -1,5 +1,5 @@
-import { loginWithGoogle } from "../../../../backend/auth/googleLogin";
-import { loginWithFacebook } from "../../../../backend/auth/facebookLogin";
+import { loginWithGoogle } from "../../../../services/auth/googleLogin";
+import { loginWithFacebook } from "../../../../services/auth/facebookLogin";
 import {
   logo,
   googleIcon,
