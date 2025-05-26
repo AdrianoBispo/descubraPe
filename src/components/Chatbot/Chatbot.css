@@ -7,7 +7,7 @@
   width: 60px;
   border: none;
   border-radius: 50%;
-  background: #6d4fc2;
+  background: var(--azul-principal);
   color: #fff;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
 
 #chatbot-toggler:hover {
   transform: scale(1.1);
-  background: #593bab;
+  background: var(--azul-principal);
 }
 
 #chatbot-toggler .chat-icon .close-icon {
@@ -71,7 +71,7 @@
 
 /* Header */
 .chat-header {
-  background: #6d4fc2;
+  background: var(--azul-principal);
   padding: 18px 24px;
   display: flex;
   justify-content: space-between;
@@ -90,7 +90,7 @@
   width: 38px;
   padding: 6px;
   background: #ffffff;
-  fill: #6d4fc2;
+  fill: var(--azul-principal);
   border-radius: 50%;
 }
 
@@ -129,7 +129,7 @@
 }
 
 .chat-body::-webkit-scrollbar-thumb {
-  background-color: #ddd3f9;
+  background-color: #fef08a;
   border-radius: 10px;
 }
 
@@ -144,7 +144,7 @@
 }
 
 .bot-message svg {
-  background: #6d4fc2;
+  background: var(--azul-principal);
   fill: #fff;
   padding: 6px;
   height: 32px;
@@ -165,7 +165,7 @@
 }
 
 .bot-message .message-text {
-  background: #f6f2ff;
+  background: var(--amarelo-clarinho);
   border-radius: 18px 18px 18px 6px;
 }
 
@@ -174,7 +174,7 @@
 }
 
 .user-message .message-text {
-  background: #6d4fc2;
+  background: var(--azul-principal);
   color: #fff;
   border-radius: 18px 18px 6px 18px;
 }
@@ -190,15 +190,14 @@
   display: flex;
   align-items: center;
   background: #ffffff;
-  border: 1px solid #cccce5;
+  border: 1px solid var(--azul-principal);
   border-radius: 30px;
   padding: 0 14px;
   transition: border 0.2s;
 }
 
 .chat-form:focus-within {
-  border-color: #6d4fc2;
-  box-shadow: 0 0 0 3px rgba(109, 79, 194, 0.2);
+  box-shadow: 0 0 0 3px rgba(39, 181, 247, 0.2);
 }
 
 .message-input {
@@ -213,7 +212,7 @@
 
 .chat-form button {
   display: none;
-  background: #6d4fc2;
+  background: var(--azul-principal);
   border: none;
   height: 35px;
   width: 35px;
@@ -226,7 +225,7 @@
 }
 
 .chat-form button:hover {
-  background: #593bab;
+  background: var(--azul-secundario);
 }
 
 .message-input:valid ~ button {

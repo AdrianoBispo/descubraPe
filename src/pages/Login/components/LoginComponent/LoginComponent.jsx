@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-import { FaFacebook } from "react-icons/fa";
-import { loginWithGoogle } from "../../../../backend/FirebaseServices/auth/googleLogin";
-import { loginWithFacebook } from "../../../../backend/FirebaseServices/auth/facebookLogin";
-import { logo, googleIcon, bannerLogin } from "../../../../assets/index";
-=======
-import { loginWithGoogle } from "../../../../backend/auth/googleLogin";
-import { loginWithFacebook } from "../../../../backend/auth/facebookLogin";
+import { loginWithGoogle } from "../../../../services/auth/googleLogin";
+import { loginWithFacebook } from "../../../../services/auth/facebookLogin";
 import {
   logo,
   googleIcon,
   facebookIcon,
   bannerLogin,
 } from "../../../../assets/index";
->>>>>>> master
 import { useNavigate } from "react-router-dom";
 
 import "./LoginComponent.css";

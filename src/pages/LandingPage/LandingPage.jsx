@@ -2,11 +2,12 @@ import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { Banner } from "../../components/Banner/Banner";
 import { CarroselTrilha } from "../../components/CarroselTrilha/CarroselTrilha";
-import { BookingCards } from "../../components/Cards/BookingCards";
+import { CardsLugares } from './../../components/Cards/CardsLugares';
 import { Convite } from "../../components/Convite/Convite";
 import { FormParcerias } from "../../components/FormParcerias/FormParcerias";
 import { Planos } from "../Assinaturas/components/Planos";
-import { Chatbot } from "../../backend/Chatbot/Chatbot";
+import { Chatbot } from "../../components/Chatbot/Chatbot";
+
 
 export function LandingPage() {
   return (
@@ -14,12 +15,12 @@ export function LandingPage() {
       <Header />
       <Banner />
       <CarroselTrilha />
-      <BookingCards />
+      <CardsLugares />
       <Convite />
       <Planos />
       <FormParcerias />
-      <Footer />
       <Chatbot />
+      <Footer />
     </>
   );
 }

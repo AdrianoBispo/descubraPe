@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { navConfig } from "../../mocks/navConfig";
 import { logo } from "../../assets/index";
-import { logout } from "../../backend/auth/loginNormal/logout";
+import { logout } from "../../services/auth/authEmailSenha/logout";
 
 import "./Header.css";
 

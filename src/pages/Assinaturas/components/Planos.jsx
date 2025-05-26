@@ -3,7 +3,7 @@ import "./Planos.css";
 
 export function Planos() {
   return (
-    <div className="bg-white min-h-screen flex flex-col items-center px-4 py-10 Principal">
+    <div className="bg-white min-h-screen flex flex-col items-center px-4 Principal">
       <div className="max-w-6xl w-full text-center">
         <h2 className="font-bold mb-2 Titulo">
           Assine e desbloqueie o melhor de Pernambuco

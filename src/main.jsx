@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "@material-tailwind/react";
 
 import { App } from "./App.jsx";
-import { AuthProvider } from "./backend/FirebaseServices/components/AuthProvider.jsx"
+import { AuthProvider } from "./AuthProvider.jsx"
 
 import "./index.css";
 

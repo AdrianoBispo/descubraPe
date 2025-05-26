@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import { useAuth } from '../useAuth';
+import { useAuth } from './services/useAuth';
 
 export function PrivateRoute({ children }) {
   const isAuthenticated = localStorage.getItem("authToken"); // ou use um context de auth

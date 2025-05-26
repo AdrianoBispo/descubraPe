@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { PrivateRoute } from "./backend/FirebaseServices/components/PrivateRoute"
+import { PrivateRoute } from "./PrivateRoute"
 import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { Parcerias } from "./pages/Parcerias/Parcerias";
 import { Missoes } from "./pages/Missoes/Missoes";

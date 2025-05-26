@@ -1,4 +1,4 @@
-.container-bookingCards {
+.container-cards {
   background-image: url(../../assets/background/background-claro.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,13 +14,13 @@
   background-color: white;
 }
 
-.textoBookingCard {
+.texto-cards {
   color: rgb(0, 102, 255);
   margin-left: 2.5rem;
 }
 
 @media (max-width: 768px) {
-  .textoBookingCard {
+  .texto-cards {
     margin-left: 1rem;
   }  
 }

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { cadastrar } from "../../../../backend/FirebaseServices/auth/loginNormal/cadastro";
-import { logar } from "../../../../backend/FirebaseServices/auth/loginNormal/login";
+import { cadastrar } from "../../../../services/auth/authEmailSenha/cadastro";
+import { logar } from "../../../../services/auth/authEmailSenha/login"
 
 import {
   Dialog,

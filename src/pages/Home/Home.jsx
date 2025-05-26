@@ -1,8 +1,9 @@
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { Banner } from "../../components/Banner/Banner";
-import { BookingCards } from "../../components/Cards/BookingCards";
+import { CardsLugares } from "../../components/Cards/CardsLugares";
 import { CarroselTrilha } from "../../components/CarroselTrilha/CarroselTrilha";
+import { Chatbot } from './../../components/Chatbot/Chatbot';
 
 export function Home() {
   return (
@@ -10,7 +11,8 @@ export function Home() {
         <Header />
         <Banner />
         <CarroselTrilha />
-        <BookingCards />
+        <CardsLugares />
+        <Chatbot />
         <Footer />
       </>
     );
