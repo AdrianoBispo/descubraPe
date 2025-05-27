@@ -1,9 +1,9 @@
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer"
 import { Categorias } from "./components/Categorias/Categorias";
-import { Chatbot } from './../../components/Chatbot/Chatbot';
+import { Chatbot } from '../../components/Chatbot/Chatbot';
 
-export function Trilhas() {
+export function TrilhasCarrossel() {
   return (
     <>
     <Header />

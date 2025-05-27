@@ -1,7 +1,48 @@
-export const melhoresAtracoes = [
+export const lugares = [
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "001",
     title: "Restaurante Entre Amigos",
+=======
+    id: 1,
+    title: "Recife",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/00/2e/31/recife.jpg?w=600&h=500&s=1",
+    localizacao: "Pernambuco, Brasil",
+    categoria: "cidade",
+    rating: "5.0",
+  },
+  {
+    id: 2,
+    title: "Ipojuca",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/b1/6e/40/20170317-105852-largejpg.jpg?w=600&h=400&s=1",
+    localizacao: "Pernambuco, Brasil",
+    categoria: "cidade",
+    rating: "5.0",
+  },
+  {
+    id: 3,
+    title: "Olinda",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/81/4e/3c/vista-do-elevador.jpg?w=600&h=400&s=1",
+    localizacao: "Pernambuco, Brasil",
+    categoria: "cidade",
+    rating: "5.0",
+  },
+  {
+    id: 4,
+    title: "Caruaru",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/ba/36/b5/20160624-155441-largejpg.jpg?w=600&h=400&s=1",
+    localizacao: "Pernambuco, Brasil",
+    categoria: "cidade",
+    rating: "5.0",
+  },
+  {
+    id: 5,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://lh3.googleusercontent.com/p/AF1QipNHPBizGkVnZlpl1SdGc7C4T_nJrHVGVOJM0Lgv=s1360-w1360-h1020-rw",
     localizacao: "Recife, PE",
@@ -11,8 +52,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "002",
     title: "Casa de Noca",
+=======
+    id: 6,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://media-cdn.tripadvisor.com/media/photo-s/08/bf/cf/f9/casa-de-noca.jpg",
     localizacao: "Olinda, PE",
@@ -22,8 +68,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "003",
     title: "Beijupirá",
+=======
+    id: 7,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://lh3.googleusercontent.com/p/AF1QipMPRfit4-_rJjeil02FgsrNsRWUT0S5MRgJdgGV=s1360-w1360-h1020-rw ",
     localizacao: "Ipojuca, PE",
@@ -33,8 +84,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "004",
     title: "Bodódromo",
+=======
+    id: 8,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://lh3.googleusercontent.com/p/AF1QipPebOcoR9GbXojS8CktO80oSahLgpD8dmILnF1W=s1360-w1360-h1020-rw",
     localizacao: "Petrolina, PE",
@@ -44,8 +100,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "005",
     title: "Capela Dourada",
+=======
+    id: 9,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://www.bahia.ws/wp-content/uploads/2017/10/Capela-Dourada.jpg",
     localizacao: "Recife, PE",
@@ -55,8 +116,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "006",
     title: "Capela de São Benedito",
+=======
+    id: 10,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://vivoportodegalinhas.com/wp-content/uploads/2022/09/Vivo-Porto-de-Galinhas-Capela-de-Sao-Benedito-ou-Igrejinha-dos-Carneiros-17.png",
     localizacao: "Tamandaré, PE",
@@ -66,8 +132,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "007",
     title: "Paróquia Sant'Ana Gravatá",
+=======
+    id: 11,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/8f/2e/c6/outra-vista-da-atracao.jpg?w=1200&h=-1&s=1",
     localizacao: "Gravatá, PE",
@@ -77,8 +148,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "008",
     title: "Igreja de São Pedro dos Clérigos",
+=======
+    id: 12,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://www2.recife.pe.gov.br/sites/default/files/styles/imagem_slide_home/public/patio_sao_pedro-fotos_inaldo_lins-17-02-2016_2.jpg?itok=dHQaGF9q  ",
     localizacao: "Recife, PE",
@@ -88,7 +164,7 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
-    id: "009",
+    id: 13,
     title: "Praia dos Carneiros",
     image:
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/b9/e6/c6/praia-dos-carneiros-en.jpg?w=2000&h=-1&s=1",
@@ -99,8 +175,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "010",
     title: "Passeio de Buggy nas Dunas de Maracaípe",
+=======
+    id: 14,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://pgsocial-media.s3.sa-east-1.amazonaws.com/wp-content/uploads/2020/10/27114441/maracaipe-coqueiral-5cae588b-0b2c-4931-be4f-66b9dd6e14fa.jpg https://beachhousemaracaipe.com/wp-content/uploads/2021/08/buggyrides_porto_de_galinhas-1.jpg",
     localizacao: " Ipojuca, PE",
@@ -110,8 +191,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "011",
     title: "Instituto Ricardo Brennand",
+=======
+    id: 15,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://rota1976.com/wp-content/uploads/2020/04/instituto-ricardo-brennand.jpg",
     localizacao: "Várzea, Recife, PE",
@@ -121,8 +207,13 @@ export const melhoresAtracoes = [
     rating: "5.0",
   },
   {
+<<<<<<< HEAD:src/mocks/melhoresAtracoes.js
     id: "012",
     title: "Cachoeira Véu da Noiva",
+=======
+    id: 16,
+    title: "Praia dos Carneiros",
+>>>>>>> aa964d70878c37df28895dab1a7295ade706ea6c:src/mocks/lugares.js
     image:
       "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noJ_lz59Aayw-om6u_pgx9NxPwRo8LpNi4OwPYL_WqwMsAClvUaY-qLJGpa9aGniQxgysk-Jbf6UsZu2Fr1fK2Md3Plz5nSnPrF6DuR62dAVaQytRZxExxaPi5Y5I2hwExfnVOZ=s1360-w1360-h1020-rw",
     localizacao: "Bonito, PE",

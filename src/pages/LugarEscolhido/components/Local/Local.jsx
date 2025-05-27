@@ -2,6 +2,8 @@ import { MdArrowBackIos } from "react-icons/md";
 import { IoShareOutline } from "react-icons/io5";
 import { BsPencil } from "react-icons/bs";
 
+import { useParams } from "react-router-dom";
+
 import {
   Card,
   CardHeader,
@@ -12,7 +14,12 @@ import {
 
 import "./Local.css";
 
+import { lugares } from "../../../../mocks/lugares";
+
 export function Local() {
+  const { id } = useParams();
+  const lugar = lugares.find((t) => t.title === id);
+
   return (
     <div className="local-container">
       {/* Botao de voltar */}
@@ -25,7 +32,7 @@ export function Local() {
       <div className="w-full flex flex-row items-center">
         <div className="w-1/2 justify-center flex-col">
           <h1 className="font-bold text-[#0033cc] mb-4 ml-2 TituloPrincipal">
-            Capela Dourada - Recife
+            {lugar.title}
           </h1>
           <div className="flex items-center">
             <span className="text-gray-500 text-sm pt-1 mr-1 ml-1">4.8</span>
@@ -52,17 +59,17 @@ export function Local() {
       <div className="flex flex-row items-center justify-center gap-1 my-6">
         <img
           className="ImagemPrincipal"
-          src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png"
-          alt=""
+          src={lugar.image}
+          alt={lugar.title}
         />
         <div className="Imagens">
           <img
-            src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png"
-            alt=""
+            src={lugar.image}
+            alt={lugar.title}
           />
           <img
-            src="https://park.com.br/wp-content/uploads/2018/12/park-hotel-boa-viagem-recife-pe-capela-dourada.png"
-            alt=""
+            src={lugar.image}
+            alt={lugar.title}
           />
         </div>
       </div>

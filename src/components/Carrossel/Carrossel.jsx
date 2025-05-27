@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 import { trilhas } from "../../mocks/trilhas";
 
-import "./CarroselTrilha.css";
+import "./Carrossel.css";
 
-export function CarroselTrilha() {
+export function Carrossel() {
   const [indiceAtual, setIndiceAtual] = useState(0);
   const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ export function CarroselTrilha() {
 
   const handleClick = (item) => {
     if (indiceAtual === trilhas.findIndex((trilha) => trilha.id === item.id)) {
-      navigate(`/trilhas/${item.tituloItemCarrossel}`);
+      navigate(`/trilhas-carrossel/${item.tituloItemCarrossel}`);
     }
   };
 

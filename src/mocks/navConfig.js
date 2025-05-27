@@ -1,22 +1,25 @@
 export const navConfig = {
   // Rotas Privadas
   "/": [
-    { label: "Início", path: "/" },
-    { label: "Trilhas", path: "/trilhas" },
+    { label: "Trilhas", path: "/minhas-trilhas" },
+    { label: "Missões", path: "/missoes" },
+    { label: "Parcerias", path: "/parcerias" },
+    { label: "Assinaturas", path: "/assinaturas" },
+  ],
+  "/minhas-trilhas": [
+    { label: "Trilhas", path: "/minhas-trilhas" },
     { label: "Missões", path: "/missoes" },
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
   ],
   "/missoes": [
-    { label: "Início", path: "/" },
-    { label: "Trilhas", path: "/trilhas" },
+    { label: "Trilhas", path: "/minhas-trilhas" },
     { label: "Missões", path: "/missoes" },
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
   ],
   "/profile": [
-    { label: "Início", path: "/" },
-    { label: "Trilhas", path: "/trilhas" },
+    { label: "Trilhas", path: "/minhas-trilhas" },
     { label: "Missões", path: "/missoes" },
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
@@ -24,35 +27,33 @@ export const navConfig = {
 
   // Rotas Públicas
   "/landing-page": [
-    { label: "Início", path: "/" },
-    { label: "Parcerias", path: "/parcerias" },
+    { label: "Trilhas", path: "/minhas-trilhas" },
+    { label: "Missões", path: "/missoes" },
     { label: "Assinaturas", path: "/assinaturas" },
+    { label: "Parcerias", path: "/parcerias" },
   ],
   "/lugar-escolhido": [
-    { label: "Início", path: "/" },
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
   ],
   "/parcerias": [
     { label: "Início", path: "/" },
-    { label: "Trilhas", path: "/trilhas" },
+    { label: "Trilhas", path: "/minhas-trilhas" },
     { label: "Missões", path: "/missoes" },
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
   ],
   "/trilhas/:tituloItemCarrossel": [
     { label: "Início", path: "/" },
-    { label: "Trilhas", path: "/trilhas" },
+    { label: "Trilhas", path: "/minhas-trilhas" },
     { label: "Missões", path: "/missoes" },
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
   ],
   "/assinaturas": [
-    { label: "Início", path: "/" },
-    { label: "Trilhas", path: "/trilhas" },
+    { label: "Trilhas", path: "/minhas-trilhas" },
     { label: "Missões", path: "/missoes" },
     { label: "Parcerias", path: "/parcerias" },
     { label: "Assinaturas", path: "/assinaturas" },
   ],
-
 };
