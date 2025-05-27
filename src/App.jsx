@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { PrivateRoute } from "./PrivateRoute"
+import { PrivateRoute } from "./PrivateRoute";
 import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { Parcerias } from "./pages/Parcerias/Parcerias";
 import { Missoes } from "./pages/Missoes/Missoes";
@@ -8,9 +8,8 @@ import { Home } from "./pages/Home/Home";
 import { Profile } from "./pages/Profile/Profile";
 import { Login } from "./pages/Login/Login";
 import { TrilhasCarrossel } from "./pages/TrilhasCarrossel/TrilhasCarrossel";
-import { LugarEscolhido } from './pages/LugarEscolhido/LugarEscolhido';
-import { MinhasTrilhas } from "./pages/Home/components/MinhasTrilhas/MinhasTrilhas";
-import { TravelLists } from './pages/TravelLists/TravelLists';
+import { LugarEscolhido } from "./pages/LugarEscolhido/LugarEscolhido";
+import { MinhasTrilhas } from './pages/MinhasTrilhas/MinhasTrilhas';
 
 export function App() {
   return (
@@ -20,9 +19,9 @@ export function App() {
         <Route path="/parcerias" element={<Parcerias />} />
         <Route path="/assinaturas" element={<Assinaturas />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/:id" element={<TrilhasCarrossel />} />
-        <Route path="/lugar-escolhido" element={<LugarEscolhido />} />
-        <Route path="/travel-lists" element={<TravelLists />} />
+        <Route path="/trilhas-carrossel/:id" element={<TrilhasCarrossel />} />
+        <Route path="/lugar-escolhido/:id" element={<LugarEscolhido />} />
+
         <Route
           path="/"
           element={
@@ -48,7 +47,7 @@ export function App() {
           }
         />
         <Route
-          path="/trilhas"
+          path="/minhas-trilhas"
           element={
             <PrivateRoute>
               <MinhasTrilhas />

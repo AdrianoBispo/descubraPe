@@ -4,6 +4,8 @@ import {Local} from "./components/Local/Local"
 import { Chatbot } from './../../components/Chatbot/Chatbot';
 
 export function LugarEscolhido() {
+
+
   return (
     <div>
       <Header/>

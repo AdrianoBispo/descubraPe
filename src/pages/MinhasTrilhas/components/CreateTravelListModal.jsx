@@ -12,7 +12,7 @@ import {
   Textarea,
 } from "@material-tailwind/react";
 
-export function TravelListModal({ availableCards, onClose, onSubmit }) {
+export function CreateTravelListModal({ availableCards, onClose, onSubmit }) {
   const [step, setStep] = useState(1); // 1: Seleção, 2: Formulário
   const [selectedCards, setSelectedCards] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
