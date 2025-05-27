@@ -19,7 +19,7 @@ export function BookingCard({ lugar, onFavorite, isFavorited, onAddToGallery }) 
 
   return (
     <>
-      <Card className="w-full max-w-[20rem] shadow-lg m-7" onClick={() => navigate(`/lugar-escolhido/${lugar.title}`)}>
+      <Card className="w-full max-w-[20rem] shadow-lg m-7">
         <CardHeader floated={false} color="blue-gray">
           <img src={image} alt="titulo" />
 
@@ -35,7 +35,7 @@ export function BookingCard({ lugar, onFavorite, isFavorited, onAddToGallery }) 
           </IconButton>
         </CardHeader>
 
-        <CardBody className="">
+        <CardBody onClick={() => navigate(`/lugar-escolhido/${lugar.title}`)}>
           <div className="mb-3 flex items-center justify-between">
             <div className="flex flex-col">
               <Typography variant="h5" color="blue-gray" className="font-bold">
