@@ -1,7 +1,7 @@
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { Banner } from "../../components/Banner/Banner";
-import { CarroselTrilha } from "../../components/CarroselTrilha/CarroselTrilha";
+import { Carrossel } from "../../components/Carrossel/Carrossel";
 import { CardsLugares } from './../../components/Cards/CardsLugares';
 import { Convite } from "../../components/Convite/Convite";
 import { FormParcerias } from "../../components/FormParcerias/FormParcerias";
@@ -14,7 +14,7 @@ export function LandingPage() {
     <>
       <Header />
       <Banner />
-      <CarroselTrilha />
+      <Carrossel />
       <CardsLugares />
       <Convite />
       <Planos />
