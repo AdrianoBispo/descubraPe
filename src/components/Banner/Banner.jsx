@@ -20,7 +20,7 @@ export function Banner() {
           Descubra roteiros incríveis e participe de <br /> experiências únicas.
           Conecte-se com o que <br /> Pernambuco tem de mais autêntico.
         </p>
-        <button className="hover:bg-cyan-500 font-bold py-2 px-6 rounded-full shadow-md transition duration-300 Aventure-se" onClick={() => navigate("/login")}>
+        <button className="hover:bg-cyan-500 font-bold py-2 px-6 rounded-full shadow-md transition duration-300 Aventure-se" onClick={() => navigate("/minhas-trilhas")}>
           AVENTURE-SE <img src={Seta} className="Icon3"/>
         </button>
       </div>
