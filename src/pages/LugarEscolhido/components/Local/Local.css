@@ -41,6 +41,24 @@
   margin-top: -1rem;
 }
 
+@media (max-width: 1700px) {
+  .Opcoes {
+  gap: 8rem;
+}
+}
+
+@media (max-width: 1480px) {
+  .Opcoes {
+  gap: 6rem;
+}
+}
+
+@media (max-width: 1330px) {
+  .Opcoes {
+  gap: 4rem;
+}
+}
+
 @media (max-width: 768px) {
 
   .TituloPrincipal {

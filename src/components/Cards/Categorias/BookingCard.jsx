@@ -1,10 +1,4 @@
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
   IconButton,
   Rating,
 } from "@material-tailwind/react";

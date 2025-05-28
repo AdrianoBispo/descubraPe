@@ -1,28 +1,26 @@
-import { useState, useEffect } from "react";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { logo } from "../../assets/index";
 import { logout } from "../../services/auth/authEmailSenha/logout";
+import { useAuth } from "../../services/useAuth";
 
 import "./Header.css";
 
 export function Header() {
+  const { currentUser } = useAuth();
   const navigate = useNavigate();
- 
+
   const handleLogout = async () => {
-    await logout();
-    <Navigate to="/login"></Navigate> // redireciona após logout
+    try {
+      await logout();
+      navigate("/login"); // Redireciona para a página de login após sair
+      console.log("Usuário deslogado com sucesso!");
+    } catch (error) {
+      console.error("Erro ao fazer logout:", error);
+    }
   };
 
-
-  const location = useLocation();
-  const currentPath = location.pathname;
-
-  const [isLogged, setisLogged] = useState(false);
   const [menuAberto, setMenuAberto] = useState(false);
-
-  useEffect(() => {
-    setisLogged(currentPath === "/");
-  }, [currentPath]);
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -32,7 +30,9 @@ export function Header() {
     <header className="flex fixed w-full top-0 left-0 justify-between items-center z-10 p-3 bg-white shadow-md">
       <div className="flex items-center ml-5">
         <img src={logo} alt="" className="Logo" />
-        <span className="TituloLogo" onClick={() => navigate("/")}>Descubra PE</span>
+        <span className="TituloLogo" onClick={() => navigate("/")}>
+          Descubra PE
+        </span>
       </div>
 
       <div className="menu-toggle" onClick={toggleMenu}>
@@ -43,39 +43,56 @@ export function Header() {
 
       <nav className={`${menuAberto ? "active" : ""}`}>
         <ul className={`${menuAberto ? "NavbarMobile" : "Navbar"}`}>
-            <li>
-              <Link to="/minhas-trilhas">Trilhas</Link>
-            </li>
-            <li>
-              <Link to="/missoes">Missões</Link>
-            </li>
-            <li>
-              <Link to="/parcerias">Parcerias</Link>
-            </li>
-            <li>
-              <Link to="/assinaturas">Assinaturas</Link>
-            </li>
+          <li>
+            <Link to="/minhas-trilhas">Trilhas</Link>
+          </li>
+          <li>
+            <Link to="/missoes">Missões</Link>
+          </li>
+          <li>
+            <Link to="/parcerias">Parcerias</Link>
+          </li>
+          <li>
+            <Link to="/assinaturas">Assinaturas</Link>
+          </li>
         </ul>
         <div className="menu-buttonsHamb">
-          <Link to={isLogged ? "/profile" : "/login"} className="BotaoLogin">
-            {isLogged ? "Perfil" : "Login"}
-          </Link>
-          <Link to={isLogged ? "/landing-page" : currentPath} className={isLogged ? "BotaoLogin" : "hidden"}>
-            {isLogged ? "Sair" : ""}
-          </Link>
+          {currentUser ? (
+            <>
+              <Link to="/perfil" className="BotaoLogin">
+                Perfil
+              </Link>
+              <button onClick={handleLogout} className="BotaoLogin">
+                Sair
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="BotaoLogin">
+                Login
+              </Link>
+            </>
+          )}
         </div>
       </nav>
 
       <div className="menu-buttons">
-        <Link to={isLogged ? "/profile" : "/login"} className="BotaoLogin">
-          {isLogged ? "Perfil" : "Login"}
-        </Link>
-        <Link
-          onClick={handleLogout}
-          className={isLogged ? "BotaoLogin" : "hidden"}
-        >
-          {isLogged ? "Sair" : ""}
-        </Link>
+        {currentUser ? (
+          <>
+            <Link to="/profile" className="BotaoLogin">
+              Perfil
+            </Link>
+            <button onClick={handleLogout} className="BotaoLogin">
+              Sair
+            </button>
+          </>
+        ) : (
+          <>
+            <Link to="/login" className="BotaoLogin">
+              Login
+            </Link>
+          </>
+        )}
       </div>
     </header>
   );

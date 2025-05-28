@@ -2,7 +2,7 @@ import { MdArrowBackIos } from "react-icons/md";
 import { IoShareOutline } from "react-icons/io5";
 import { BsPencil } from "react-icons/bs";
 
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import {
   Card,
@@ -17,14 +17,15 @@ import "./Local.css";
 import { lugares } from "../../../../mocks/lugares";
 
 export function Local() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const lugar = lugares.find((t) => t.title === id);
 
   return (
     <div className="local-container">
       {/* Botao de voltar */}
-      <div className="flex flex-row items-center mb-7">
-        <MdArrowBackIos size={18} />{" "}
+      <div className="flex flex-row items-center mb-7 cursor-pointer" onClick={() => navigate("/")}>
+        <MdArrowBackIos size={18} />
         <span className="text-[#0033cc]">Ver todos os lugares </span>
       </div>
 

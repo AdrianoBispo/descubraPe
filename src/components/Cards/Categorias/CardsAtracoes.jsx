@@ -45,7 +45,7 @@ export function CardsAtracoes() {
         // Se o album de favoritos não existe, cria ele
         await setDoc(userDocRef, {
           title: "# Favoritos",
-          description: "Meus cards favoritos",
+          description: "#### Seus lugares favoritos ficarão salvos aqui.",
           cards: [],
           createdAt: new Date(),
         });

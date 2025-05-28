@@ -13,7 +13,7 @@ export const trilhas = [
   {
     id: "01",
     tituloItemCarrossel: "Gastronômica",
-    tituloCategoria: "Melhores Restaurantes de Pernambuco",
+    tituloCategoria: "Restaurantes em Pernambuco",
     capaItemCarrossel: feijao,
     mapa: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63203.34944207094!2d-34.934029651531326!3d-8.080120641679818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smelhores%20restaurantes%20de%20pernambuco!5e0!3m2!1spt-BR!2sbr!4v1747440704941!5m2!1spt-BR!2sbr",
     lugares: [  

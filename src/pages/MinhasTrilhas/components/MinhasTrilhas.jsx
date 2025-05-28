@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth, db } from "../../services/firebase";
+import { auth, db } from "../../../services/firebase";
 import {
   collection,
   getDocs,
@@ -19,11 +19,10 @@ import {
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import EditAlbumModal from "./components/EditAlbumModal";
-import ManageCardsModal from "./components/ManageCardsModal";
+import EditAlbumModal from "./EditAlbumModal";
+import ManageCardsModal from "./ManageCardsModal";
 
-import { lugares } from "../../mocks/lugares";
-import { Header } from "./../../components/Header/Header";
+import { lugares } from "../../../mocks/lugares";
 
 // Ícones
 const TrashIcon = () => (
@@ -145,7 +144,7 @@ export function MinhasTrilhas() {
       });
       setAlbums(fetchedAlbums);
     } catch (error) {
-      console.error("Erro ao buscar álbuns:", error);
+      console.error("Erro ao buscar trilhas:", error);
     }
     setLoading(false);
   };
@@ -154,7 +153,7 @@ export function MinhasTrilhas() {
     if (!user || albumId === "favorites") return;
     if (
       window.confirm(
-        "Tem certeza que deseja deletar este álbum? Esta ação não pode ser desfeita."
+        "Tem certeza que deseja deletar esta trilha? Esta ação não pode ser desfeita."
       )
     ) {
       try {
@@ -162,7 +161,7 @@ export function MinhasTrilhas() {
         await deleteDoc(albumDocRef);
         setAlbums((prev) => prev.filter((album) => album.id !== albumId));
       } catch (error) {
-        console.error("Erro ao deletar álbum:", error);
+        console.error("Erro ao deletar trilha:", error);
       }
     }
   };
@@ -178,7 +177,7 @@ export function MinhasTrilhas() {
         )
       );
     } catch (error) {
-      console.error("Erro ao salvar detalhes do álbum:", error);
+      console.error("Erro ao salvar detalhes da trilha:", error);
     }
   };
 
@@ -193,20 +192,18 @@ export function MinhasTrilhas() {
         )
       );
     } catch (error) {
-      console.error("Erro ao salvar cards do álbum:", error);
+      console.error("Erro ao salvar os lugares na trilha:", error);
     }
   };
 
   return (
     <>
-      <Header />
       <div className="container mx-auto p-4 mt-32">
         <Typography variant="h1" className="text-center text-[#002cdf]">
           Minha Trilha Personalizada
         </Typography>
         <Typography className="text-center mb-6" variant="lead">
-          Explore Pernambuco no seu ritmo com os lugares que você mais deseja
-          conhecer.
+          Explore Pernambuco no seu ritmo com os lugares que você mais deseja conhecer.
         </Typography>
         {loading ? (
           <Typography>Carregando trilhas...</Typography>
@@ -268,7 +265,7 @@ export function MinhasTrilhas() {
               </div>
 
               {!album.cards || album.cards.length === 0 ? (
-                <Typography>Este álbum está vazio.</Typography>
+                <Typography>Esta trilha está vazia.</Typography>
               ) : (
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                   {album.cards.map((cardId) => (
