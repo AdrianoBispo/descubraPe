@@ -43,7 +43,7 @@ export const lugares = [
     localizacao: "Petrolina, PE",
     categoria: "Gastronomia",
     description:
-      " Localizado em Petrolina, o Bodódromo é um complexo gastronômico tradicional, famoso por reunir diversos restaurantes especializados em pratos à base de bode e carneiro. É um dos principais pontos turísticos da cidade e referência da culinária sertaneja no estado de Pernambuco. ",
+      "Localizado em Petrolina, o Bodódromo é um complexo gastronômico tradicional, famoso por reunir diversos restaurantes especializados em pratos à base de bode e carneiro. É um dos principais pontos turísticos da cidade e referência da culinária sertaneja no estado de Pernambuco. ",
     rating: "5.0",
     qtdeAvaliacao: 251,
   },
@@ -78,7 +78,7 @@ export const lugares = [
     localizacao: "Gravatá, PE",
     categoria: "Capela",
     description:
-      "é uma igreja católica de grande importância na Diocese de Caruaru. Localizada no centro de Gravatá, é um dos pontos turísticos e religiosos mais importantes da cidade, com uma história de mais de 150 anos. A igreja substituiu uma antiga capela e é conhecida por sua arquitetura com traços barroco, um interior simples e uma torre com traços mais contemporâneos.",
+      "É uma igreja católica de grande importância na Diocese de Caruaru. Localizada no centro de Gravatá, é um dos pontos turísticos e religiosos mais importantes da cidade, com uma história de mais de 150 anos. A igreja substituiu uma antiga capela e é conhecida por sua arquitetura com traços barroco, um interior simples e uma torre com traços mais contemporâneos.",
     rating: "5.0",
     qtdeAvaliacao: 251,
   },
@@ -108,12 +108,13 @@ export const lugares = [
   },
   {
     id: "010",
-    title: "Passeio de Buggy nas Dunas de Maracaípe",
+    title: "Trilha do Pico do Papagaio",
     image:
-      "https://pgsocial-media.s3.sa-east-1.amazonaws.com/wp-content/uploads/2020/10/27114441/maracaipe-coqueiral-5cae588b-0b2c-4931-be4f-66b9dd6e14fa.jpg https://beachhousemaracaipe.com/wp-content/uploads/2021/08/buggyrides_porto_de_galinhas-1.jpg",
-    localizacao: " Ipojuca, PE",
-    categoria: "Praia",
-    description: "Passeio emocionante pelas dunas e praias da região.",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/24/8c/b1/vista-do-pico-do-papagaio.jpg?w=1000&h=-1&s=1 ",
+    localizacao: "Triunfo, PE",
+    categoria: "Aventura",
+    description:
+      "Trilha que leva ao ponto mais alto de Pernambuco, oferecendo vistas panorâmicas.",
     rating: "5.0",
     qtdeAvaliacao: 251,
   },

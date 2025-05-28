@@ -23,12 +23,12 @@
 }
 
 .top-column {
-    width: 100vh;
+    width: 99.7vh;
     height: 25%;
     position: absolute;
-    background-image: url(../../../../assets/lugares/capela_dourada_1.jpg);
+    background-image: url(../../../../assets/banner/background-banner.png);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -43,12 +43,14 @@
 }
 
 .top-column .titulo-trilha h2 {
-    font-size: 2.5rem;
+    text-align: left;
+    font-size: 3rem;
+    color: #002cdf;
     font-weight: 600;
 }
 
 .top-column .titulo-trilha .date {
-    color: #666;
+    color: #002cdf;
 }
 
 .explore-header {
@@ -141,4 +143,41 @@
     cursor: pointer;
     margin: 0 15px;
     z-index: 2;
+}
+
+@media (max-width: 1620px) {
+    .top-column {
+        height: 45%;
+    }
+
+    .top-column .titulo-trilha {
+        padding: 3rem;
+        margin-top: 4rem;
+        border-radius: 1rem;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .top-column .titulo-trilha h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .main { 
+        width: 50vh;
+    }
+
+    .top-column {
+        width: 50.4vh;
+        height: 25%;
+    }
+
+    .left-column {
+        width: 50.4vh;
+    }
+
+    .right-column {
+        display: none;
+    }
 }
