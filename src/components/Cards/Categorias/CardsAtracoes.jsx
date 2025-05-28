@@ -111,7 +111,7 @@ export function CardsAtracoes() {
         </p>
       </div>
 
-      <div className="flex flex-row flex-wrap">
+      <div className="mx-8 flex flex-row flex-wrap gap-8">
         {lugares
           .filter((lugar) => lugar.categoria !== "cidade")
           .map((lugar) => (

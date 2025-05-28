@@ -111,7 +111,7 @@ export function CardsCidades() {
         </p>
       </div>
 
-      <div className="flex flex-row flex-wrap justify-center">
+      <div className="ml-8 flex flex-row flex-wrap gap-12">
         {lugares
           .filter((lugar) => lugar.categoria === "cidade")
           .map((lugar) => (

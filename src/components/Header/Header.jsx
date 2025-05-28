@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
-import { navConfig } from "../../mocks/navConfig";
 import { logo } from "../../assets/index";
 import { logout } from "../../services/auth/authEmailSenha/logout";
 
@@ -17,7 +16,6 @@ export function Header() {
 
   const location = useLocation();
   const currentPath = location.pathname;
-  const links = navConfig[currentPath] || [];
 
   const [isLogged, setisLogged] = useState(false);
   const [menuAberto, setMenuAberto] = useState(false);
@@ -45,11 +43,18 @@ export function Header() {
 
       <nav className={`${menuAberto ? "active" : ""}`}>
         <ul className={`${menuAberto ? "NavbarMobile" : "Navbar"}`}>
-          {links.map((item) => (
-            <li key={item.path}>
-              <Link to={item.path}>{item.label}</Link>
+            <li>
+              <Link to="/minhas-trilhas">Trilhas</Link>
             </li>
-          ))}
+            <li>
+              <Link to="/missoes">Missões</Link>
+            </li>
+            <li>
+              <Link to="/parcerias">Parcerias</Link>
+            </li>
+            <li>
+              <Link to="/assinaturas">Assinaturas</Link>
+            </li>
         </ul>
         <div className="menu-buttonsHamb">
           <Link to={isLogged ? "/profile" : "/login"} className="BotaoLogin">

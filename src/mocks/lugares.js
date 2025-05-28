@@ -9,6 +9,7 @@ export const lugares = [
     description:
       "Restaurante tradicional que oferece culinária regional e brasileira, com ambiente familiar e pratos caseiros e saborosos.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "002",
@@ -20,6 +21,7 @@ export const lugares = [
     description:
       "Localizado em Olinda, restaurante simples, comida caseira e famosa pela melhor macaxeira gourmet da região. O restaurante está situado numa rua secundária do Sítio Histórico de Olinda, no caminho entre o Alto da Sé e os Quatro Cantos de Olinda.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "003",
@@ -31,6 +33,7 @@ export const lugares = [
     description:
       "Restaurante renomado em Porto de Galinhas, combina frutos do mar com sabores tropicais. O ambiente é rústico, acolhedor e cercado por natureza, oferecendo uma experiência gastronômica sofisticada e regional ao mesmo tempo.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "004",
@@ -42,17 +45,18 @@ export const lugares = [
     description:
       " Localizado em Petrolina, o Bodódromo é um complexo gastronômico tradicional, famoso por reunir diversos restaurantes especializados em pratos à base de bode e carneiro. É um dos principais pontos turísticos da cidade e referência da culinária sertaneja no estado de Pernambuco. ",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "005",
     title: "Capela Dourada",
-    image:
-      "https://www.bahia.ws/wp-content/uploads/2017/10/Capela-Dourada.jpg",
+    image: "https://www.bahia.ws/wp-content/uploads/2017/10/Capela-Dourada.jpg",
     localizacao: "Recife, PE",
     categoria: "Capela",
     description:
       "A Capela dos Noviços da Ordem Terceira de São Francisco de Assis ou Capela Dourada é uma capela da Ordem Franciscana localizada na cidade do Recife, capital do estado brasileiro de Pernambuco. Com construção iniciada em 1696, foi o primeiro templo do Brasil a ser integralmente coberto de decoração barroca e ouro.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "006",
@@ -64,6 +68,7 @@ export const lugares = [
     description:
       "A Capela de São Benedito, construída no século XVIII, é um importante marco histórico e religioso da região. Com sua arquitetura colonial e localização privilegiada, a capela atrai turistas que buscam conhecer um pouco mais sobre a história e a cultura local.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "007",
@@ -75,6 +80,7 @@ export const lugares = [
     description:
       "é uma igreja católica de grande importância na Diocese de Caruaru. Localizada no centro de Gravatá, é um dos pontos turísticos e religiosos mais importantes da cidade, com uma história de mais de 150 anos. A igreja substituiu uma antiga capela e é conhecida por sua arquitetura com traços barroco, um interior simples e uma torre com traços mais contemporâneos.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "008",
@@ -86,9 +92,10 @@ export const lugares = [
     description:
       "A Concatedral de São Pedro dos Clérigos, também conhecida simplesmente como Igreja de São Pedro dos Clérigos, é um templo católico situado no município do Recife, capital do estado de Pernambuco, Brasil. É a consede da Arquidiocese de Olinda e Recife. ",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
-    id: 13,
+    id: "009",
     title: "Praia dos Carneiros",
     image:
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/b9/e6/c6/praia-dos-carneiros-en.jpg?w=2000&h=-1&s=1",
@@ -97,6 +104,7 @@ export const lugares = [
     description:
       "A Praia dos Carneiros está localizada no município de Tamandaré, em Pernambuco, Brasil. É conhecida por suas águas cristalinas, coqueirais e pela Capela de São Benedito à beira-mar. A praia fica a cerca de 96 km de Recife e a 50 km de Porto de Galinhas.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "010",
@@ -105,9 +113,9 @@ export const lugares = [
       "https://pgsocial-media.s3.sa-east-1.amazonaws.com/wp-content/uploads/2020/10/27114441/maracaipe-coqueiral-5cae588b-0b2c-4931-be4f-66b9dd6e14fa.jpg https://beachhousemaracaipe.com/wp-content/uploads/2021/08/buggyrides_porto_de_galinhas-1.jpg",
     localizacao: " Ipojuca, PE",
     categoria: "Praia",
-    description:
-      "Passeio emocionante pelas dunas e praias da região.",
+    description: "Passeio emocionante pelas dunas e praias da região.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "011",
@@ -119,6 +127,7 @@ export const lugares = [
     description:
       " O Instituto Ricardo Brennand, também conhecido como Castelo de Brennand, é uma instituição cultural brasileira sem fins lucrativos localizada na cidade do Recife, capital do estado de Pernambuco.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
   },
   {
     id: "012",
@@ -130,5 +139,46 @@ export const lugares = [
     description:
       "Uma das cachoeiras mais famosas de Pernambuco, com 32 metros de queda d’água, ideal para banhos, trilhas e prática de rapel, rodeada por mata atlântica preservada.",
     rating: "5.0",
+    qtdeAvaliacao: 251,
+  },
+  {
+    id: "013",
+    title: "Recife",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/00/2e/31/recife.jpg?w=600&h=500&s=1",
+    localizacao: "Pernambuco, Brasil",
+    categoria: "cidade",
+    rating: "5.0",
+    qtdeAvaliacao: 251,
+  },
+  {
+    id: "014",
+    title: "Ipojuca",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/b1/6e/40/20170317-105852-largejpg.jpg?w=600&h=400&s=1",
+    localizacao: "Pernambuco, Brasil",
+    categoria: "cidade",
+    rating: "5.0",
+    qtdeAvaliacao: 251,
+  },
+  {
+    id: "015",
+    title: "Olinda",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/81/4e/3c/vista-do-elevador.jpg?w=600&h=400&s=1",
+    localizacao: "Pernambuco, Brasil",
+    categoria: "cidade",
+    rating: "5.0",
+    qtdeAvaliacao: 251,
+  },
+  {
+    id: "016",
+    title: "Caruaru",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/ba/36/b5/20160624-155441-largejpg.jpg?w=600&h=400&s=1",
+    localizacao: "Pernambuco, Brasil",
+    categoria: "cidade",
+    rating: "5.0",
+    qtdeAvaliacao: 251,
   },
 ];
