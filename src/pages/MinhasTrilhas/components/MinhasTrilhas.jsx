@@ -199,7 +199,7 @@ export function MinhasTrilhas() {
   return (
     <>
       <div className="container mx-auto p-4 mt-32">
-        <Typography variant="h1" className="text-center text-[#002cdf]">
+        <Typography variant="h1" className="text-center titulo">
           Minha Trilha Personalizada
         </Typography>
         <Typography className="text-center mb-6" variant="lead">

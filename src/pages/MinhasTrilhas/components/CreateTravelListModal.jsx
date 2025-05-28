@@ -47,11 +47,13 @@ export function CreateTravelListModal({ availableCards, onClose, onSubmit }) {
     <Dialog open={true} handler={onClose} size="lg">
       {step === 1 && (
         <>
-          <DialogHeader>Selecione os Cards para o Novo Álbum</DialogHeader>
-          <DialogBody divider className="h-[40rem] overflow-scroll">
+          <DialogHeader className="flex justify-center">
+            <Typography variant="h4">Escolha os Lugares e Monte sua Trilha</Typography>
+          </DialogHeader>
+          <DialogBody divider className="h-[33rem] overflow-scroll">
             <div className="mb-4">
               <Input
-                label="Buscar Card pelo Título"
+                label="Digite o nome do lugar"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 icon={<i className="fas fa-search" />}
@@ -106,14 +108,14 @@ export function CreateTravelListModal({ availableCards, onClose, onSubmit }) {
 
       {step === 2 && (
         <>
-          <DialogHeader>Criar Novo Álbum</DialogHeader>
+          <DialogHeader>Criar Nova Trilha</DialogHeader>
           <DialogBody divider>
             <Typography className="mb-4">
-              Você selecionou {selectedCards.length} card(s).
+              Você selecionou {selectedCards.length} lugar(es).
             </Typography>
             <div className="flex flex-col gap-6">
               <Input
-                label="Título do Álbum"
+                label="Digite o Nome da sua Trilha"
                 value={albumTitle}
                 onChange={(e) => setAlbumTitle(e.target.value)}
                 required

@@ -7,7 +7,7 @@ import "../AchievementProfile/AchievementProfile.css";
 
 export function Ranking() {
   return (
-    <div className="w-full min-h-screen bg-white p-6 flex flex-col gap-6 SecaoUsuario">
+    <div className="w-[53.555%] min-h-screen bg-white p-6 flex flex-col gap-6 SecaoUsuario">
       {/* Seus Pontos */}
       <div className="border rounded-xl p-4 shadow-sm">
         <h3 className="text-lg font-semibold flex items-center gap-2">
