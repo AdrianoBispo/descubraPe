@@ -44,16 +44,16 @@ export function Header() {
       <nav className={`${menuAberto ? "active" : ""}`}>
         <ul className={`${menuAberto ? "NavbarMobile" : "Navbar"}`}>
           <li>
-            <Link to="/minhas-trilhas">Trilhas</Link>
+            <Link to={currentUser ? "/minhas-trilhas" : "/login"}>Trilhas</Link>
           </li>
           <li>
-            <Link to="/missoes">Missões</Link>
+            <Link to={currentUser ? "/missoes" : "/login"}>Missões</Link>
           </li>
           <li>
-            <Link to="/parcerias">Parcerias</Link>
+            <Link to={currentUser ? "/assinaturas" : "/landing-page/#assinaturas"}>Assinaturas</Link>
           </li>
           <li>
-            <Link to="/assinaturas">Assinaturas</Link>
+            <Link to={currentUser ? "/parcerias" : "/landing-page/#parcerias"}>Parcerias</Link>
           </li>
         </ul>
         <div className="menu-buttonsHamb">
