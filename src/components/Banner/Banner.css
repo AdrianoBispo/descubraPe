@@ -1,11 +1,29 @@
-.SecaoPrincipal h1 {
+/* Tela de PC/Notebook Full HD (1920 x 1080) */
+.container__banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  color: white;
+}
+
+.container__banner-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container__banner-textos h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 4rem;
+  line-height: 1.25;
   margin-left: 4.5rem;
 }
 
-.SecaoPrincipal p {
+.container__banner-textos p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -14,16 +32,31 @@
 }
 
 .Aventure-se {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: #56faff;
   color: #2423a3;
   width: 13rem;
   margin-left: 12rem;
   font-weight: bold;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.372);
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
-.Aventure-se .Icon3 {
-  display: inline-block;
+.Aventure-se:hover {
+  background-color: #06b6d4;
+}
+
+.Aventure-se img {
   width: 2rem;
   height: 2rem;
   font-size: 1.3rem;
@@ -31,46 +64,73 @@
   z-index: 2;
 }
 
-.Pin {
-  width: 40rem;
-  height: 40rem;
+.container__banner-imagens {
+  width: 50%;
+  margin: 2.5rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+}
+
+.mulher__banner {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 9999px;
+  overflow: hidden;
   box-shadow: 0 10rem 10rem rgba(0, 0, 0, 0.372);
 }
 
-.Icon1 {
+.mulher__banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.iconPin__banner {
+  position: absolute;
+  bottom: 1rem;
   width: 20rem;
   height: 10rem;
   margin-left: 34.2rem;
   margin-bottom: 25.2rem;
 }
 
-.Icon2 {
+.bandeiraPe__banner {
+  position: absolute;
+  bottom: 1rem;
   width: 20rem;
   height: 10rem;
   margin-right: 32rem;
   margin-bottom: 6rem;
 }
 
+/* Tela de Notebook Full HD com 125% de escala*/
 @media (max-width: 1620px) {
-  .SecaoPrincipal h1 {
+  .container__banner-textos h1 {
+    display: flex;
+    flex-direction: row;
     font-size: 3rem;
   }
 
-  .SecaoPrincipal p {
+  .container__banner-textos p {
     font-size: 1rem;
   }
 
-  .Pin {
+  .mulher__banner {
     width: 30rem;
     height: 30rem;
   }
 
-  .Icon1 {
-    margin-left: 25rem;
-    margin-bottom: 18rem;
+  .iconPin__banner {
+    margin-right: 6rem;
+
+    width: 15%;
+    height: 10%;
   }
 
-  .Icon2 {
+  .bandeiraPe__banner {
     margin-right: 25rem;
     margin-bottom: 3.5rem;
   }
@@ -80,19 +140,64 @@
   }
 }
 
+/* Tela de Notebook HD */
+@media (max-width: 1350px) {
+  .container__banner-textos h1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+  }
 
+  .container__banner-textos p {
+    font-size: 1rem;
+  }
+
+  .iconPin__banner {
+    margin-left: 25rem;
+    margin-bottom: 34rem;
+    width: 15%;
+    height: 10%;
+  }
+
+  .bandeiraPe__banner {
+    width: 25%;
+    height: 15%;
+    margin-right: 25rem;
+    margin-bottom: 14rem;
+  }
+
+  .Aventure-se {
+    margin-left: 6rem;
+  }
+}
+
+/* Tela de Tablet HD */
+@media (max-width: 1280px) {
+}
+
+/* Tela de Tablet Grande */
+@media (max-width: 1024px) {
+}
+
+/* Tela de Tablets Mediano */
 @media (max-width: 768px) {
   * {
     zoom: 1;
   }
-  
-  .SecaoPrincipal h1 {
+
+  .container__banner {
+    padding: 2rem;
+    color: white;
+    flex-direction: column;
+  }
+
+  .container__banner-textos h1 {
     margin-top: 7rem;
     margin-left: 2rem;
     font-size: 2.5rem;
   }
 
-  .SecaoPrincipal p {
+  .container__banner-textos p {
     margin-top: 2rem;
     margin-left: 0;
     margin-right: 17rem;
@@ -103,7 +208,7 @@
     margin-left: 5.5rem;
   }
 
-  .Pin {
+  .mulher__banner {
     position: absolute;
     width: 12rem;
     height: 12rem;
@@ -112,11 +217,27 @@
     margin-bottom: 62rem;
   }
 
-  .Icon1 {
-   display: none;
-  }
-
-  .Icon2 {
+  .iconPin__banner {
     display: none;
   }
+
+  .bandeiraPe__banner {
+    display: none;
+  }
+}
+
+/* Tela de tablet pequenos */
+@media (max-width: 640px) {
+}
+
+/* Tela de Smartphone grandes */
+@media (max-width: 430px) {
+}
+
+/* Tela de Smartphone medianos */
+@media (max-width: 375px) {
+}
+
+/* Tela de smartphones pequenos */
+@media (max-width: 320px) {
 }
