@@ -5,9 +5,11 @@ import { Seta } from "../../assets/index";
 import { mulherBanner } from "../../assets/index";
 
 import "./Banner.css";
+import { useAuth } from './../../services/useAuth';
 
 export function Banner() {
   const navigate = useNavigate();
+  const {currentUser} = useAuth();
 
   return (
     <section className="container__banner bg-gradient-to-r from-[#002CDF] to-[#56FAFF]">
@@ -22,7 +24,7 @@ export function Banner() {
         </p>
         <button
           className="Aventure-se"
-          onClick={() => navigate("/minhas-trilhas")}
+          onClick={currentUser ? () => navigate("/minhas-trilhas") : () => navigate("/login")}
         >
           AVENTURE-SE <img src={Seta} alt="ícone seta para esquerda" />
         </button>
