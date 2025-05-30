@@ -274,6 +274,12 @@
   }
 }
 
+@media (min-width: 240px) and (max-width: 520px) {
+  .container.show-chatbot #chatbot-toggler {
+    display: none;
+  }
+}
+
 /* Future Dark Mode (optional)
 body.dark {
   background: linear-gradient(135deg, #1e1e2f, #2e2e3d);
