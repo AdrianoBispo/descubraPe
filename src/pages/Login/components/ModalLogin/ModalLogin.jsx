@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { cadastrar } from "../../../../services/auth/authEmailSenha/cadastro";
-import { logar } from "../../../../services/auth/authEmailSenha/login"
+import { cadastrar } from "../../../../services/auth/cadastro";
+import { logar } from "../../../../services/auth/login"
 
 import {
   Dialog,
@@ -11,7 +11,6 @@ import {
   CardFooter,
   Typography,
   Input,
-  Checkbox,
   Button,
 } from "@material-tailwind/react";
 

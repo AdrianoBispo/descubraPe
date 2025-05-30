@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { logo } from "../../assets/index";
-import { logout } from "../../services/auth/authEmailSenha/logout";
+import { logout } from "../../services/auth/logout";
 import { useAuth } from "../../services/useAuth";
 
 import "./Header.css";

@@ -1,5 +1,11 @@
-import { loginWithGoogle } from "../../../../services/auth/googleLogin";
-import { loginWithFacebook } from "../../../../services/auth/facebookLogin";
+import {
+  auth,
+  googleProvider,
+  facebookProvider,
+  db,
+} from "../../../../services/firebase";
+import { doc, setDoc, serverTimestamp, getDoc } from "firebase/firestore";
+import { signInWithPopup } from "firebase/auth";
 import {
   logo,
   googleIcon,
@@ -15,39 +21,85 @@ export function LoginComponent({ onClick }) {
 
   const handleGoogleLogin = async () => {
     try {
-      const user = await loginWithGoogle();
-      console.log("Logado com Google:", user);
-      navigate("/"); // redireciona para a tela principal
-    } catch (error) {
-      console.error("Erro no login com Google:", error);
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+
+      // Verifica se o usuário já existe no Firestore, se não, cria
+      const userDocRef = doc(db, "users", user.uid);
+      const userDoc = await getDoc(userDocRef);
+
+      if (!userDoc.exists()) {
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            uid: user.uid,
+            nome: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL,
+            telefone: "",
+            resumo: "",
+            dataCriacao: serverTimestamp(),
+          },
+          { merge: true }
+        );
+      }
+
+      navigate("/");
+    } catch (err) {
+      console.error("Erro no login com Google:", err);
     }
   };
 
   const handleFacebookLogin = async () => {
     try {
-      const user = await loginWithFacebook();
-      console.log("Logado com Facebook:", user);
+      const result = await signInWithPopup(auth, facebookProvider);
+      const user = result.user;
+
+      // Verifica se o usuário já existe no Firestore, se não, cria
+      const userDocRef = doc(db, "users", user.uid);
+      const userDoc = await getDoc(userDocRef);
+
+      if (!userDoc.exists()) {
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            uid: user.uid,
+            nome: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL,
+            telefone: "",
+            resumo: "",
+            dataCriacao: serverTimestamp(),
+          },
+          { merge: true }
+        );
+      }
+
       navigate("/");
-    } catch (error) {
-      console.error("Erro no login com Facebook:", error);
+    } catch (err) {
+      console.error("Erro no login com Facebook:", err);
     }
   };
 
   return (
     <div className="container_login">
-      <img className="container_login-img" src={bannerLogin} alt="Banner convidando o usuário a criar sua conta na Descubra PE" />
+      <img
+        className="container_login-img"
+        src={bannerLogin}
+        alt="Banner convidando o usuário a criar sua conta na Descubra PE"
+      />
 
       <div className="container_login_form">
         <h1 className="container_login_form-titulo">
-          <img src={logo} alt="Logo Descubra PE"/> DESCUBRA PE
+          <img src={logo} alt="Logo Descubra PE" /> DESCUBRA PE
         </h1>
         <h2 className="container_login_form-subtitulo">
           Explore o inesquecível, <br />
           Descubra Pernambuco.
         </h2>
         <p className="container_login_form-paragrafo">
-          Entre ou crie sua conta e junte-se a diversas
-          pessoas que gostam de usar o Descubra PE
+          Entre ou crie sua conta e junte-se a diversas pessoas que gostam de
+          usar o Descubra PE
         </p>
 
         <button className="btn-conecte" onClick={onClick}>
