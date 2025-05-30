@@ -1,0 +1,16 @@
+.container__footer {
+  border-top: solid 1px black;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #fffce7;
+}
+
+@media (min-width: 240px) and (max-width: 540px) {
+  .container__footer-items img {
+    align-self: center;
+    width: 48px;
+    height: 48px;
+  }
+  .container__footer-links {
+    flex-direction: column;
+  }
+}
