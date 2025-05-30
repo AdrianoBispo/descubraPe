@@ -8,6 +8,7 @@ import {
   DialogHeader,
   DialogBody,
   DialogFooter,
+  Button
 } from "@material-tailwind/react";
 
 import { IoMdClose } from "react-icons/io";
@@ -74,7 +75,9 @@ export function ProfileConfig({ open, handleOpen }) {
           <hr />
           <div className="flex flex-row justify-between">
             <p className="text-xl">E-mail:</p>
-            <span className="text-xl">{userData?.email || "Não informado"}</span>
+            <span className="text-xl">
+              {userData?.email || "Não informado"}
+            </span>
             <BsPencil size={16} className="mt-1 cursor-pointer" />
           </div>
           <hr />
@@ -95,9 +98,13 @@ export function ProfileConfig({ open, handleOpen }) {
         </DialogBody>
 
         <DialogFooter className="flex  gap-12">
-          <button className="" onClick={handleOpen}>
-            Confirmar
-          </button>
+          <Button
+            variant="gradient"
+            color="green"
+            onClick={handleOpen}
+          >
+            <span>Salvar</span>
+          </Button>
         </DialogFooter>
       </Dialog>
     </>
