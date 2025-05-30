@@ -175,85 +175,10 @@
   }
 }
 
-/* Tela de Tablet HD */
-@media (max-width: 1280px) {
-}
-
-/* Tela de Tablet Grande */
-@media (max-width: 1024px) {
-}
-
-/* Tela de Tablets Mediano */
-@media (max-width: 768px) {
+/* Tela de Tablets HD */
+@media (min-width: 851px) and (max-width: 1150px) {
   .container__banner {
-    padding: 2rem;
-    color: white;
-    flex-direction: column;
-  }
-
-  .container__banner-textos h1 {
-    margin-top: 7rem;
-    margin-left: 2rem;
-    font-size: 2.5rem;
-  }
-
-  .container__banner-textos p {
-    margin-top: 2rem;
-    margin-left: 0;
-    margin-right: 17rem;
-    font-size: 1rem;
-  }
-
-  .Aventure-se {
-    margin-left: 5.5rem;
-  }
-
-  .mulher__banner {
-    position: absolute;
-    width: 12rem;
-    height: 12rem;
-    margin-top: -10.5rem;
-    margin-left: 14rem;
-    margin-bottom: 62rem;
-  }
-
-  .iconPin__banner {
-    display: none;
-  }
-
-  .bandeiraPe__banner {
-    display: none;
-  }
-}
-
-/* Tela de tablet pequenos */
-@media (max-width: 640px) {
-  .container__banner-textos h1 {
-    margin-left: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .container__banner-textos p {
-    margin-left: -1rem;
-    margin-right: 9rem;
-  }
-
-  .mulher__banner {
-    width: 10rem;
-    height: 10rem;
-    margin-top: 20rem;
-  }
-
-  .Aventure-se {
-    margin-top: 2rem;
-    margin-left: 4rem;
-  }
-}
-
-/* Tela de Smartphone mediano - grande */
-@media (min-width: 377px) and (max-width: 448px) {
-  .container__banner {
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -266,12 +191,282 @@
   }
 
   .container__banner-textos h1 {
+    margin-top: 7rem;
+    margin-left: 0rem;
+    font-size: 0;
+    color: transparent;
+  }
+
+  .container__banner-textos h1::before {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    margin: 40px 0 0 0;
+    padding: 0px 2rem;
+    content: "Do frevo ao mar cristalino: Pernambuco é paixão à primeira vista!";
+  }
+
+  .container__banner-textos p {
+    font-size: 0;
+    color: transparent;
+  }
+
+  .container__banner-textos p::before {
+    content: "Descubra roteiros incríveis e participe de experiências únicas. \A Conecte-se com o que Pernambuco tem de mais autêntico.";
+    font-size: 1.5rem;
+    line-height: 1.25;
+    color: #fff;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    white-space: pre-wrap;
+  }
+
+  .Aventure-se {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    padding: 0px;
+    margin: 0 0 2rem 0;
+    font-size: 1rem;
+    width: 12rem;
+    height: 3rem;
+  }
+
+  .Aventure-se img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .mulher__banner {
+    display: none;
+  }
+
+  .iconPin__banner {
+    display: none;
+  }
+
+  .bandeiraPe__banner {
+    display: none;
+  }
+
+  .container__banner-imagem {
+    display: contents;
+    border-radius: 99999px;
+  }
+
+  .container__banner-imagem img {
+    border-radius: 99999px;
+    object-fit: cover;
+    width: 35%;
+    height: 35vw;
+  }
+}
+
+/* Tela de Tablets Mediano */
+@media (min-width: 701px) and (max-width: 850px) {
+  .container__banner {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container__banner-textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container__banner-textos h1 {
+    margin-top: 7rem;
+    margin-left: 2rem;
+    font-size: 0;
+    color: transparent;
+  }
+
+  .container__banner-textos h1::before {
+    font-size: 1.888rem;
+    text-align: center;
+    color: white;
+    margin: 40px 0 0 0;
+    padding: 0px;
+    content: "Do frevo ao mar cristalino: Pernambuco é paixão à primeira vista!";
+  }
+
+  .container__banner-textos p {
+    font-size: 0;
+    color: transparent;
+  }
+
+  .container__banner-textos p::before {
+    content: "Descubra roteiros incríveis e participe de experiências únicas. \A Conecte-se com o que Pernambuco tem de mais autêntico.";
+    font-size: 1.1rem;
+    line-height: 1.25;
+    color: #fff;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    white-space: pre-wrap;
+  }
+
+  .Aventure-se {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    padding: 0px;
+    margin: 0 0 2rem 0;
+    font-size: 1rem;
+    width: 12rem;
+    height: 3rem;
+  }
+
+  .Aventure-se img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .mulher__banner {
+    display: none;
+  }
+
+  .iconPin__banner {
+    display: none;
+  }
+
+  .bandeiraPe__banner {
+    display: none;
+  }
+
+  .container__banner-imagem {
+    display: contents;
+    border-radius: 99999px;
+  }
+
+  .container__banner-imagem img {
+    border-radius: 99999px;
+    object-fit: cover;
+    width: 45%;
+    height: 40vw;
+  }
+}
+
+/* Tela de tablet pequenos */
+@media (min-width: 449px) and (max-width: 700px) {
+  .container__banner {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container__banner-textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container__banner-textos h1 {
+    margin-top: 7rem;
+    margin-left: 2rem;
+    font-size: 0;
+    color: transparent;
+  }
+
+  .container__banner-textos h1::before {
+    font-size: 1.6rem;
+    text-align: center;
+    color: white;
+    margin: 40px 0 0 0;
+    padding: 0px;
+    content: "Do frevo ao mar cristalino: Pernambuco é paixão à primeira vista!";
+  }
+
+  .container__banner-textos p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+  }
+  .Aventure-se {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+    width: 12rem;
+    height: 3rem;
+  }
+
+  .Aventure-se img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .mulher__banner {
+    display: none;
+  }
+
+  .iconPin__banner {
+    display: none;
+  }
+
+  .bandeiraPe__banner {
+    display: none;
+  }
+
+  .iconPin__banner {
+    display: none;
+  }
+
+  .bandeiraPe__banner {
+    display: none;
+  }
+
+  .container__banner-imagem {
+    display: contents;
+    border-radius: 99999px;
+  }
+
+  .container__banner-imagem img {
+    border-radius: 99999px;
+    object-fit: cover;
+    width: 60%;
+    height: 50vw;
+  }
+}
+
+/* Tela de Smartphone grandes */
+@media (min-width: 377px) and (max-width: 448px) {
+  .container__banner {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container__banner-textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container__banner-textos h1 {
+    margin-top: 7rem;
+    margin-left: 2rem;
     font-size: 0;
     color: transparent;
   }
 
   .container__banner-textos h1::before {
     font-size: 1.37rem;
+    text-align: center;
     color: white;
     margin: 40px 0 0 0;
     padding: 0px;
@@ -305,6 +500,14 @@
     display: none;
   }
 
+  .iconPin__banner {
+    display: none;
+  }
+
+  .bandeiraPe__banner {
+    display: none;
+  }
+
   .container__banner-imagem {
     display: contents;
     border-radius: 99999px;
@@ -318,9 +521,10 @@
   }
 }
 
-/* Tela de smartphones pequeno - mediano */
+/* Tela de smartphones pequenos */
 @media (min-width: 320px) and (max-width: 376px) {
   .container__banner {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -333,12 +537,15 @@
   }
 
   .container__banner-textos h1 {
+    margin-top: 7rem;
+    margin-left: 2rem;
     font-size: 0;
     color: transparent;
   }
 
   .container__banner-textos h1::before {
     font-size: 1.1rem;
+    text-align: center;
     color: white;
     margin: 40px 0 0 0;
     padding: 0px;
@@ -368,6 +575,14 @@
   }
 
   .mulher__banner {
+    display: none;
+  }
+
+  .iconPin__banner {
+    display: none;
+  }
+
+  .bandeiraPe__banner {
     display: none;
   }
 
