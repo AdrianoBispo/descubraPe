@@ -93,7 +93,7 @@
   transition: 0.4s;
 }
 
-@media (min-width: 0px) and (max-width: 1360px) {
+@media (min-width: 320px) and (max-width: 1360px) {
   nav {
     display: none;
     flex-direction: column;

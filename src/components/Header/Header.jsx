@@ -59,7 +59,7 @@ export function Header() {
         <div className="menu-buttonsHamb">
           {currentUser ? (
             <>
-              <Link to="/perfil" className="BotaoLogin">
+              <Link to="/profile" className="BotaoLogin">
                 Perfil
               </Link>
               <button onClick={handleLogout} className="BotaoLogin">

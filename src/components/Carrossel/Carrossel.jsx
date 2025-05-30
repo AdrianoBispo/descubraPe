@@ -6,7 +6,7 @@ import { trilhas } from "../../mocks/trilhas";
 import "./Carrossel.css";
 
 export function Carrossel() {
-  const [indiceAtual, setIndiceAtual] = useState(0);
+  const [indiceAtual, setIndiceAtual] = useState(2);
   const navigate = useNavigate();
 
   const anterior = () => {

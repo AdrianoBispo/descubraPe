@@ -104,9 +104,9 @@ export function CardsCidades() {
 
   return (
     <>
-      <div className="mt-32 mb-2">
+      <div className="mb-2">
         <h1 className="titulo">Pernambuco: Cidades Badaladas</h1>
-        <p className="text-xl texto-cards">
+        <p className="texto-cards">
           Explore as cidades mais visitadas do estado
         </p>
       </div>

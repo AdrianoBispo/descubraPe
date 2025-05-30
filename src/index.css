@@ -178,3 +178,11 @@
   margin-left: 2rem;
   margin-bottom: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 2rem;
+    text-align: left;
+    margin: 1rem;
+  }
+}

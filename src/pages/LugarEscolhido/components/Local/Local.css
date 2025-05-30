@@ -67,15 +67,15 @@
 
   .Avaliacao {
     text-wrap: nowrap;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 
   .Opcoes {
     flex-direction: column;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: -5.5rem;
     margin-left: 4rem;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 
   .ImagemPrincipal {
@@ -92,7 +92,7 @@
   }
 
   .Horario {
-    margin-top: -6rem;
+    margin-top: -5rem;
     margin-left: 2rem;
   }
 }

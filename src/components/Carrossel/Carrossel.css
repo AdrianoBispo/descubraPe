@@ -134,8 +134,8 @@
 @media (max-width: 768px) {
 
   .carrossel-titulo {
-    font-size: 2.5rem;
-    margin-left: 2rem;
+    text-align: center;
+    font-size: 2rem;
   }
 
   .carrossel-card {
@@ -155,17 +155,13 @@
   }
 
   .carrossel-subtitulo strong {
-    position: absolute;
-    margin-top: -3rem;
-    margin-left: -5rem;
-    font-size: 1.5rem;
+    align-items: center;
   }
 
   .text {
+    text-align: center;
     font-size: 0.8rem;
     font-weight: 500;
-    margin-right: -2rem;
-    margin-left: -2rem;
   }
 
   .carrossel-setalateralEsquerda {
@@ -252,7 +248,7 @@
 }
 
 @media (min-width: 851) and (max-width: 1700px) {
-  
+
   .carrossel-setalateralDireita {
     margin-right: 1500rem;
   }

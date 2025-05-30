@@ -21,6 +21,7 @@
 
 @media (max-width: 768px) {
   .texto-cards {
+    text-align: left;
     margin-left: 1rem;
   }  
 }

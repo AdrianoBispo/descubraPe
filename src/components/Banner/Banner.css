@@ -172,18 +172,13 @@
 }
 
 /* Tela de Tablet HD */
-@media (max-width: 1280px) {
-}
+@media (max-width: 1280px) {}
 
 /* Tela de Tablet Grande */
-@media (max-width: 1024px) {
-}
+@media (max-width: 1024px) {}
 
 /* Tela de Tablets Mediano */
 @media (max-width: 768px) {
-  * {
-    zoom: 1;
-  }
 
   .container__banner {
     padding: 2rem;
@@ -212,7 +207,7 @@
     position: absolute;
     width: 12rem;
     height: 12rem;
-    margin-top: 10.5rem;
+    margin-top: -10.5rem;
     margin-left: 14rem;
     margin-bottom: 62rem;
   }
@@ -228,16 +223,35 @@
 
 /* Tela de tablet pequenos */
 @media (max-width: 640px) {
+
+  .container__banner-textos h1 {
+    margin-left: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .container__banner-textos p {
+    margin-left: -1rem;
+    margin-right: 9rem;
+  }
+
+  .mulher__banner {
+    width: 10rem;
+    height: 10rem;
+    margin-top: 20rem;
+  }
+
+  .Aventure-se {
+    margin-top: 2rem;
+    margin-left: 4rem;
+  }
 }
 
 /* Tela de Smartphone grandes */
-@media (max-width: 430px) {
-}
+@media (max-width: 430px) {}
 
 /* Tela de Smartphone medianos */
-@media (max-width: 375px) {
-}
+@media (max-width: 375px) {}
 
 /* Tela de smartphones pequenos */
-@media (max-width: 320px) {
-}
+@media (max-width: 320px) {}

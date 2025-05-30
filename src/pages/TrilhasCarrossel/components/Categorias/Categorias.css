@@ -13,11 +13,12 @@
 .left-column {
     background: white;
     width: 50%;
-    height: 75%;
+    height: 100%;
     margin-top: 15rem;
 }
 
 .right-column {
+    
     width: 50%;
     height: 100%;
 }
@@ -60,7 +61,7 @@
 }
 
 .explore-header h3 {
-    margin-top: 8rem;
+    margin-top: 4rem;
     margin-right: 1rem;
     margin-left: 2rem;
     font-size: 2.5rem;
@@ -146,8 +147,13 @@
 }
 
 @media (max-width: 1620px) {
+    
+    .right-column {
+        height: 100%;
+    }
+
     .top-column {
-        height: 45%;
+        height: 25%;
     }
 
     .top-column .titulo-trilha {
@@ -160,6 +166,11 @@
     .top-column .titulo-trilha h2 {
         font-size: 2rem;
     }
+
+    .left-column {
+        margin-top: 8.5rem;
+        padding-top: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -170,14 +181,50 @@
 
     .top-column {
         width: 50.4vh;
-        height: 25%;
+        height: 35%;
     }
 
     .left-column {
         width: 50.4vh;
     }
 
+    .explore-header h3 {
+        margin-top: 6.5rem;
+    }
+
+    .left-column .cards {
+        margin-top: 2rem;
+        padding-top: 11rem;
+    }
+
     .right-column {
         display: none;
     }
+}
+
+@media (max-width: 640px) {
+    .top-column {
+        padding: 1rem;
+    }
+
+    .top-column .titulo-trilha {
+        padding: 2rem;
+    }
+
+    .top-column .titulo-trilha h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .left-column .explore-header h3 {
+        margin-left: 0.7rem;
+        font-size: 1.5rem;
+    }
+
+
+    .left-column .cards {
+        margin: 0;
+        padding: 0;
+    }
+
 }

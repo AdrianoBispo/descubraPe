@@ -106,7 +106,7 @@ export function CardsAtracoes() {
     <>
     <div className="mt-32 mb-2">
         <h1 className="font-bold titulo">Pernambuco: Melhores Atrações</h1>
-        <p className="text-xl texto-cards">
+        <p className="texto-cards">
           Conheça os locais mais visitados do estado
         </p>
       </div>
