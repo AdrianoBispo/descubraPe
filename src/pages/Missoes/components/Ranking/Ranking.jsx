@@ -1,22 +1,53 @@
-import { usuario } from "../../../../assets";
+import { avatarMasc, avatarFem } from "../../../../assets";
 import { Pontos } from "../../../../assets/index";
 import { Ranking1 } from "../../../../assets/index";
+
+import { useState, useEffect } from "react";
+import { db } from "../../../../services/firebase";
+import { doc, getDoc } from "firebase/firestore";
+import { useAuth } from "../../../../services/useAuth";
 
 import "./Ranking.css";
 import "../AchievementProfile/AchievementProfile.css";
 
 export function Ranking() {
+  const { currentUser } = useAuth();
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      if (currentUser) {
+        try {
+          const docRef = doc(db, "users", currentUser.uid);
+          const docSnap = await getDoc(docRef);
+
+          if (docSnap.exists()) {
+            setUserData(docSnap.data());
+          } else {
+            console.log("Nenhum documento encontrado!");
+          }
+        } catch (err) {
+          console.error("Erro ao buscar dados:", err);
+        }
+      }
+    };
+
+    fetchUserData();
+  }, [currentUser]); // Recarrega quando o usuário muda
+
   return (
     <div className="w-[53.555%] min-h-screen bg-white p-6 flex flex-col gap-6 SecaoUsuario">
       {/* Seus Pontos */}
       <div className="border rounded-xl p-4 shadow-sm">
         <h3 className="text-lg font-semibold flex items-center gap-2">
           <span>
-            <img src={Pontos} className="Icones"/>
-          </span> Seus Pontos
+            <img src={Pontos} className="Icones" />
+          </span>{" "}
+          Seus Pontos
         </h3>
         <p className="text-sm mt-1 ml-5">
-          Saldo: <span className="text-green-600 font-semibold">520 Pontos</span>
+          Saldo:{" "}
+          <span className="text-green-600 font-semibold">520 Pontos</span>
         </p>
         <button className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium">
           Resgatar Recompensas
@@ -27,15 +58,21 @@ export function Ranking() {
       <div className="border rounded-xl p-4 shadow-sm ">
         <h3 className="text-xl font-semibold flex items-center gap-2 mb-1">
           <span>
-            <img src={Ranking1} className="Icones"/>
-          </span> Ranking dos Exploradores de Pernambuco
+            <img src={Ranking1} className="Icones" />
+          </span>{" "}
+          Ranking dos Exploradores de Pernambuco
         </h3>
         <p className="text-sm text-gray-500 mb-4">
-          Classificação com base em XP, Missões Concluídas e Badges Conquistadas. Atualizado em: 10:00, 26/10/2024
+          Classificação com base em XP, Missões Concluídas e Badges
+          Conquistadas. Atualizado em: 10:00, 26/10/2024
         </p>
         <div className="flex items-center gap-2 mb-4">
-          <button className="px-4 py-1 bg-gray-800 text-white rounded-lg text-sm font-medium">Geral</button>
-          <button className="px-4 py-1 bg-gray-200 text-gray-800 rounded-lg text-sm font-medium">Amigos</button>
+          <button className="px-4 py-1 bg-gray-800 text-white rounded-lg text-sm font-medium">
+            Geral
+          </button>
+          <button className="px-4 py-1 bg-gray-200 text-gray-800 rounded-lg text-sm font-medium">
+            Amigos
+          </button>
           <select className="ml-auto border rounded-lg px-3 py-1 text-sm">
             <option>Ordenar por:</option>
             <option>XP</option>
@@ -58,21 +95,79 @@ export function Ranking() {
             </thead>
             <tbody>
               {[
-                { nome: "Maria Silva", xp: 15000, missoes: 32, badges: 12, total: 15824 },
-                { nome: "João Pereira", xp: 14500, missoes: 30, badges: 10, total: 15250 },
-                { nome: "Carlos Rocha", xp: 1305, missoes: 28, badges: 9, total: 14728 },
-                { nome: "Bruna Santos", xp: 1250, missoes: 5, badges: 2, total: 520 },
-                { nome: "Marcelo Borges", xp: 25, missoes: 3, badges: 1, total: 24 },
-                { nome: "Marcos Felipe", xp: 0, missoes: 0, badges: 0, total: 0 }
+                {
+                  nome: "Maria Silva",
+                  xp: 15000,
+                  missoes: 32,
+                  badges: 12,
+                  total: 15824,
+                  avatar: avatarFem,
+                },
+                {
+                  nome: "João Pereira",
+                  xp: 14500,
+                  missoes: 30,
+                  badges: 10,
+                  total: 15250,
+                  avatar: avatarMasc,
+                },
+                {
+                  nome: "Carlos Rocha",
+                  xp: 1305,
+                  missoes: 28,
+                  badges: 9,
+                  total: 14728,
+                  avatar: avatarMasc,
+                },
+                {
+                  nome: `${
+                    userData?.nome ||
+                    currentUser?.displayName ||
+                    "Nome não definido"
+                  }`,
+                  xp: 1250,
+                  missoes: 5,
+                  badges: 2,
+                  total: 520,
+                  avatar: `${
+                    userData?.photoURL ||
+                    "https://ionicframework.com/docs/img/demos/avatar.svg"
+                  }`,
+                },
+                {
+                  nome: "Marcelo Borges",
+                  xp: 25,
+                  missoes: 3,
+                  badges: 1,
+                  total: 24,
+                  avatar: avatarMasc,
+                },
+                {
+                  nome: "Marcos Felipe",
+                  xp: 0,
+                  missoes: 0,
+                  badges: 0,
+                  total: 0,
+                  avatar: avatarMasc,
+                },
               ].map((user, index) => (
                 <tr
                   key={index}
-                  className={`border-t ${user.nome === "Bruna Santos" ? "bg-yellow-50" : ""}`}
+                  className={`border-t ${
+                    user.nome ===
+                    `${
+                      userData?.nome ||
+                      currentUser?.displayName ||
+                      "Nome não definido"
+                    }`
+                      ? "bg-yellow-50"
+                      : ""
+                  }`}
                 >
                   <td className="px-4 py-2 font-medium">{index + 1}</td>
                   <td className="px-4 py-2 flex items-center gap-2">
                     <img
-                      src={usuario}
+                      src={user.avatar}
                       alt="avatar"
                       className="w-6 h-6 rounded-full"
                     />

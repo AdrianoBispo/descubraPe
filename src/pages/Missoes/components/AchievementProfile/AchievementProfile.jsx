@@ -1,41 +1,83 @@
-import { usuario } from "../../../../assets/index";
 import { Badge } from "../../../../assets/index";
 import { Badge1 } from "../../../../assets/index";
 import { Badge2 } from "../../../../assets/index";
 import { Missoes } from "../../../../assets/index";
 import { Progress, Typography } from "@material-tailwind/react";
 
+import { useState, useEffect } from "react";
+import { db } from "../../../../services/firebase";
+import { doc, getDoc } from "firebase/firestore";
+import { useAuth } from "../../../../services/useAuth";
+
 import { Ranking } from "../Ranking/Ranking";
 
 import "./AchievementProfile.css";
 
 export function AchievementProfile() {
+  const { currentUser } = useAuth();
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      if (currentUser) {
+        try {
+          const docRef = doc(db, "users", currentUser.uid);
+          const docSnap = await getDoc(docRef);
+
+          if (docSnap.exists()) {
+            setUserData(docSnap.data());
+          } else {
+            console.log("Nenhum documento encontrado!");
+          }
+        } catch (err) {
+          console.error("Erro ao buscar dados:", err);
+        }
+      }
+    };
+
+    fetchUserData();
+  }, [currentUser]); // Recarrega quando o usuário muda
+
   return (
     <>
       <div className="w-full min-h-screen mt-20 bg-white p-6 flex flex-col items-center gap-6 SecaoUsuario">
         {/* Perfil do usuário */}
         <div className="w-2/4 flex items-center gap-4">
           <img
-            src={usuario}
+            src={
+              userData?.photoURL ||
+              "https://ionicframework.com/docs/img/demos/avatar.svg"
+            }
             alt="Foto de perfil"
             className="w-40 h-40 mb-4 mr-4 rounded-full object-cover avatar"
           />
           <div className="flex flex-col">
-            <h2 className="nome">Bruna Santos</h2>
-            <p className="bio">
-              "Apaixonada por cultura, tecnologia e turismo em Pernambuco."
-            </p>
+            <h2 className="nome">
+              {" "}
+              {userData?.nome ||
+                currentUser?.displayName ||
+                "Nome não definido"}
+            </h2>
+            <p className="bio">{userData?.resumo || "Não informado"}</p>
 
             <div className="w-full mt-3">
               <div className=" flex items-center justify-between gap-4">
-                <Typography color="blue-gray" variant="h6" className="text-[#009245]">
+                <Typography
+                  color="blue-gray"
+                  variant="h6"
+                  className="text-[#009245]"
+                >
                   Nível 5
                 </Typography>
-                <Typography color="blue-gray" className="text-[#009245]" variant="h6">
+                <Typography
+                  color="blue-gray"
+                  className="text-[#009245]"
+                  variant="h6"
+                >
                   1250/2000 XP
                 </Typography>
               </div>
-              <Progress value={62.5} color="green"/>
+              <Progress value={62.5} color="green" />
             </div>
           </div>
         </div>
