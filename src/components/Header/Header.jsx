@@ -29,7 +29,7 @@ export function Header() {
   return (
     <header className="flex fixed w-full top-0 left-0 justify-between items-center z-10 p-3 bg-white shadow-md">
       <div className="flex items-center ml-5">
-        <img src={logo} alt="" className="Logo" />
+        <img src={logo} alt="Logomarca" className="Logo" />
         <span className="TituloLogo" onClick={() => navigate("/")}>
           Descubra PE
         </span>
