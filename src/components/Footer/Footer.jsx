@@ -9,11 +9,15 @@ export function Footer() {
     <>
       <footer className="container__footer">
         <div className="container__footer-items flex flex-row flex-wrap justify-around">
+          <div className="flex items-center gap-2">
           <img
             src={logo}
             alt="logo-ct"
-            className="w-10"
+            className="w-8"
           />
+          <h3 className="text-xl font-bold text-[#0f30b6]">Descubra PE</h3>
+
+          </div>
           <ul className="container__footer-links flex flex-wrap items-center gap-y-2 gap-x-8">
             <li>
               <Typography
@@ -49,7 +53,7 @@ export function Footer() {
         </div>
         <hr className="my-8 border-black w-2/3 place-self-center" />
         <Typography className="text-center font-700">
-          &copy; {currentYear} Descubra PE. Todos direitos reservados.
+          &copy; {currentYear} Todos direitos reservados.
         </Typography>
       </footer>
     </>
