@@ -1,0 +1,46 @@
+/* CardsCidades.css */
+
+/* Bloco: cards-cidades */
+/* Idealmente, o componente CardsCidades teria um div wrapper com a classe "cards-cidades".
+   Assumindo que os elementos estão dentro de um contexto de página. */
+
+.cards-cidades__header {
+  margin-top: 8rem; /* Equivalente a mt-32 */
+  margin-bottom: 0.5rem; /* Equivalente a mb-2 */
+  padding-left: 2rem; /* Adicionado para alinhar com o grid, ajuste se necessário */
+  padding-right: 2rem; /* Adicionado para consistência, ajuste se necessário */
+}
+
+.cards-cidades__title {
+  /* Estilos base para a classe 'titulo' dentro deste contexto */
+  font-size: 2.25rem; /* Exemplo de tamanho para um título principal */
+  font-weight: bold;
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do título */
+}
+
+.cards-cidades__subtitle {
+  font-size: 1.25rem; /* Equivalente a text-xl */
+  line-height: 1.75rem; /* Equivalente a text-xl */
+  /* Estilos base para a classe 'texto-cards' */
+  color: #555; /* Exemplo de cor de texto */
+}
+
+.cards-cidades__grid {
+  margin-left: 2rem; /* Equivalente a ml-8 */
+  /* Se o padding foi adicionado ao __header, pode não precisar de margin aqui,
+     ou ajustar para margin-left: 0 e usar padding no container pai.
+     Para manter a tradução direta do ml-8, ele permanece. */
+  display: flex; /* Equivalente a flex */
+  flex-direction: row; /* Equivalente a flex-row */
+  flex-wrap: wrap; /* Equivalente a flex-wrap */
+  gap: 3rem; /* Equivalente a gap-12 */
+  padding-bottom: 2rem; /* Espaçamento inferior para o grid */
+}
+
+/* Estilos para BookingCard (que é um componente separado) serão definidos em BookingCard.css */
+/* Exemplo de como um BookingCard apareceria dentro deste grid:
+.cards-cidades__grid .booking-card {
+   // Estilos específicos se o BookingCard precisar se adaptar dentro de CardsCidades
+}
+*/

@@ -4,6 +4,8 @@ import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { Rating } from "@material-tailwind/react";
 
+import "./CardsModelLugares.css"
+
 export function CardsModelLugares({
   lugar,
   onFavorite,
@@ -17,11 +19,9 @@ export function CardsModelLugares({
 
   return (
     <>
-      <div className="card" key={id}>
+      <div className="model-card" key={id}>
         <div
-          size="sm"
-          variant="text"
-          className="absolute ml-[12.8rem] mt-1 rounded-full cursor-pointer"
+          className="model-card__favorite-button"
           onClick={
             currentUser
               ? () => onFavorite(id, !isFavorited)
@@ -36,19 +36,19 @@ export function CardsModelLugares({
         </div>
         <img
           onClick={() => navigate(`/lugar-escolhido/${lugar.title}`)}
-          className="max-h-[10rem]"
+          className="model-card__image"
           src={image}
           alt={title}
         />
-        <h4 className="truncate">{title}</h4>
-        <div className="flex flex-row items-center">
-          <Rating className="pb-1.5" value={parseInt(rating)} readonly />
-          <p className="text-green-600">({qtdeAvaliacao})</p>
+        <h4 className="model-card__title">{title}</h4>
+        <div className="model-card__rating-line">
+          <Rating className="model-card__rating-stars" value={parseInt(rating)} readonly />
+          <p className="model-card__review-count">({qtdeAvaliacao})</p>
         </div>
-        <p className="mb-1 truncate font-bold">{localizacao}</p>
-        <p className="truncate">{description}</p>
+        <p className="model-card__location">{localizacao}</p>
+        <p className="model-card__description">{description}</p>
         <button
-          className="trilha-btn"
+          className="model-card__action-button"
           onClick={
             currentUser ? () => onAddToGallery() : () => navigate("/login")
           }

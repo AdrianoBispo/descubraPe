@@ -1,0 +1,37 @@
+/* CardsAtracoes.css */
+
+/* Bloco: cards-atracoes */
+
+.cards-atracoes__header {
+  margin-top: 8rem; /* Equivalente a mt-32 */
+  margin-bottom: 0.5rem; /* Equivalente a mb-2 */
+  padding-left: 2rem;  /* Ajustado para consistência com mx-8 do grid */
+  padding-right: 2rem; /* Ajustado para consistência com mx-8 do grid */
+}
+
+.cards-atracoes__title {
+  font-weight: 700; /* Equivalente a font-bold */
+  /* Estilos base para a classe 'titulo' dentro deste contexto */
+  font-size: 2.25rem; /* Exemplo de tamanho para um título principal */
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do título */
+}
+
+.cards-atracoes__subtitle {
+  font-size: 1.25rem; /* Equivalente a text-xl */
+  line-height: 1.75rem; /* Equivalente a text-xl */
+  /* Estilos base para a classe 'texto-cards' */
+  color: #555; /* Exemplo de cor de texto */
+}
+
+.cards-atracoes__grid {
+  margin-left: 2rem; /* Parte de mx-8 */
+  margin-right: 2rem; /* Parte de mx-8 */
+  display: flex; /* Equivalente a flex */
+  flex-direction: row; /* Equivalente a flex-row */
+  flex-wrap: wrap; /* Equivalente a flex-wrap */
+  gap: 2rem; /* Equivalente a gap-8 */
+  padding-bottom: 2rem; /* Espaçamento inferior para o grid */
+}
+
+/* Estilos para BookingCard (que é um componente separado) serão definidos em BookingCard.css */

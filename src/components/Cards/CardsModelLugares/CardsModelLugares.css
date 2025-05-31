@@ -1,0 +1,113 @@
+.model-card {
+    background: white;
+    width: 16.5rem;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.model-card:hover, .model-card:focus {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.model-card img {
+    width: 100%;
+    height: 50%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.model-card h4 {
+    margin: 8px 0 4px;
+    font-weight: bold;
+}
+
+.model-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.model-card__favorite-button {
+  position: absolute;
+  margin-left: 13rem;
+  margin-top: 4px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.model-card__image {
+  width: 100%;
+  max-height: 10rem;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+}
+
+.model-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.model-card__rating-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.model-card__rating-stars {
+  padding-bottom: 0.375rem;
+}
+
+.model-card__review-count {
+  color: #16a34a;
+  font-size: 0.875rem;
+  margin-left: 0.25rem;
+}
+
+.model-card__location {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.model-card__description {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
+  min-height: 2.625em;
+}
+
+.model-card__action-button {
+  background-color: #002cdf;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+  margin-top: auto;
+}
+
+.model-card__action-button:hover {
+  background-color: #2563eb;
+}
