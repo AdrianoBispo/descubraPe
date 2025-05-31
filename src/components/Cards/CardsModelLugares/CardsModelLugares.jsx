@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../services/useAuth";
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
-import { IconButton, Rating } from "@material-tailwind/react";
+import { Rating } from "@material-tailwind/react";
 
 export function CardsModelLugares({
   lugar,
@@ -18,10 +18,10 @@ export function CardsModelLugares({
   return (
     <>
       <div className="card" key={id}>
-        <IconButton
+        <div
           size="sm"
           variant="text"
-          className="absolute ml-[12.8rem] mt-1 rounded-full"
+          className="absolute ml-[12.8rem] mt-1 rounded-full cursor-pointer"
           onClick={
             currentUser
               ? () => onFavorite(id, !isFavorited)
@@ -29,11 +29,11 @@ export function CardsModelLugares({
           }
         >
           {isFavorited ? (
-            <FaHeart size={26} color="blue" />
+            <FaHeart size={24} color="blue" />
           ) : (
             <FaRegHeart size={24} color="blue" />
           )}
-        </IconButton>
+        </div>
         <img
           onClick={() => navigate(`/lugar-escolhido/${lugar.title}`)}
           className="max-h-[10rem]"
