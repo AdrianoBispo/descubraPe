@@ -40,9 +40,9 @@ export function AchievementProfile() {
 
   return (
     <>
-      <div className="w-full min-h-screen mt-20 bg-white p-6 flex flex-col items-center gap-6 SecaoUsuario">
+      <div className="w-full min-h-screen bg-white SecaoUsuario flex flex-col items-center md:gap-4">
         {/* Perfil do usuário */}
-        <div className="w-2/4 flex items-center gap-4">
+        <div className="w-full md:w-2/4 flex flex-col sm:flex-row items-center gap-4">
           <img
             src={
               userData?.photoURL ||
@@ -83,7 +83,7 @@ export function AchievementProfile() {
         </div>
 
         {/* Badges */}
-        <div className="w-2/4 border rounded-xl p-4 shadow-sm">
+        <div className="w-full md:w-2/4 border rounded-xl p-4 shadow-sm mt-4">
           <h3 className=" text-lg font-semibold mb-3 flex items-center gap-2">
             <img src={Badge1} className="Icones" />
             Badges
@@ -112,7 +112,7 @@ export function AchievementProfile() {
         </div>
 
         {/* Missões */}
-        <div className="w-2/4 border rounded-xl p-4 shadow-sm">
+        <div className="w-full md:w-2/4 border rounded-xl p-4 shadow-sm mt-4">
           <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
             <span>
               <img src={Missoes} className="Icones mx-auto" />
