@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "./../../../services/useAuth";
+import { useAuth } from "../../../services/useAuth";
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { IconButton, Rating } from "@material-tailwind/react";
 
-export function BookingCard({
+export function CardsModelLugares({
   lugar,
   onFavorite,
   isFavorited,

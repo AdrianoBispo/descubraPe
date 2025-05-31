@@ -1,7 +1,7 @@
 import "./CardsLugares.css";
 
-import { CardsAtracoes } from './Categorias/CardsAtracoes';
-import { CardsCidades } from './Categorias/CardsCidades';
+import { CardsAtracoes } from '../CardsAtracoes/CardsAtracoes';
+import { CardsCidades } from '../CardsCidades/CardsCidades';
 
 export function CardsLugares() {
   return (

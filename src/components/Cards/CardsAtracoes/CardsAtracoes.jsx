@@ -12,12 +12,14 @@ import {
   addDoc,
 } from "firebase/firestore";
 
-import { CreateTrilhasModal } from "../../../pages/MinhasTrilhas/Modais/CreateTrilhas/CreateTrilhas";
-import { BookingCard } from "./BookingCard";
+import { CreateTrilhasModal } from "../../../pages/MinhasTrilhas/components/Modais/CreateTrilhas/CreateTrilhas";
+import { CardsModelLugares } from './../CardsModelLugares/CardsModelLugares';
 
 import { lugares } from "../../../mocks/lugares";
 
-export function CardsCidades() {
+import "./CardsAtracoes.css"
+
+export function CardsAtracoes() {
   const navigate = useNavigate();
   const [favorites, setFavorites] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -45,7 +47,7 @@ export function CardsCidades() {
         // Se a trilha de favoritos não existe, ele cria
         await setDoc(userDocRef, {
           title: "# Favoritos",
-          description: "Meus cards favoritos",
+          description: "#### Seus lugares favoritos ficarão salvos aqui.",
           cards: [],
           createdAt: new Date(),
         });
@@ -94,7 +96,7 @@ export function CardsCidades() {
         cards: selectedCards.map((card) => card.id), // Salva apenas os IDs
         createdAt: new Date(),
       });
-      console.log("Trilha criada com sucesso!");
+      console.log("Trilha criado com sucesso!");
       setShowModal(false);
       navigate("/minhas-trilhas"); // Opcional: navegar para a galeria após criar
     } catch (error) {
@@ -104,18 +106,18 @@ export function CardsCidades() {
 
   return (
     <>
-      <div className="mb-2">
-        <h1 className="titulo">Pernambuco: Cidades Badaladas</h1>
+    <div className="mt-32 mb-2">
+        <h1 className="font-bold titulo">Pernambuco: Melhores Atrações</h1>
         <p className="texto-cards">
-          Explore as cidades mais visitadas do estado
+          Conheça os locais mais visitados do estado
         </p>
       </div>
 
-      <div className="ml-8 flex flex-row flex-wrap gap-12">
+      <div className="mx-8 flex flex-row flex-wrap gap-8">
         {lugares
-          .filter((lugar) => lugar.categoria === "cidade")
+          .filter((lugar) => lugar.categoria !== "cidade")
           .map((lugar) => (
-            <BookingCard
+            <CardsModelLugares
               key={lugar.id}
               lugar={lugar}
               onFavorite={handleFavorite}
@@ -132,5 +134,6 @@ export function CardsCidades() {
         />
       )}
     </>
+      
   );
 }
