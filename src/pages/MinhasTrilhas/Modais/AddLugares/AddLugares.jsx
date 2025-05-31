@@ -6,13 +6,14 @@ import {
   DialogBody,
   DialogFooter,
   Input,
-  Checkbox,
   Card,
   CardBody,
   Typography,
 } from "@material-tailwind/react";
 
-function AddCardsModal({
+import "./AddLugares.css";
+
+export function AddTrilhasModal({
   availableCards,
   cardsToExclude,
   open,
@@ -31,10 +32,10 @@ function AddCardsModal({
   };
 
   const cardsToShow = availableCards
-  .filter((card) =>
-    card.title.toLowerCase().includes(searchTerm.toLowerCase())
-)
-.filter((card) => !cardsToExclude.includes(card.id))
+    .filter((card) =>
+      card.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter((card) => !cardsToExclude.includes(card.id));
 
   const handleConfirmAdd = () => {
     if (selectedCards.length > 0) {
@@ -44,13 +45,9 @@ function AddCardsModal({
 
   return (
     <>
-      <Dialog
-        open={open}
-        handler={onClose}
-        size="lg"
-      >
+      <Dialog open={open} handler={onClose} size="lg">
         <>
-        <DialogHeader>Selecione os Lugares para sua Trilha</DialogHeader>
+          <DialogHeader>Selecione os Lugares para sua Trilha</DialogHeader>
           <DialogBody divider className="h-[40rem] overflow-scroll">
             <div className="mb-4">
               <Input
@@ -105,10 +102,7 @@ function AddCardsModal({
             </Button>
           </DialogFooter>
         </>
-        
       </Dialog>
     </>
   );
 }
-
-export default AddCardsModal;

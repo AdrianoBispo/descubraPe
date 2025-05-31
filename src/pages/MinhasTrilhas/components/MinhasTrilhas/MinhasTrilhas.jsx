@@ -19,12 +19,12 @@ import {
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import EditAlbumModal from "../EditAlbumModal";
-import ManageCardsModal from "../ManageCardsModal";
+import { EditTrilhasModal } from "../../Modais/EditTrilhas/EditTrilhas";
+import { ManageTrilhasModal } from "../../Modais/ManageTrilhas/ManageTrilhas";
 
 import { lugares } from "../../../../mocks/lugares";
 
-import "./MinhasTrilhas.css"
+import "./MinhasTrilhas.css";
 
 // Ícones
 const TrashIcon = () => (
@@ -85,25 +85,24 @@ const CogIcon = () => (
 const cardMap = new Map(lugares.map((card) => [card.id, card]));
 
 function MiniCard({ card }) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // Simplificado - agora só exibe
   if (!card) return null; // Retorna nulo se o card não for encontrado
   return (
-    <Card className="mini-card" onClick={() => navigate(`/lugar-escolhido/${card.title}`)}>
-      <CardHeader floated={false} color="blue-gray" className="mini-card__header">
-        <img
-          src={card.image}
-          alt={card.title}
-          className="mini-card__image"
-        />
+    <Card
+      className="mini-card"
+      onClick={() => navigate(`/lugar-escolhido/${card.title}`)}
+    >
+      <CardHeader
+        floated={false}
+        color="blue-gray"
+        className="mini-card__header"
+      >
+        <img src={card.image} alt={card.title} className="mini-card__image" />
       </CardHeader>
       <CardBody className="mini-card__body">
-        <Typography
-          variant="h6"
-          color="blue-gray"
-          className="mini-card__title"
-        >
+        <Typography variant="h6" color="blue-gray" className="mini-card__title">
           {card.title}
         </Typography>
       </CardBody>
@@ -114,16 +113,16 @@ function MiniCard({ card }) {
 export function MinhasTrilhas() {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
-  const [albums, setAlbums] = useState([]);
+  const [trilhas, setTrilhas] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [editingAlbum, setEditingAlbum] = useState(null); // Para EditAlbumModal
-  const [managingCardsAlbum, setManagingCardsAlbum] = useState(null); // Para ManageCardsModal
+  const [editingTrilha, setEditingTrilha] = useState(null); // Para EditTrilhasModal
+  const [managingCardsTrilha, setManagingCardsTrilha] = useState(null); // Para ManageTrilhasModal
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        fetchAlbums(currentUser.uid);
+        fetchtrilhas(currentUser.uid);
       } else {
         setUser(null);
         navigate("/landing-page");
@@ -132,52 +131,52 @@ export function MinhasTrilhas() {
     return () => unsubscribe();
   }, [navigate]);
 
-  const fetchAlbums = async (uid) => {
+  const fetchtrilhas = async (uid) => {
     setLoading(true);
     try {
-      const albumsCollectionRef = collection(db, "users", uid, "albums");
-      const querySnapshot = await getDocs(albumsCollectionRef);
-      const fetchedAlbums = querySnapshot.docs.map((doc) => ({
+      const trilhasCollectionRef = collection(db, "users", uid, "trilhas");
+      const querySnapshot = await getDocs(trilhasCollectionRef);
+      const fetchedtrilhas = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
-      fetchedAlbums.sort((a, b) => {
+      fetchedtrilhas.sort((a, b) => {
         if (a.id === "favorites") return -1;
         if (b.id === "favorites") return 1;
         return (a.createdAt?.toDate() || 0) - (b.createdAt?.toDate() || 0);
       });
-      setAlbums(fetchedAlbums);
+      setTrilhas(fetchedtrilhas);
     } catch (error) {
       console.error("Erro ao buscar trilhas:", error);
     }
     setLoading(false);
   };
 
-  const handleDeleteAlbum = async (albumId) => {
-    if (!user || albumId === "favorites") return;
+  const handleDeletetrilha = async (trilhaId) => {
+    if (!user || trilhaId === "favorites") return;
     if (
       window.confirm(
         "Tem certeza que deseja deletar esta trilha? Esta ação não pode ser desfeita."
       )
     ) {
       try {
-        const albumDocRef = doc(db, "users", user.uid, "albums", albumId);
-        await deleteDoc(albumDocRef);
-        setAlbums((prev) => prev.filter((album) => album.id !== albumId));
+        const trilhaDocRef = doc(db, "users", user.uid, "trilhas", trilhaId);
+        await deleteDoc(trilhaDocRef);
+        setTrilhas((prev) => prev.filter((trilha) => trilha.id !== trilhaId));
       } catch (error) {
         console.error("Erro ao deletar trilha:", error);
       }
     }
   };
 
-  const handleSaveAlbumDetails = async (albumId, title, description) => {
+  const handleSavetrilhaDetails = async (trilhaId, title, description) => {
     if (!user) return;
     try {
-      const albumDocRef = doc(db, "users", user.uid, "albums", albumId);
-      await updateDoc(albumDocRef, { title, description });
-      setAlbums((prev) =>
-        prev.map((album) =>
-          album.id === albumId ? { ...album, title, description } : album
+      const trilhaDocRef = doc(db, "users", user.uid, "trilhas", trilhaId);
+      await updateDoc(trilhaDocRef, { title, description });
+      setTrilhas((prev) =>
+        prev.map((trilha) =>
+          trilha.id === trilhaId ? { ...trilha, title, description } : trilha
         )
       );
     } catch (error) {
@@ -185,14 +184,14 @@ export function MinhasTrilhas() {
     }
   };
 
-  const handleSaveChangesCards = async (albumId, newCardIds) => {
+  const handleSaveChangesCards = async (trilhaId, newCardIds) => {
     if (!user) return;
     try {
-      const albumDocRef = doc(db, "users", user.uid, "albums", albumId);
-      await updateDoc(albumDocRef, { cards: newCardIds });
-      setAlbums((prev) =>
-        prev.map((album) =>
-          album.id === albumId ? { ...album, cards: newCardIds } : album
+      const trilhaDocRef = doc(db, "users", user.uid, "trilhas", trilhaId);
+      await updateDoc(trilhaDocRef, { cards: newCardIds });
+      setTrilhas((prev) =>
+        prev.map((trilha) =>
+          trilha.id === trilhaId ? { ...trilha, cards: newCardIds } : trilha
         )
       );
     } catch (error) {
@@ -207,44 +206,43 @@ export function MinhasTrilhas() {
           Minha Trilha Personalizada
         </Typography>
         <Typography className="minhas-trilhas__subtitle" variant="lead">
-          Explore Pernambuco no seu ritmo com os lugares que você mais deseja conhecer.
+          Explore Pernambuco no seu ritmo com os lugares que você mais deseja
+          conhecer.
         </Typography>
         {loading ? (
           <Typography>Carregando trilhas...</Typography>
-        ) : albums.length === 0 ? (
+        ) : trilhas.length === 0 ? (
           <Typography>
             Você ainda não criou nenhuma trilha ou favoritou algum lugar.
           </Typography>
         ) : (
-          albums.map((album) => (
-            <div
-              key={album.id}
-              className="minhas-trilhas__album-item"
-            >
-              <div className="minhas-trilhas__album-header">
-                <div className="prose minhas-trilhas__album-title">{/* Classe para estilizar o Markdown */}
+          trilhas.map((trilha) => (
+            <div key={trilha.id} className="minhas-trilhas__trilha-item">
+              <div className="minhas-trilhas__trilha-header">
+                <div className="prose minhas-trilhas__trilha-title">
+                  {/* Classe para estilizar o Markdown */}
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                    {album.title || "Trilha sem Nome"}
+                    {trilha.title || "Trilha sem Nome"}
                   </ReactMarkdown>
                 </div>
-                <div className="minhas-trilhas__album-actions">
+                <div className="minhas-trilhas__trilha-actions">
                   <Tooltip content="Gerenciar Trilha">
                     <IconButton
                       variant="text"
                       color="blue-gray"
-                      onClick={() => setManagingCardsAlbum(album)}
+                      onClick={() => setManagingCardsTrilha(trilha)}
                       className="minhas-trilhas__action-button-icon"
                     >
                       <CogIcon />
                     </IconButton>
                   </Tooltip>
-                  {album.id !== "favorites" && (
+                  {trilha.id !== "favorites" && (
                     <>
                       <Tooltip content="Editar Trilha">
                         <IconButton
                           variant="text"
                           color="blue-gray"
-                          onClick={() => setEditingAlbum(album)}
+                          onClick={() => setEditingTrilha(trilha)}
                           className="minhas-trilhas__action-button-icon"
                         >
                           <PencilIcon />
@@ -254,7 +252,7 @@ export function MinhasTrilhas() {
                         <IconButton
                           variant="text"
                           color="red"
-                          onClick={() => handleDeleteAlbum(album.id)}
+                          onClick={() => handleDeletetrilha(trilha.id)}
                           className="minhas-trilhas__action-button-icon"
                         >
                           <TrashIcon />
@@ -264,18 +262,18 @@ export function MinhasTrilhas() {
                   )}
                 </div>
               </div>
-              <div className="prose prose-sm minhas-trilhas__album-description-container">
+              <div className="prose prose-sm minhas-trilhas__trilha-description-container">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {album.description || ""}
+                  {trilha.description || ""}
                 </ReactMarkdown>
               </div>
 
-              {!album.cards || album.cards.length === 0 ? (
+              {!trilha.cards || trilha.cards.length === 0 ? (
                 <Typography>Esta trilha está vazia.</Typography>
               ) : (
                 <div className="minhas-trilhas__cards">
-                  {album.cards.map((cardId) => (
-                    <MiniCard key={cardId} card={cardMap.get(cardId)}/>
+                  {trilha.cards.map((cardId) => (
+                    <MiniCard key={cardId} card={cardMap.get(cardId)} />
                   ))}
                 </div>
               )}
@@ -283,20 +281,20 @@ export function MinhasTrilhas() {
           ))
         )}
         {/* Modais */}
-        {editingAlbum && (
-          <EditAlbumModal
-            album={editingAlbum}
-            open={!!editingAlbum}
-            onClose={() => setEditingAlbum(null)}
-            onSave={handleSaveAlbumDetails}
+        {editingTrilha && (
+          <EditTrilhasModal
+            trilha={editingTrilha}
+            open={!!editingTrilha}
+            onClose={() => setEditingTrilha(null)}
+            onSave={handleSavetrilhaDetails}
           />
         )}
-        {managingCardsAlbum && (
-          <ManageCardsModal
-            album={managingCardsAlbum}
+        {managingCardsTrilha && (
+          <ManageTrilhasModal
+            trilha={managingCardsTrilha}
             allCardsMap={cardMap}
-            open={!!managingCardsAlbum}
-            onClose={() => setManagingCardsAlbum(null)}
+            open={!!managingCardsTrilha}
+            onClose={() => setManagingCardsTrilha(null)}
             onSave={handleSaveChangesCards}
           />
         )}

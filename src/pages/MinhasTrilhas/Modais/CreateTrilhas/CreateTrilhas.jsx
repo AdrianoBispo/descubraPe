@@ -12,12 +12,14 @@ import {
   Textarea,
 } from "@material-tailwind/react";
 
-export function CreateTravelListModal({ availableCards, onClose, onSubmit }) {
+import "./CreateTrilhas.css"
+
+export function CreateTrilhasModal({ availableCards, onClose, onSubmit }) {
   const [step, setStep] = useState(1); // 1: Seleção, 2: Formulário
   const [selectedCards, setSelectedCards] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [albumTitle, setAlbumTitle] = useState("");
-  const [albumDescription, setAlbumDescription] = useState("");
+  const [trilhaTitle, setTrilhaTitle] = useState("");
+  const [trilhaDescription, setTrilhaDescription] = useState("");
 
   const handleCardSelect = (card) => {
     setSelectedCards((prev) =>
@@ -38,8 +40,8 @@ export function CreateTravelListModal({ availableCards, onClose, onSubmit }) {
   };
 
   const handleSubmitForm = () => {
-    if (albumTitle.trim() !== "") {
-      onSubmit(selectedCards, albumTitle, albumDescription);
+    if (trilhaTitle.trim() !== "") {
+      onSubmit(selectedCards, trilhaTitle, trilhaDescription);
     }
   };
 
@@ -116,14 +118,14 @@ export function CreateTravelListModal({ availableCards, onClose, onSubmit }) {
             <div className="flex flex-col gap-6">
               <Input
                 label="Digite o Nome da sua Trilha"
-                value={albumTitle}
-                onChange={(e) => setAlbumTitle(e.target.value)}
+                value={trilhaTitle}
+                onChange={(e) => setTrilhaTitle(e.target.value)}
                 required
               />
               <Textarea
                 label="Descrição (opcional, máx. 250 caracteres)"
-                value={albumDescription}
-                onChange={(e) => setAlbumDescription(e.target.value)}
+                value={trilhaDescription}
+                onChange={(e) => setTrilhaDescription(e.target.value)}
                 maxLength={250}
               />
             </div>
@@ -149,7 +151,7 @@ export function CreateTravelListModal({ availableCards, onClose, onSubmit }) {
               variant="gradient"
               color="green"
               onClick={handleSubmitForm}
-              disabled={albumTitle.trim() === ""}
+              disabled={trilhaTitle.trim() === ""}
             >
               <span>Confirmar e Criar</span>
             </Button>

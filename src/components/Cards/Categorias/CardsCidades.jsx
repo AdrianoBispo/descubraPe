@@ -12,7 +12,7 @@ import {
   addDoc,
 } from "firebase/firestore";
 
-import { CreateTravelListModal } from "./../../../pages/MinhasTrilhas/components/CreateTravelListModal";
+import { CreateTrilhasModal } from "../../../pages/MinhasTrilhas/Modais/CreateTrilhas/CreateTrilhas";
 import { BookingCard } from "./BookingCard";
 
 import { lugares } from "../../../mocks/lugares";
@@ -37,12 +37,12 @@ export function CardsCidades() {
 
   const fetchFavorites = async (uid) => {
     try {
-      const userDocRef = doc(db, "users", uid, "albums", "favorites");
+      const userDocRef = doc(db, "users", uid, "trilhas", "favorites");
       const docSnap = await getDoc(userDocRef);
       if (docSnap.exists()) {
         setFavorites(docSnap.data().cards || []);
       } else {
-        // Se o album de favoritos não existe, cria ele
+        // Se a trilha de favoritos não existe, ele cria
         await setDoc(userDocRef, {
           title: "# Favoritos",
           description: "Meus cards favoritos",
@@ -58,7 +58,7 @@ export function CardsCidades() {
 
   const handleFavorite = async (cardId, isAdding) => {
     if (!user) return;
-    const userDocRef = doc(db, "users", user.uid, "albums", "favorites");
+    const userDocRef = doc(db, "users", user.uid, "trilhas", "favorites");
     try {
       await updateDoc(userDocRef, {
         cards: isAdding ? arrayUnion(cardId) : arrayRemove(cardId),
@@ -84,21 +84,21 @@ export function CardsCidades() {
     setShowModal(false);
   };
 
-  const handleCreateAlbum = async (selectedCards, title, description) => {
+  const handleCreateTrilha = async (selectedCards, title, description) => {
     if (!user) return;
     try {
-      const albumsCollectionRef = collection(db, "users", user.uid, "albums");
-      await addDoc(albumsCollectionRef, {
+      const trilhasCollectionRef = collection(db, "users", user.uid, "trilhas");
+      await addDoc(trilhasCollectionRef, {
         title: title,
         description: description,
         cards: selectedCards.map((card) => card.id), // Salva apenas os IDs
         createdAt: new Date(),
       });
-      console.log("Album criado com sucesso!");
+      console.log("Trilha criada com sucesso!");
       setShowModal(false);
       navigate("/minhas-trilhas"); // Opcional: navegar para a galeria após criar
     } catch (error) {
-      console.error("Erro ao criar album:", error);
+      console.error("Erro ao criar trilha:", error);
     }
   };
 
@@ -125,10 +125,10 @@ export function CardsCidades() {
           ))}
       </div>
       {showModal && (
-        <CreateTravelListModal
+        <CreateTrilhasModal
           availableCards={lugares}
           onClose={handleCloseModal}
-          onSubmit={handleCreateAlbum}
+          onSubmit={handleCreateTrilha}
         />
       )}
     </>

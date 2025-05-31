@@ -10,25 +10,27 @@ import {
   Textarea,
 } from "@material-tailwind/react";
 
-function EditAlbumModal({ album, open, onClose, onSave }) {
+import "./EditTrilhas.css"
+
+export function EditTrilhasModal({ trilha, open, onClose, onSave }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
   useEffect(() => {
-    if (album) {
-      setTitle(album.title || "");
-      setDescription(album.description || "");
+    if (trilha) {
+      setTitle(trilha.title || "");
+      setDescription(trilha.description || "");
     }
-  }, [album]);
+  }, [trilha]);
 
   const handleSave = () => {
     if (title.trim()) {
-      onSave(album.id, title, description);
+      onSave(trilha.id, title, description);
       onClose();
     }
   };
 
-  if (!album) return null;
+  if (!trilha) return null;
 
   return (
     <Dialog open={open} handler={onClose}>
@@ -70,5 +72,3 @@ function EditAlbumModal({ album, open, onClose, onSave }) {
     </Dialog>
   );
 }
-
-export default EditAlbumModal;

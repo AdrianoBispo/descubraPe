@@ -56,12 +56,12 @@
    Estilos para Typography de carregamento 
 }
 
-.minhas-trilhas__no-albums-text {
+.minhas-trilhas__no-trilhas-text {
    Estilos para Typography quando não há trilhas
 }
 */
 
-.minhas-trilhas__album-item {
+.minhas-trilhas__trilha-item {
   margin-bottom: 2.5rem;
   padding: 1.5rem;
   border-width: 1px;
@@ -70,18 +70,18 @@
   background-color: #ffffff;
 }
 
-.minhas-trilhas__album-header {
+.minhas-trilhas__trilha-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.minhas-trilhas__album-title {
+.minhas-trilhas__trilha-title {
   align-self: start !important;
 }
 
-.minhas-trilhas__album-actions {
+.minhas-trilhas__trilha-actions {
   display: flex;
   gap: 0.5rem;
 }
@@ -91,12 +91,12 @@
   height: 1.25rem;
 }
 
-.minhas-trilhas__album-description-container {
+.minhas-trilhas__trilha-description-container {
   color: #4b5563;
   margin-bottom: 1.5rem;
 }
 
-/* .minhas-trilhas__empty-album-text {
+/* .minhas-trilhas__empty-trilha-text {
    Estilos para Typography de trilha vazia 
 } */
 
@@ -144,12 +144,12 @@
     margin-bottom: 1.5rem;
   }
 
-  .minhas-trilhas__album-header {
+  .minhas-trilhas__trilha-header {
     display: flex;
     flex-direction: column-reverse;
   }
 
-  .minhas-trilhas__album-actions {
+  .minhas-trilhas__trilha-actions {
     display: flex;
     flex-direction: row;
     align-self: flex-end;
@@ -162,7 +162,7 @@
     height: 1rem !important;
   }
 
-  .minhas-trilhas__album-description-container {
+  .minhas-trilhas__trilha-description-container {
     margin-bottom: 1rem;
   }
 }

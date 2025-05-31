@@ -28,6 +28,8 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
+import "./ManageTrilhas.css"
+
 // Componente para um card 'arrastável' (Passo 1)
 function SortableCard({ id, card, onRemove }) {
   const { attributes, listeners, setNodeRef, transform, transition } =
@@ -121,21 +123,27 @@ function SelectableCard({ card, onSelect, isSelected }) {
 }
 
 // --- Componente Principal ---
-function ManageCardsModal({ album, allCardsMap, open, onClose, onSave }) {
+export function ManageTrilhasModal({
+  trilha,
+  allCardsMap,
+  open,
+  onClose,
+  onSave,
+}) {
   const [step, setStep] = useState(1); // 1: Gerenciar, 2: Adicionar
-  const [cards, setCards] = useState([]); // Cards atuais no album (Passo 1)
+  const [cards, setCards] = useState([]); // Cards atuais no trilha (Passo 1)
   const [selectedCardsToAdd, setSelectedCardsToAdd] = useState([]); // Cards selecionados (Passo 2)
   const [searchTerm, setSearchTerm] = useState(""); // Busca (Passo 2)
 
-  // Carrega os cards iniciais quando o album muda
+  // Carrega os cards iniciais quando o trilha muda
   useEffect(() => {
-    if (album && allCardsMap) {
-      const currentCards = album.cards
+    if (trilha && allCardsMap) {
+      const currentCards = trilha.cards
         .map((id) => ({ ...allCardsMap.get(id), id }))
         .filter((card) => card.title);
       setCards(currentCards);
     }
-  }, [album, allCardsMap]);
+  }, [trilha, allCardsMap]);
 
   // Reset para Passo 1 quando o modal reabre (opcional, mas bom)
   useEffect(() => {
@@ -202,7 +210,7 @@ function ManageCardsModal({ album, allCardsMap, open, onClose, onSave }) {
 
   const handleSaveChanges = () => {
     const cardIds = cards.map((card) => card.id);
-    onSave(album.id, cardIds);
+    onSave(trilha.id, cardIds);
     onClose();
   };
 
@@ -217,7 +225,7 @@ function ManageCardsModal({ album, allCardsMap, open, onClose, onSave }) {
     }
   };
 
-  if (!album) return null;
+  if (!trilha) return null;
 
   return (
     <Dialog
@@ -241,7 +249,8 @@ function ManageCardsModal({ album, allCardsMap, open, onClose, onSave }) {
             </Button>
             {cards.length === 0 ? (
               <Typography>
-                Este álbum está vazio. Clique em "Adicionar mais lugares" para começar.
+                Este álbum está vazio. Clique em "Adicionar mais lugares" para
+                começar.
               </Typography>
             ) : (
               <DndContext
@@ -346,5 +355,3 @@ function ManageCardsModal({ album, allCardsMap, open, onClose, onSave }) {
     </Dialog>
   );
 }
-
-export default ManageCardsModal;
