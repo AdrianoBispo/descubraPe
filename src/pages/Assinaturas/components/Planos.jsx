@@ -17,7 +17,7 @@ export function Planos() {
           {/* Plano Gratuito */}
           <div className="border rounded-xl p-12 shadow-sm flex flex-col items-center">
             <h3 className="font-bold mb-2 Texto">Explorador Gratuito</h3>
-            <p className="font-bold mb-1 Month">R$ 0 <span className="font-medium Month">/ mês</span></p>
+            <span className="Month">R$ 0/mês</span>
             <ul className="text-sm text-gray-700 mt-4 mb-6 space-y-1 text-left">
               <li>Criação de até 3 trilhas personalizadas</li>
               <li>Visualização de atrações e avaliações</li>
@@ -31,7 +31,7 @@ export function Planos() {
           {/* Plano Plus */}
           <div className="border rounded-xl p-12 shadow-sm flex flex-col items-center">
             <h3 className="font-bold mb-2 Texto">Explorador Plus</h3>
-            <p className="font-bold mb-1 Month">R$ 14,90 <span className="font-medium Month">/ mês</span></p>
+            <span className="Month">R$ 14,90/mês</span>
             <ul className="text-sm text-gray-700 mt-4 mb-6 space-y-1 text-left">
               <li>Criação ilimitada de trilhas</li>
               <li>Cupons exclusivos em restaurantes e passeios</li>
@@ -46,7 +46,7 @@ export function Planos() {
           {/* Plano Pro */}
           <div className="border rounded-xl p-12 shadow-sm flex flex-col items-center">
             <h3 className="font-bold mb-2 Texto">Explorador Pro</h3>
-            <p className="font-bold mb-1 Month">R$ 29,90 <span className="font-medium Month">/ mês</span></p>
+            <span className="Month">R$ 29,90/mês</span>
             <ul className="text-sm text-gray-700 mt-4 mb-6 space-y-1 text-left">
               <li>Todas as vantagens do Plus</li>
               <li>Acesso antecipado a eventos e trilhas especiais</li>
