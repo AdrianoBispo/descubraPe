@@ -12,6 +12,8 @@ import {
   addDoc,
 } from "firebase/firestore";
 
+import "./CardsCidades.css"
+
 import { CreateTrilhasModal } from "../../../pages/MinhasTrilhas/components/Modais/CreateTrilhas/CreateTrilhas";
 import { CardsModelLugares } from './../CardsModelLugares/CardsModelLugares';
 
@@ -105,13 +107,13 @@ export function CardsCidades() {
   return (
     <>
       <div className="mb-2">
-        <h1 className="titulo">Pernambuco: Cidades Badaladas</h1>
+        <h1 className="cards-cidades__title">Pernambuco: Cidades Badaladas</h1>
         <p className="texto-cards">
           Explore as cidades mais visitadas do estado
         </p>
       </div>
 
-      <div className="ml-8 flex flex-row flex-wrap gap-12">
+      <div className="cards-cidades">
         {lugares
           .filter((lugar) => lugar.categoria === "cidade")
           .map((lugar) => (
