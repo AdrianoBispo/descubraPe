@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth, db } from "../../../services/firebase";
+import { auth, db } from "../../../../services/firebase";
 import {
   collection,
   getDocs,
@@ -19,10 +19,12 @@ import {
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import EditAlbumModal from "./EditAlbumModal";
-import ManageCardsModal from "./ManageCardsModal";
+import EditAlbumModal from "../EditAlbumModal";
+import ManageCardsModal from "../ManageCardsModal";
 
-import { lugares } from "../../../mocks/lugares";
+import { lugares } from "../../../../mocks/lugares";
+
+import "./MinhasTrilhas.css"
 
 // Ícones
 const TrashIcon = () => (
@@ -83,22 +85,24 @@ const CogIcon = () => (
 const cardMap = new Map(lugares.map((card) => [card.id, card]));
 
 function MiniCard({ card }) {
+    const navigate = useNavigate();
+
   // Simplificado - agora só exibe
   if (!card) return null; // Retorna nulo se o card não for encontrado
   return (
-    <Card className="w-full max-w-[15rem] shadow-md mb-4">
-      <CardHeader floated={false} color="blue-gray" className="h-40">
+    <Card className="mini-card" onClick={() => navigate(`/lugar-escolhido/${card.title}`)}>
+      <CardHeader floated={false} color="blue-gray" className="mini-card__header">
         <img
           src={card.image}
           alt={card.title}
-          className="w-full h-full object-cover"
+          className="mini-card__image"
         />
       </CardHeader>
-      <CardBody className="text-center p-4">
+      <CardBody className="mini-card__body">
         <Typography
           variant="h6"
           color="blue-gray"
-          className="font-medium truncate"
+          className="mini-card__title"
         >
           {card.title}
         </Typography>
@@ -198,11 +202,11 @@ export function MinhasTrilhas() {
 
   return (
     <>
-      <div className="container mx-auto p-4 mt-32 mb-12">
-        <Typography variant="h1" className="text-center titulo">
+      <div className="minhas-trilhas__page-container">
+        <Typography variant="h1" className="minhas-trilhas__main-title">
           Minha Trilha Personalizada
         </Typography>
-        <Typography className="text-center mb-6" variant="lead">
+        <Typography className="minhas-trilhas__subtitle" variant="lead">
           Explore Pernambuco no seu ritmo com os lugares que você mais deseja conhecer.
         </Typography>
         {loading ? (
@@ -215,21 +219,21 @@ export function MinhasTrilhas() {
           albums.map((album) => (
             <div
               key={album.id}
-              className="mb-10 p-6 border rounded-lg shadow-lg bg-white"
+              className="minhas-trilhas__album-item"
             >
-              <div className="flex justify-between items-center mb-4">
-                <div className="prose">
-                  {/* Classe para estilizar o Markdown */}
+              <div className="minhas-trilhas__album-header">
+                <div className="prose minhas-trilhas__album-title">{/* Classe para estilizar o Markdown */}
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>
                     {album.title || "Trilha sem Nome"}
                   </ReactMarkdown>
                 </div>
-                <div className="flex gap-2">
+                <div className="minhas-trilhas__album-actions">
                   <Tooltip content="Gerenciar Trilha">
                     <IconButton
                       variant="text"
                       color="blue-gray"
                       onClick={() => setManagingCardsAlbum(album)}
+                      className="minhas-trilhas__action-button-icon"
                     >
                       <CogIcon />
                     </IconButton>
@@ -241,6 +245,7 @@ export function MinhasTrilhas() {
                           variant="text"
                           color="blue-gray"
                           onClick={() => setEditingAlbum(album)}
+                          className="minhas-trilhas__action-button-icon"
                         >
                           <PencilIcon />
                         </IconButton>
@@ -250,6 +255,7 @@ export function MinhasTrilhas() {
                           variant="text"
                           color="red"
                           onClick={() => handleDeleteAlbum(album.id)}
+                          className="minhas-trilhas__action-button-icon"
                         >
                           <TrashIcon />
                         </IconButton>
@@ -258,7 +264,7 @@ export function MinhasTrilhas() {
                   )}
                 </div>
               </div>
-              <div className="prose prose-sm text-gray-600 mb-6">
+              <div className="prose prose-sm minhas-trilhas__album-description-container">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                   {album.description || ""}
                 </ReactMarkdown>
@@ -267,9 +273,9 @@ export function MinhasTrilhas() {
               {!album.cards || album.cards.length === 0 ? (
                 <Typography>Esta trilha está vazia.</Typography>
               ) : (
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <div className="minhas-trilhas__cards">
                   {album.cards.map((cardId) => (
-                    <MiniCard key={cardId} card={cardMap.get(cardId)} />
+                    <MiniCard key={cardId} card={cardMap.get(cardId)}/>
                   ))}
                 </div>
               )}

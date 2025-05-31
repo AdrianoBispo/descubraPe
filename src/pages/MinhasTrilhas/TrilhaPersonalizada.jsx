@@ -1,5 +1,5 @@
 import { Header } from "./../../components/Header/Header";
-import { MinhasTrilhas } from "./components/MinhasTrilhas";
+import { MinhasTrilhas } from "./components/MinhasTrilhas/MinhasTrilhas";
 import { Chatbot } from "./../../components/Chatbot/Chatbot";
 import { Footer } from "./../../components/Footer/Footer";
 
