@@ -12,14 +12,14 @@ import {
   addDoc,
 } from "firebase/firestore";
 
+import "./CardsCategorias.css"
+
 import { CreateTrilhasModal } from "../../../pages/MinhasTrilhas/components/Modais/CreateTrilhas/CreateTrilhas";
-import { CardsModelLugares } from './../CardsModelLugares/CardsModelLugares';
+import { CardsModelLugares } from '../CardsModelLugares/CardsModelLugares';
 
 import { lugares } from "../../../mocks/lugares";
 
-import "./CardsAtracoes.css"
-
-export function CardsAtracoes() {
+export function CardsCidades() {
   const navigate = useNavigate();
   const [favorites, setFavorites] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -47,7 +47,7 @@ export function CardsAtracoes() {
         // Se a trilha de favoritos não existe, ele cria
         await setDoc(userDocRef, {
           title: "# Favoritos",
-          description: "#### Seus lugares favoritos ficarão salvos aqui.",
+          description: "Meus cards favoritos",
           cards: [],
           createdAt: new Date(),
         });
@@ -96,7 +96,7 @@ export function CardsAtracoes() {
         cards: selectedCards.map((card) => card.id), // Salva apenas os IDs
         createdAt: new Date(),
       });
-      console.log("Trilha criado com sucesso!");
+      console.log("Trilha criada com sucesso!");
       setShowModal(false);
       navigate("/minhas-trilhas"); // Opcional: navegar para a galeria após criar
     } catch (error) {
@@ -106,16 +106,16 @@ export function CardsAtracoes() {
 
   return (
     <>
-    <div className="mt-32 mb-2">
-        <h1 className="font-bold titulo">Pernambuco: Melhores Atrações</h1>
-        <p className="texto-cards">
-          Conheça os locais mais visitados do estado
+      <div className="cards-categorias__header">
+        <h1 className="cards-categorias__title">Cidades Badaladas</h1>
+        <p className="cards-categorias__subtitle">
+          Conheça as cidades mais visitadas do estado
         </p>
       </div>
 
-      <div className="mx-8 flex flex-row flex-wrap gap-8">
+      <div className="cards-categorias">
         {lugares
-          .filter((lugar) => lugar.categoria !== "cidade")
+          .filter((lugar) => lugar.categoria === "cidade")
           .map((lugar) => (
             <CardsModelLugares
               key={lugar.id}
@@ -134,6 +134,5 @@ export function CardsAtracoes() {
         />
       )}
     </>
-      
   );
 }

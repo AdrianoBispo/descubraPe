@@ -1,32 +1,33 @@
 .model-card {
-    background: white;
-    width: 16.5rem;
-    padding: 12px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
+  background: white;
+  width: 16.5rem;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
-.model-card:hover, .model-card:focus {
+.model-card:hover,
+.model-card:focus {
   transform: scale(1.05);
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.75);
 }
 
 .model-card img {
-    width: 100%;
-    height: 50%;
-    border-radius: 4px;
-    object-fit: cover;
+  width: 100%;
+  height: 50%;
+  border-radius: 4px;
+  object-fit: cover;
 }
 
 .model-card h4 {
-    margin: 8px 0 4px;
-    font-weight: bold;
+  margin: 8px 0 4px;
+  font-weight: bold;
 }
 
 .model-card p {
-    font-size: 14px;
-    color: #555;
+  font-size: 14px;
+  color: #555;
 }
 
 .model-card__favorite-button {

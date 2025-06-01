@@ -149,7 +149,7 @@
     flex-direction: column;
     position: absolute;
     top: 65px;
-    right: 20px;
+    right: -25px;
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
