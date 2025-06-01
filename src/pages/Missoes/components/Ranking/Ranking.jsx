@@ -36,9 +36,9 @@ export function Ranking() {
   }, [currentUser]); // Recarrega quando o usuário muda
 
   return (
-    <div className="w-[53.555%] min-h-screen bg-white p-6 flex flex-col gap-6 SecaoUsuario">
+    <div className="w-full min-h-screen bg-white SecaoUsuario flex flex-col items-center md:gap-4">
       {/* Seus Pontos */}
-      <div className="border rounded-xl p-4 shadow-sm">
+      <div className="w-full md:w-2/4 border rounded-xl p-4 shadow-sm mt-4">
         <h3 className="text-lg font-semibold flex items-center gap-2">
           <span>
             <img src={Pontos} className="Icones" />
@@ -55,25 +55,25 @@ export function Ranking() {
       </div>
 
       {/* Ranking */}
-      <div className="border rounded-xl p-4 shadow-sm ">
+      <div className="w-full md:w-2/4 border rounded-xl p-4 shadow-sm mt-4">
         <h3 className="text-xl font-semibold flex items-center gap-2 mb-1">
           <span>
             <img src={Ranking1} className="Icones" />
           </span>{" "}
           Ranking dos Exploradores de Pernambuco
         </h3>
-        <p className="text-sm text-gray-500 mb-4">
+        <p className="text-sm text-center text-gray-500 mb-4">
           Classificação com base em XP, Missões Concluídas e Badges
           Conquistadas. Atualizado em: 10:00, 26/10/2024
         </p>
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex gap-2 w-full md:w-2/4 border rounded-xl p-4 shadow-sm mt-4">
           <button className="px-4 py-1 bg-gray-800 text-white rounded-lg text-sm font-medium">
             Geral
           </button>
           <button className="px-4 py-1 bg-gray-200 text-gray-800 rounded-lg text-sm font-medium">
             Amigos
           </button>
-          <select className="ml-auto border rounded-lg px-3 py-1 text-sm">
+          <select className="w-full md:w-2/4 border rounded-lg text-sm">
             <option>Ordenar por:</option>
             <option>XP</option>
             <option>Missões</option>

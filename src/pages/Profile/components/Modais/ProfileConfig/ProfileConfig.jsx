@@ -75,7 +75,7 @@ export function ProfileConfig({ open, handleOpen }) {
           <hr />
           <div className="flex flex-row justify-between">
             <p className="text-xl">E-mail:</p>
-            <span className="text-xl">
+            <span className="text-xl truncate">
               {userData?.email || "Não informado"}
             </span>
             <BsPencil size={16} className="mt-1 cursor-pointer" />

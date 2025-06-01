@@ -7,7 +7,7 @@ import "../Header/Header.css";
 export function Convite() {
   return (
     <div className="convite-container">
-      <h1 className="titulo text-center mt-14 mb-12">
+      <h1 className="carrossel-titulo text-center mt-14 mb-12">
         Desbloqueie experiências exclusivas em Pernambuco!
       </h1>
       <h3 className=" comoFunciona text-center mb-8">
@@ -15,7 +15,7 @@ export function Convite() {
       </h3>
 
       <div className="flex flex-row justify-center gap-20 flex-wrap mb-16">
-        <Card className=" w-96">
+        <Card className=" w-80">
           <CardBody className="cards-convite cardbody-color">
             <div className="flex justify-center gap-1 m-4">
               <img src={alvoIcon} className="Icons"/>
@@ -30,7 +30,7 @@ export function Convite() {
           </CardBody>
         </Card>
 
-        <Card className="w-96">
+        <Card className="w-80">
           <CardBody className="cards-convite cardbody-color">
             <div className="flex justify-center gap-1 m-4">
               <img src={medalhaIcon} className="Icons"/>
@@ -44,7 +44,7 @@ export function Convite() {
             </p>
           </CardBody>
         </Card>
-        <Card className="w-96">
+        <Card className="w-80">
           <CardBody className="cards-convite cardbody-color">
             <div className="flex justify-center gap-1 m-4">
               <img src={presenteIcon} className="Icons"/>
