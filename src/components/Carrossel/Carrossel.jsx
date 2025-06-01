@@ -18,15 +18,14 @@ export function Carrossel() {
   };
 
   const handleClick = (item) => {
-    if (indiceAtual === trilhas.findIndex((trilha) => trilha.id === item.id)) {
-      navigate(`/trilhas-carrossel/${item.tituloItemCarrossel}`);
-    }
+    trilhas.findIndex((trilha) => trilha.id === item.id);
+    navigate(`/trilhas-carrossel/${item.tituloItemCarrossel}`);
   };
 
   return (
     <div id="trilhas-carrossel">
       <div className="carrossel-container">
-      <h1 className="carrossel-titulo">MONTE A SUA TRILHA PERSONALIZADA!</h1>
+        <h1 className="carrossel-titulo">MONTE A SUA TRILHA PERSONALIZADA!</h1>
         <div className="carrossel-area">
           <div className="carrossel-wrapper">
             <button
@@ -43,7 +42,7 @@ export function Carrossel() {
                 }`}
                 onClick={() => handleClick(item)}
                 style={{
-                  cursor: indiceAtual === index ? "pointer" : "not-allowed",
+                  cursor: "pointer",
                   opacity: indiceAtual === index ? 1 : 0.5,
                 }}
               >
@@ -52,10 +51,15 @@ export function Carrossel() {
                   alt={item.tituloItemCarrossel}
                   className="carrossel-imagem"
                 />
-                <h3 className="carrossel-nomeTrilha">{item.tituloItemCarrossel}</h3>
+                <h3 className="carrossel-nomeTrilha">
+                  {item.tituloItemCarrossel}
+                </h3>
               </div>
             ))}
-            <button onClick={proximo} className="carrossel-setalateralDireita absolute right-1 transform -translate-y-1">
+            <button
+              onClick={proximo}
+              className="carrossel-setalateralDireita absolute right-1 transform -translate-y-1"
+            >
               ❯
             </button>
           </div>
@@ -65,9 +69,9 @@ export function Carrossel() {
           <p>
             <strong>E muito mais</strong>
           </p>
-        <p className="text">
-          Monte a sua trilha personalizada de forma prática e rápida!
-        </p>
+          <p className="text">
+            Monte a sua trilha personalizada de forma prática e rápida!
+          </p>
         </div>
       </div>
     </div>
