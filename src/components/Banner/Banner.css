@@ -281,8 +281,8 @@
   }
 
   .container__banner-textos h1 {
-    margin-top: 7rem;
-    margin-left: 2rem;
+    margin-top: 6rem;
+    margin-left: 12rem;
     font-size: 0;
     color: transparent;
   }
@@ -319,7 +319,8 @@
     justify-content: center;
     gap: 12px;
     padding: 0px;
-    margin: 0 0 2rem 0;
+    margin: 0;
+    margin-top: -4rem;
     font-size: 1rem;
     width: 12rem;
     height: 3rem;
@@ -350,8 +351,8 @@
   .container__banner-imagem img {
     border-radius: 99999px;
     object-fit: cover;
-    width: 45%;
-    height: 40vw;
+    width: 35%;
+    height: 30vw;
   }
 }
 
@@ -372,7 +373,7 @@
 
   .container__banner-textos h1 {
     margin-top: 7rem;
-    margin-left: 2rem;
+    margin-left: 12rem;
     font-size: 0;
     color: transparent;
   }
@@ -389,6 +390,7 @@
   .container__banner-textos p {
     font-size: 1rem;
     font-weight: 400;
+    text-align: center;
     margin: 0px;
     padding: 0px;
   }
@@ -437,8 +439,8 @@
   .container__banner-imagem img {
     border-radius: 99999px;
     object-fit: cover;
-    width: 60%;
-    height: 50vw;
+    width: 40%;
+    height: 30vw;
   }
 }
 
@@ -458,13 +460,13 @@
   }
 
   .container__banner-textos h1 {
-    margin-top: 7rem;
-    margin-left: 2rem;
+    margin: 0;
     font-size: 0;
-    color: transparent;
+    text-align: center;
   }
 
   .container__banner-textos h1::before {
+    display: none;
     font-size: 1.37rem;
     text-align: center;
     color: white;
@@ -476,6 +478,7 @@
   .container__banner-textos p {
     font-size: 0.8rem;
     font-weight: 400;
+    text-align: center;
     margin: 0px;
     padding: 0px;
   }
@@ -516,8 +519,8 @@
   .container__banner-imagem img {
     border-radius: 99999px;
     object-fit: cover;
-    width: 70%;
-    height: 55vw;
+    width: 50%;
+    height: 40vw;
   }
 }
 

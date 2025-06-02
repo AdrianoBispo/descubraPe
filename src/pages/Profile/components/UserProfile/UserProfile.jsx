@@ -47,10 +47,10 @@ export function UserProfile({ onClick }) {
                 "https://ionicframework.com/docs/img/demos/avatar.svg"
               }
               alt="Foto de perfil"
-              className="w-96 h-96 rounded-full object-cover avatar"
+              className="w-80 h-80 rounded-full object-cover avatar"
             />
             <button className="absolute bottom-0 left-1/2 transform -translate-x-1/2  p-2 rounded-full Camera">
-              <FaCamera size={70} />
+              <FaCamera size={60} />
             </button>
           </div>
           <button
@@ -83,13 +83,13 @@ export function UserProfile({ onClick }) {
             </h3>
             <div className="flex gap-3 mt-2 mb-2 preferencias-btns">
               <button className="rounded-full">
-                <MdOutlineMuseum size={30} className="Icones" /> Museus
+                <MdOutlineMuseum size={20} className="Icones" /> Museus
               </button>
               <button className="rounded-full">
-                <FaUmbrellaBeach size={30} className="Icones" /> Praias
+                <FaUmbrellaBeach size={20} className="Icones" /> Praias
               </button>
               <button className="rounded-full">
-                <GrSchedules size={30} className="Icones" /> Eventos
+                <GrSchedules size={20} className="Icones" /> Eventos
               </button>
             </div>
           </div>
