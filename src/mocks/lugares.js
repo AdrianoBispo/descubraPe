@@ -3,7 +3,7 @@ export const lugares = [
     id: "001",
     title: "Restaurante Entre Amigos",
     image:
-      "https://lh3.googleusercontent.com/p/AF1QipNHPBizGkVnZlpl1SdGc7C4T_nJrHVGVOJM0Lgv=s1360-w1360-h1020-rw",
+      "https://lh3.googleusercontent.com/p/AF1QipPv6PvXM9-CicrGDFcmFNcZ5qF-HDtoxSg8k6eI=s1360-w1360-h1020-rw",
     localizacao: "Recife, PE",
     categoria: "Gastronomia",
     description:
@@ -15,7 +15,7 @@ export const lugares = [
     id: "002",
     title: "Casa de Noca",
     image:
-      "https://media-cdn.tripadvisor.com/media/photo-s/08/bf/cf/f9/casa-de-noca.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/ce/48/14/casa-de-noca.jpg?w=500&h=-1&s=1",
     localizacao: "Olinda, PE",
     categoria: "Gastronomia",
     description:
