@@ -47,7 +47,7 @@ export function UserProfile({ onClick }) {
                 "https://ionicframework.com/docs/img/demos/avatar.svg"
               }
               alt="Foto de perfil"
-              className="w-80 h-80 rounded-full object-cover avatar"
+              className="w-80 h-80 md:w-60 md:h-60 rounded-full object-cover avatar"
             />
             <button className="absolute bottom-0 left-1/2 transform -translate-x-1/2  p-2 rounded-full Camera">
               <FaCamera size={60} />
@@ -62,13 +62,13 @@ export function UserProfile({ onClick }) {
         </div>
 
         {/* Coluna Direita */}
-        <div className="flex flex-col gap-4 w-full md:w-2/3">
+        <div className="flex flex-col gap-4 w-full md:w-2/3 md:text-md">
           <div>
-            <h2 className="text-4xl font-base">
+            <h2 className="text-3xl font-base">
               {userData?.nome ||
                 currentUser?.displayName ||
                 "Nome não definido"}{" "}
-              <span className="text-3xl font-base">
+              <span className="text-2xl font-base">
                 / Nível 5 • 3 Badges • 1250 XP
               </span>
             </h2>
@@ -99,7 +99,7 @@ export function UserProfile({ onClick }) {
               Histórico de Visitas
             </h3>
             <ul className="list-disc list-inside">
-              <li className="mt-2">
+              <li className="mt-2 ml-2">
                 <strong>Instituto Ricardo Brennand</strong> | Visitado em:
                 03/04/2025
                 <p className="ml-5 italic text-gray-700 mt-1">
@@ -123,7 +123,7 @@ export function UserProfile({ onClick }) {
             <h3 className="text-2xl font-semibold visitas-lista mb-2">
               Minhas Recomendações
             </h3>
-            <ul className="list-disc list-inside mt-2">
+            <ul className="list-disc list-inside mt-2 ml-2">
               <li>Paço do Frevo</li>
               <li>Marco Zero</li>
             </ul>

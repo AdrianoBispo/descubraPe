@@ -55,8 +55,8 @@ export function ProfileConfig({ open, handleOpen }) {
 
         <DialogBody className="h-[20rem] overflow-y-auto mx-12 flex flex-col justify-center gap-4">
           <div className="flex flex-row justify-between">
-            <p className="text-xl">Nome:</p>
-            <span className="text-xl">
+            <p className="text-md">Nome:</p>
+            <span className="text-md">
               {" "}
               {userData?.nome ||
                 currentUser?.displayName ||
@@ -66,30 +66,30 @@ export function ProfileConfig({ open, handleOpen }) {
           </div>
           <hr />
           <div className="flex flex-row justify-between">
-            <p className="text-xl">Telefone:</p>
-            <span className="text-lg">
+            <p className="text-md">Telefone:</p>
+            <span className="text-md">
               {userData?.telefone || "Não informado"}
             </span>
             <BsPencil size={16} className="mt-1 cursor-pointer" />
           </div>
           <hr />
           <div className="flex flex-row justify-between">
-            <p className="text-xl">E-mail:</p>
-            <span className="text-xl truncate">
+            <p className="text-md">E-mail:</p>
+            <span className="text-md truncate">
               {userData?.email || "Não informado"}
             </span>
             <BsPencil size={16} className="mt-1 cursor-pointer" />
           </div>
           <hr />
           <div className="flex flex-row justify-between ">
-            <p className="text-xl">Senha: </p>
-            <span className="text-xl">********</span>
+            <p className="text-md">Senha: </p>
+            <span className="text-md">********</span>
             <BsPencil size={16} className="mt-1 cursor-pointer" />
           </div>
           <hr />
           <div className="flex flex-row justify-between ">
-            <p className="text-xl">Bio: </p>
-            <span className="text-xl">
+            <p className="text-md">Bio: </p>
+            <span className="text-md">
               {userData?.resumo || "Não informado"}
             </span>
             <BsPencil size={16} className="mt-1 cursor-pointer" />
