@@ -47,7 +47,7 @@ export function UserProfile({ onClick }) {
                 "https://ionicframework.com/docs/img/demos/avatar.svg"
               }
               alt="Foto de perfil"
-              className="w-80 h-80 md:w-60 md:h-60 rounded-full object-cover avatar"
+              className="w-60 h-60 md:w-80 md:h-80 rounded-full object-cover avatar"
             />
             <button className="absolute bottom-0 left-1/2 transform -translate-x-1/2  p-2 rounded-full Camera">
               <FaCamera size={60} />
@@ -64,21 +64,21 @@ export function UserProfile({ onClick }) {
         {/* Coluna Direita */}
         <div className="flex flex-col gap-4 w-full md:w-2/3 md:text-md">
           <div>
-            <h2 className="text-3xl font-base">
+            <h2 className="text-3xl font-base ml-2">
               {userData?.nome ||
                 currentUser?.displayName ||
                 "Nome não definido"}{" "}
-              <span className="text-2xl font-base">
+              <span className="text-lg md:text-2xl font-base">
                 / Nível 5 • 3 Badges • 1250 XP
               </span>
             </h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 mb-4 ml-2">
               {userData?.resumo || "Não informado"}
             </p>
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-4">
+            <h3 className="text-2xl font-semibold mb-4 ml-2">
               Preferências Culturais
             </h3>
             <div className="flex gap-3 mt-2 mb-2 preferencias-btns">
@@ -95,13 +95,12 @@ export function UserProfile({ onClick }) {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold visitas-lista mb-2">
+            <h3 className="text-2xl font-semibold visitas-lista mb-2 ml-2">
               Histórico de Visitas
             </h3>
             <ul className="list-disc list-inside">
               <li className="mt-2 ml-2">
-                <strong>Instituto Ricardo Brennand</strong> | Visitado em:
-                03/04/2025
+                <strong>Instituto Ricardo Brennand</strong> | Visitado em: 03/04/2025
                 <p className="ml-5 italic text-gray-700 mt-1">
                   "Um lugar incrível com uma coleção surpreendente!"
                 </p>
@@ -111,7 +110,7 @@ export function UserProfile({ onClick }) {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold visitas-lista">
+            <h3 className="text-2xl ml-2 font-semibold visitas-lista">
               Minhas Listas de Locais
             </h3>
             <button className="mt-2 border bg-gray-200 px-4 py-1 rounded-md mb-2">
@@ -120,7 +119,7 @@ export function UserProfile({ onClick }) {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold visitas-lista mb-2">
+            <h3 className="text-2xl font-semibold visitas-lista mb-2 ml-2">
               Minhas Recomendações
             </h3>
             <ul className="list-disc list-inside mt-2 ml-2">

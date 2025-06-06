@@ -22,7 +22,7 @@
 }
 
 .ImagemPrincipal {
-  width: 66%;
+  width: 46%;
 }
 
 .Imagens {
@@ -30,16 +30,13 @@
   flex-direction: column;
   gap: 0.3rem;
   margin-right: 2rem;
-  width: 33%;
+  width: 18%;
 }
 
 .Endereco {
   width: 12rem;
 }
 
-.Horario {
-  margin-top: -1rem;
-}
 
 @media (max-width: 1700px) {
   .Opcoes {
@@ -73,7 +70,7 @@
   .Opcoes {
     flex-direction: column;
     gap: 0.5rem;
-    margin-top: -5.5rem;
+    margin-top: -3rem;
     margin-left: 4rem;
     font-size: 0.5rem;
   }
@@ -92,7 +89,26 @@
   }
 
   .Horario {
-    margin-top: -5rem;
+    margin-top: 1.5rem;
     margin-left: 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .Horario {
+    margin-top: 3.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .Horario {
+    margin-top: 3.5rem;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .Horario {
+    margin-top: 5rem;
   }
 }

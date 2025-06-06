@@ -260,7 +260,7 @@
   .container__banner-imagem img {
     border-radius: 99999px;
     object-fit: cover;
-    width: 35%;
+    width: 30%;
     height: 35vw;
   }
 }
@@ -439,8 +439,8 @@
   .container__banner-imagem img {
     border-radius: 99999px;
     object-fit: cover;
-    width: 40%;
-    height: 30vw;
+    width: 50%;
+    height: 50vw;
   }
 }
 

@@ -65,24 +65,23 @@ export function Local() {
         />
         <div className="Imagens">
           <img
-            src={lugar.image}
+            src={lugar.imagem2}
             alt={lugar.title}
           />
           <img
-            src={lugar.image}
+            src={lugar.imagem3}
             alt={lugar.title}
           />
         </div>
       </div>
 
       {/* Seção de Informações */}
-      <h2 className="text-[#0033cc] text-3xl font-bold mb-5">Informações</h2>
+      <h2 className="text-[#0033cc] text-3xl font-bold mb-5 Informacao">Informações</h2>
       <div className="flex flex-row items-center">
         <div className="flex flex-col w-1/3 gap-2">
           <h3 className="text-[#0033cc] font-bold">Endereço:</h3>
           <p className="text-[#0033cc] Endereco">
-            Altura da rua Siqueira Campos, R. do Imperador Pedro II, S/N - Santo
-            Antônio, Recife - PE, 50010-240
+            {lugar.localizacao}
           </p>
         </div>
         <div className="flex flex-col pb-12 gap-2 Horario">
@@ -90,7 +89,7 @@ export function Local() {
             Horário de Funcionamento*:
           </h3>
           <p className="text-[#0033cc]">
-            Funciona das 8h às 16h <br />(Segunda a Sexta-feira)
+            {lugar.funcionamento}
           </p>
         </div>
       </div>
@@ -100,7 +99,7 @@ export function Local() {
         <Card
           color="transparent"
           shadow={false}
-          className="max-w-[88rem] border rounded-xl"
+          className="max-w-[20rem] md:max-w-[60rem] mb-12 border rounded-xl"
         >
           <CardHeader
             color="transparent"
