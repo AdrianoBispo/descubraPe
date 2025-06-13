@@ -85,24 +85,8 @@ Para executar o projeto localmente, siga os passos abaixo:
    npm run dev
    ```
 
-## 👥 Equipe e Mentores
+![Banner Squad 13](https://github.com/user-attachments/assets/2e5b24d9-a802-4961-9c17-dac7ba933aef)
 
-### Squad 13, Accenture
-
-- Adriano Vinicius Bispo da Silva
-- Anna Luiza Gomes Sobral
-- Deyvison Francisco Soares Silva
-- Eychila Meirelle da Silva
-- Higor Ricardo da Silva
-- Luan Gabriel Rodrigues da Silva
-- Maria Clara Matos Duarte
-- Paulo Renato Pereira Bezerra
-- Ricardo Ferreira da Cruz
-- Wivian Eshley Anacleto da Silva
-
-### Mentoras
-
-- **Thifanny Sistelos** - Mentora da Accenture
-- **Nicole Charron** - Mentora do Porto Digital
+**Nossas mentoras:** [**Thifanny Sistelos** - Mentora da Accenture](https://www.linkedin.com/in/thifannyux/), [**Nicole Charron** - Mentora do Porto Digital](https://www.linkedin.com/in/nicole-charron/)
 
 ---
