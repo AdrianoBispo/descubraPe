@@ -1,4 +1,5 @@
 # Descubra PE
+https://github.com/user-attachments/assets/abc6d40a-55ef-4a5d-b593-ea5277cc3b18
 
 O **Descubra PE** é uma plataforma digital unificada que visa centralizar e organizar informações culturais e turísticas do estado de Pernambuco. Desenvolvido como parte da Residência Tecnológica do Porto Digital - RiseUp 2025.1 pelo Squad 13 da Accenture, o projeto foi criado para facilitar o acesso a eventos, pontos históricos e gastronomia local tanto para turistas quanto para moradores.
 
